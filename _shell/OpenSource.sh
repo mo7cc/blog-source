@@ -15,6 +15,10 @@ if [ -z "${desc}" ]; then
 fi
 echo "同步: ${desc}"
 
+## 清理目录 dist 和 git 仓库
+rm -rf "${OutPutPath}"
+rm -rf "${DeployLocalPath}"
+
 ## 构建源码目录
 rm -rf "${OutPutPath}"
 mkdir "${OutPutPath}"
