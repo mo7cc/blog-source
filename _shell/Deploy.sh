@@ -5,8 +5,8 @@
 source "./_shell/init.sh"
 NowPath=${NowPath}
 OutPutPath=${OutPutPath}
-DeployLocalPath=${DeployLocalPath}
 DeployPath=${DeployPath}
+DeployLocalPath=${DeployLocalPath}
 
 ## 判断参数
 desc=$1
@@ -14,7 +14,7 @@ if [ -z "${desc}" ]; then
   echo -e "\033[31m Err:需要发布说明 \033[0m"
   exit 1
 fi
-echo "${desc}"
+echo "同步: ${desc}"
 
 ## 清理目录 dist 和 git 仓库
 rm -rf "${OutPutPath}"
@@ -24,6 +24,7 @@ rm -rf "${DeployLocalPath}"
 pnpm run build &&
   cp "${NowPath}/package.json" "${OutPutPath}"
 
+# 开始进行发布步骤 OutPutPath -> 远程 DeployPath
 ## 拉取远程仓库
 git clone "${DeployPath}"
 
