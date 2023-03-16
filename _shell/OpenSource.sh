@@ -5,7 +5,7 @@ source "./_shell/init.sh"
 NowPath=${NowPath}
 OutPutPath=${OutPutPath}
 DeployPath="git@github.com:mo7cc/BlogSource.git"
-DeployLocalPath="BlogSource"
+DeployLocalPath="${NowPath}/BlogSource"
 
 ## 判断参数
 desc=$1
@@ -13,14 +13,13 @@ if [ -z "${desc}" ]; then
   echo -e "\033[31m Err:需要开源说明 \033[0m"
   exit 1
 fi
-echo "同步: ${desc}"
+echo "git commit: ${desc}"
 
 ## 清理目录 dist 和 git 仓库
 rm -rf "${OutPutPath}"
 rm -rf "${DeployLocalPath}"
 
 ## 构建源码目录
-rm -rf "${OutPutPath}"
 mkdir "${OutPutPath}"
 cp -rf "${NowPath}/src" "${OutPutPath}/src"
 cp -rf "${NowPath}/.gitignore" "${OutPutPath}/"

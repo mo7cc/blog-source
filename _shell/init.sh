@@ -15,13 +15,13 @@ function GitSet {
 NowPath=$(pwd)
 
 # 最终的输出目录
-OutPutPath=${NowPath}"/dist"
+OutPutPath="${NowPath}/dist"
 
 # 远程仓库目录地址
 DeployPath="git@github.com:mo7cc/blog.mo7.cc.git"
 
 # 远程仓库的本地目录
-DeployLocalPath=${NowPath}"/blog.mo7.cc"
+DeployLocalPath="${NowPath}/blog.mo7.cc"
 
 echo "
 ===== 初始化变量 =====

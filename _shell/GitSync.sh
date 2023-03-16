@@ -9,7 +9,7 @@ if [ -z "${desc}" ]; then
   echo -e "\033[31m Err:需要同步说明 \033[0m"
   exit 1
 fi
-echo "同步: ${desc}"
+echo "git commit: ${desc}"
 
 GitSet
 
