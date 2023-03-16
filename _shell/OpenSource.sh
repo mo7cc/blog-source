@@ -51,7 +51,9 @@ git add . &&
   git push &&
   ## 清理 dist
   rm -rf ".git" &&
-  mv "${DeployLocalPath}" "${OutPutPath}" &&
+  echo "${DeployLocalPath}"
+echo "${OutPutPath}"
+mv "${DeployLocalPath}" "${OutPutPath}" &&
   echo "已推送至${DeployPath}"
 
 exit 0
