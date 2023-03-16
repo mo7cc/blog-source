@@ -1,5 +1,7 @@
 # 个人博客
 
+sj
+
 https://blog.mo7.cc
 
 博客源码，基于 `VuePress Theme Hope` 搭建
