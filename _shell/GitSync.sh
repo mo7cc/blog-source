@@ -2,6 +2,7 @@
 
 ## 设置并加载变量
 source "./_shell/init.sh"
+DeployPath=${DeployPath}
 
 ## 判断参数
 desc=$1
