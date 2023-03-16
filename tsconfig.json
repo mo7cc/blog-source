@@ -1,0 +1,10 @@
+{
+  "include": ["src/.vuepress/*.ts", "src/.vuepress/*.vue", "src/.vuepress/types"],
+  "exclude": ["node_modules", "dist", "draft"],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "allowJs": true
+  }
+}

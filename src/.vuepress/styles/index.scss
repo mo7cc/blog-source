@@ -1,0 +1,74 @@
+// 全局 样式
+.none {
+  width: 0;
+  height: 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+}
+
+// 底部信息的样式
+.footer-icp {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  img {
+    width: 14px;
+    margin-right: 4px;
+  }
+}
+.footer-about {
+  padding: 2px 3px;
+  border-radius: 3px;
+  position: relative;
+  color: #fff;
+  &:hover {
+    background-color: rgba($color: #0c7bf4, $alpha: 0.8);
+  }
+}
+
+.footer {
+  display: flex;
+}
+
+// 首页边栏信息按钮的颜色
+.blog-info-list {
+  .blog-type-wrapper {
+    .icon-wrapper.active {
+      color: #fff;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'mo7_font';
+  src: url('/font/mo7_font.ttf');
+}
+
+/* 
+
+字体选择
+
+https://ifonts.com/font-detail/5948.html
+
+https://www.tukuppt.com/font
+
+*/
+
+.blog {
+  .fullscreen {
+    h1 {
+      font-size: 3.8rem;
+      font-family: 'mo7_font';
+    }
+  }
+}
+
+// markdown 排版布局
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
