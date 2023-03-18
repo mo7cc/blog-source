@@ -94,6 +94,9 @@ onMounted(() => {
       text-shadow: 0.05rem 0.05rem 0.1rem rgb(0 0 0 / 50%);
       opacity: 0.85;
     }
+    .repo-link {
+      color: #eee;
+    }
   }
 }
 
@@ -151,6 +154,9 @@ onMounted(() => {
   .theme-container.scroll-top {
     .navbar {
       .site-name {
+        color: rgba($color: #fff, $alpha: 0.7);
+      }
+      .repo-link {
         color: rgba($color: #fff, $alpha: 0.7);
       }
       .nav-item {

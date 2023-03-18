@@ -12,11 +12,6 @@ description: 墨七,博客,记录,分享
 article: false
 index: false
 projects:
-  - icon: web
-    name: 关于本站
-    desc: 本站的使用说明书
-    link: /posts/local
-
   - icon: jiansuo
     name: 查看索引
     desc: 站内文章索引和分类
@@ -26,6 +21,11 @@ projects:
     name: 友情链接
     desc: 欢迎交换友情链接
     link: /favorite/links/friend
+
+  - icon: liuyan
+    name: 留言板
+    desc: 欢迎交换友情链接
+    link: /about/guestbook
 
 footer: true
 permalink: /
