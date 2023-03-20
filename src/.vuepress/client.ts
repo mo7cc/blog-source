@@ -28,5 +28,9 @@ export default defineClientConfig({
     setupNavbarHide();
     setupRibbon();
   },
-  rootComponents: [HeroBG, NavMusic],
+  rootComponents: [
+    NavMusic,
+    HeroBG,
+    //...
+  ],
 });

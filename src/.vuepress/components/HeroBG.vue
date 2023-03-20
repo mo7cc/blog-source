@@ -126,11 +126,10 @@ const GetBingImgList = () => {
 };
 
 onMounted(() => {
+  const router = useRouter();
   nextTick(() => {
     GetBingImgList();
   });
-
-  const router = useRouter();
   router.beforeEach((to) => {
     nextTick(() => {
       setTimeout(() => {
@@ -141,7 +140,9 @@ onMounted(() => {
 });
 </script>
 
-<template></template>
+<template>
+  <ClientOnly />
+</template>
 
 <style lang="scss">
 // 图片切换按钮

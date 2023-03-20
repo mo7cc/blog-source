@@ -58,9 +58,9 @@ const NewPlayer = (APlayer) => {
   if (!playElm) {
     return;
   }
+
   // 判断是否被 APlayer 接管
   const playExist = playElm.classList.contains('aplayer');
-
   if (playExist) {
     return;
   }
