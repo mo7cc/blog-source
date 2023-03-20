@@ -1,33 +1,28 @@
 <script setup lang="ts">
-import { document } from '../data/document';
-import { friend } from '../data/friend';
-import { tools } from '../data/tools';
-const props = defineProps({
-  type: String,
-  src: String,
-});
+import { document } from "../data/document.js";
+import { friend } from "../data/friend.js";
+import { tools } from "../data/tools.js";
+
+const props = defineProps<{
+  type: string;
+  src: string;
+}>();
 
 let linkData = document;
 
 switch (props.src) {
-  case 'document':
+  case "document":
     linkData = document;
     break;
-  case 'tools':
+  case "tools":
     linkData = tools;
     break;
-  case 'friend':
+  case "friend":
     linkData = friend;
     break;
   default:
     linkData = document;
-    break;
 }
-
-const GetColorClassName = (index) => {
-  const Idx = index % 9;
-  return `project${Idx}`;
-};
 </script>
 
 <template>
@@ -36,7 +31,7 @@ const GetColorClassName = (index) => {
       <a
         class="linkWrapper project"
         target="_blank"
-        :class="GetColorClassName(index)"
+        :class="`project${index % 9}`"
         :href="item.href"
         v-if="item.type.indexOf(props.type) > -1"
       >

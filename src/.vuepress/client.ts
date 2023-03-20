@@ -1,36 +1,36 @@
-import { defineClientConfig } from '@vuepress/client';
-import { onMounted } from 'vue';
-import { defineAsyncComponent } from 'vue';
+import { defineClientConfig } from "@vuepress/client";
+import { defineAsyncComponent } from "vue";
 
-const MyLinks = defineAsyncComponent(() => import('./Components/MyLinks.vue'));
-const MyIcon = defineAsyncComponent(() => import('./Components/MyIcon.vue'));
+import {
+  setupBlogBg,
+  setupCommentButton,
+  setupConsole,
+  setupHeroHitokoto,
+  setupNavbarHide,
+  setupRibbon,
+} from "./composables/index.js";
 
-const BlogBeautify = defineAsyncComponent(() => import('./Components/BlogBeautify.vue'));
-const HeroBG = defineAsyncComponent(() => import('./Components/HeroBG.vue'));
-const HeroHitokoto = defineAsyncComponent(() => import('./Components/HeroHitokoto.vue'));
-const BlogBg = defineAsyncComponent(() => import('./Components/BlogBg.vue'));
-const NavMusic = defineAsyncComponent(() => import('./Components/NavMusic.vue'));
-const CommentHideBtn = defineAsyncComponent(() => import('./Components/CommentHideBtn.vue'));
-const NavBarBeautify = defineAsyncComponent(() => import('./Components/NavBarBeautify.vue'));
-const PrintVersion = defineAsyncComponent(() => import('./Components/PrintVersion.vue'));
+const MyLinks = defineAsyncComponent(() => import("./components/MyLinks.vue"));
+const MyIcon = defineAsyncComponent(() => import("./components/MyIcon.vue"));
+
+const HeroBG = defineAsyncComponent(() => import("./components/HeroBG.vue"));
+
+const NavMusic = defineAsyncComponent(
+  () => import("./components/NavMusic.vue")
+);
 
 export default defineClientConfig({
-  enhance({ app, router, siteData }) {
-    app.component('MyLinks', MyLinks);
-    app.component('MyIcon', MyIcon);
+  enhance({ app }) {
+    app.component("MyLinks", MyLinks);
+    app.component("MyIcon", MyIcon);
   },
   setup() {
-    onMounted(() => {});
+    setupBlogBg();
+    setupCommentButton();
+    setupConsole();
+    setupHeroHitokoto();
+    setupNavbarHide();
+    setupRibbon();
   },
-  rootComponents: [
-    BlogBeautify,
-    NavBarBeautify,
-    HeroBG,
-    HeroHitokoto,
-    BlogBg,
-    NavMusic,
-    CommentHideBtn,
-    PrintVersion,
-    // ...
-  ],
+  rootComponents: [HeroBG, NavMusic],
 });

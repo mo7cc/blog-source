@@ -1,0 +1,60 @@
+// 一言
+#hotWord {
+  margin: 1.2rem auto 0;
+  font-weight: 600;
+  color: rgba($color: #fff, $alpha: 0.95);
+
+  .word {
+    position: relative;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    .left {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .author {
+    font-weight: 400;
+    margin-top: 1rem;
+    float: right;
+  }
+}
+
+.word {
+  font-family: "华文行楷";
+}
+
+#hitokoto_text {
+  max-width: 80vw;
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  &::after {
+    content: "|";
+    font-size: 1.3rem;
+    animation: san 0.8s infinite;
+  }
+}
+#hitokoto_author {
+  transition: 0.7s;
+  font-family: "STXingkai";
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+@keyframes san {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
