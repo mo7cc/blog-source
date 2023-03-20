@@ -1,4 +1,4 @@
-const basePath = "//file.mo7.cc/music/";
+const basePath = '//file.mo7.cc/music/';
 
 interface GetMusicOptions {
   name: string;
@@ -30,22 +30,23 @@ export const globalMusicList: MusicInfo[] = [];
 
 globalMusicList.push(
   getMusicInfo({
-    name: "光年之外",
-    artist: "G.E.M.邓紫棋",
-  })
+    name: '光年之外',
+    artist: 'G.E.M.邓紫棋',
+  }),
 );
 globalMusicList.push(
   getMusicInfo({
-    name: "泡沫",
-    artist: "G.E.M.邓紫棋",
-  })
+    name: '泡沫',
+    artist: 'G.E.M.邓紫棋',
+  }),
 );
 globalMusicList.push(
   getMusicInfo({
-    name: "喜欢你",
-    artist: "G.E.M.邓紫棋",
-  })
+    name: '喜欢你',
+    artist: 'G.E.M.邓紫棋',
+  }),
 );
+
 /* 
 https://tools.liumingye.cn/music/#/artist/k7jl
 */

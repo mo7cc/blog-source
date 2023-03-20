@@ -32,7 +32,7 @@
       }
     }
 
-    [data-theme="light"] & {
+    [data-theme='light'] & {
       .search-pro-button {
         color: #eee;
 
@@ -73,7 +73,7 @@
       }
     }
 
-    [data-theme="dark"] & {
+    [data-theme='dark'] & {
       .navbar {
         .site-name {
           color: rgba($color: #fff, $alpha: 0.7);

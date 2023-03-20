@@ -21,12 +21,15 @@ rm -rf "${DeployLocalPath}"
 
 ## 构建源码目录
 mkdir "${OutPutPath}"
+cp -rf "${NowPath}/_shell" "${OutPutPath}/_shell"
+cp -rf "${NowPath}/.vscode" "${OutPutPath}/.vscode"
 cp -rf "${NowPath}/src" "${OutPutPath}/src"
 cp -rf "${NowPath}/.gitignore" "${OutPutPath}/"
-cp -rf "${NowPath}/tsconfig.json" "${OutPutPath}/"
+cp -rf "${NowPath}/.prettierignore" "${OutPutPath}/"
+cp -rf "${NowPath}/.prettierrc.cjs" "${OutPutPath}/"
 cp -rf "${NowPath}/package.json" "${OutPutPath}/"
+cp -rf "${NowPath}/tsconfig.json" "${OutPutPath}/"
 cp -rf "${NowPath}/README.md" "${OutPutPath}/"
-cp -rf "${NowPath}/_shell" "${OutPutPath}/_shell"
 cp -rf "${NowPath}/pnpm-lock.yaml" "${OutPutPath}/"
 
 # 开始进行发布步骤 OutPutPath -> 远程 DeployPath

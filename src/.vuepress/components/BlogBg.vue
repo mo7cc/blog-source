@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onMounted, nextTick } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted, nextTick } from 'vue';
+import { useRouter } from 'vue-router';
 
 const BlogBg = () => {
-  if (!document.querySelector(".BlogBg")) {
+  if (!document.querySelector('.BlogBg')) {
     var body = document.body;
-    var bgDiv = document.createElement("div");
-    bgDiv.className = "BlogBg";
+    var bgDiv = document.createElement('div');
+    bgDiv.className = 'BlogBg';
     body.appendChild(bgDiv);
   }
 };

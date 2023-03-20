@@ -28,7 +28,7 @@
 }
 
 .word {
-  font-family: "华文行楷";
+  font-family: '华文行楷';
 }
 
 #hitokoto_text {
@@ -37,14 +37,14 @@
   display: inline-block;
   font-size: 1.8rem;
   &::after {
-    content: "|";
+    content: '|';
     font-size: 1.3rem;
     animation: san 0.8s infinite;
   }
 }
 #hitokoto_author {
   transition: 0.7s;
-  font-family: "STXingkai";
+  font-family: 'STXingkai';
   font-style: italic;
   font-size: 1.2rem;
 }

@@ -1,11 +1,11 @@
-import axios from "axios";
-import { onMounted, nextTick } from "vue";
-import { useRouter } from "vue-router";
+import axios from 'axios';
+import { onMounted, nextTick } from 'vue';
+import { useRouter } from 'vue-router';
 
 export const setupHeroHitokoto = () => {
   const router = useRouter();
 
-  let timer: number;
+  let timer: any;
 
   const getTemplate = (text): string => `
 <div class="word">
@@ -19,14 +19,14 @@ export const setupHeroHitokoto = () => {
   const insertText = (data) => {
     clearInterval(timer);
 
-    const descriptionElement = document.getElementsByClassName("description");
+    const descriptionElement = document.getElementsByClassName('description');
 
     if (descriptionElement.length > 0) {
       const textElm = descriptionElement[0];
-      textElm.id = "hotWord";
+      textElm.id = 'hotWord';
     }
 
-    const textElement = document.getElementById("hotWord");
+    const textElement = document.getElementById('hotWord');
 
     if (!textElement) {
       return;
@@ -35,30 +35,30 @@ export const setupHeroHitokoto = () => {
     textElement.innerHTML = getTemplate(data.from);
 
     // 打字机效果
-    const authorElement = document.getElementById("hitokoto_author");
-    const hitokotoElement = document.getElementById("hitokoto_text");
+    const authorElement = document.getElementById('hitokoto_author');
+    const hitokotoElement = document.getElementById('hitokoto_text');
 
     if (!hitokotoElement || !authorElement) {
       return;
     }
 
-    authorElement.style.opacity = "0";
+    authorElement.style.opacity = '0';
 
-    const txt = data.hitokoto.split("");
+    const txt = data.hitokoto.split('');
 
     let index = 0;
     let pauseNum = 0;
     let pauseMax = 20;
     let huan = false;
-    let insertTxt = "";
+    let insertTxt = '';
 
     timer = setInterval(() => {
       const el = txt[index];
 
       if (insertTxt.length < 4) {
-        authorElement.style.opacity = "0";
+        authorElement.style.opacity = '0';
       } else {
-        authorElement.style.opacity = "1";
+        authorElement.style.opacity = '1';
       }
 
       if (pauseNum == 0) {
@@ -105,10 +105,10 @@ export const setupHeroHitokoto = () => {
       toPath = path;
     }
 
-    if (toPath == "/") {
+    if (toPath == '/') {
       axios({
-        method: "get",
-        url: "https://v1.hitokoto.cn",
+        method: 'get',
+        url: 'https://v1.hitokoto.cn',
         params: {},
       }).then(({ data }) => {
         insertText(data);

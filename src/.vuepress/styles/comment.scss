@@ -14,14 +14,14 @@
   opacity: 0;
   transition: 0.3s;
 
-  [provider="Waline"] {
+  [provider='Waline'] {
     opacity: 0;
     margin-bottom: 5rem;
   }
 
   &.hide {
     max-height: 0;
-    [provider="Waline"] {
+    [provider='Waline'] {
       opacity: 0;
       transition: 0.3s;
     }
@@ -34,7 +34,7 @@
   }
   &.show {
     max-height: 9999px;
-    [provider="Waline"] {
+    [provider='Waline'] {
       opacity: 1;
       transition: 0.3s;
     }

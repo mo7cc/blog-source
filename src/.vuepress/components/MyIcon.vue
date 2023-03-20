@@ -3,11 +3,7 @@ defineProps<{ name: string; spin?: boolean }>();
 </script>
 
 <template>
-  <span
-    class="iconfont icon"
-    :class="[`icon-${name}`]"
-    v-bind="spin ? { 'data-spin': '' } : {}"
-  />
+  <span class="iconfont icon" :class="[`icon-${name}`]" v-bind="spin ? { 'data-spin': '' } : {}" />
 </template>
 
 <style lang="scss">

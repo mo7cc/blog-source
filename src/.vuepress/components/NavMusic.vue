@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { onMounted, nextTick, ref } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted, nextTick, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-import MyIcon from "./MyIcon.vue";
-import { globalMusicList } from "../data/music.js";
+import MyIcon from './MyIcon.vue';
+import { globalMusicList } from '../data/music.js';
 
-import "aplayer/dist/APlayer.min.css";
+import 'aplayer/dist/APlayer.min.css';
 
 let player;
 
@@ -20,23 +20,23 @@ const close = () => {
 };
 
 const InsertMenu = () => {
-  const navCenterElm = document.querySelector(".navbar-end");
+  const navCenterElm = document.querySelector('.navbar-end');
 
   if (!navCenterElm) {
     return;
   }
 
-  if (!document.querySelector("#MyMusic_Menu")) {
-    const div = document.createElement("div");
+  if (!document.querySelector('#MyMusic_Menu')) {
+    const div = document.createElement('div');
 
-    div.id = "MyMusic_Menu";
-    div.classList.add("nav-item");
+    div.id = 'MyMusic_Menu';
+    div.classList.add('nav-item');
     div.innerHTML = `<div id="MyMusic_icon" class="btnImg"></div>`; // spin="true"
     navCenterElm.appendChild(div);
   }
 
-  const Menu = document.querySelector<HTMLElement>("#MyMusic_Menu")!;
-  const MyMusicWrapper = document.querySelector<HTMLElement>(".MyMusic")!;
+  const Menu = document.querySelector<HTMLElement>('#MyMusic_Menu')!;
+  const MyMusicWrapper = document.querySelector<HTMLElement>('.MyMusic')!;
 
   Menu.onclick = (event) => {
     toggle();
@@ -54,47 +54,47 @@ const NewPlayer = (APlayer) => {
   }
 
   // 如果不存在盒子 则 终止
-  const playElm = document.getElementById("GlobalAPlayer");
+  const playElm = document.getElementById('GlobalAPlayer');
   if (!playElm) {
     return;
   }
   // 判断是否被 APlayer 接管
-  const playExist = playElm.classList.contains("aplayer");
+  const playExist = playElm.classList.contains('aplayer');
 
   if (playExist) {
     return;
   }
 
   player = new APlayer({
-    container: document.getElementById("GlobalAPlayer"),
+    container: document.getElementById('GlobalAPlayer'),
     audio: globalMusicList,
     lrcType: 3,
     listFolded: false,
-    listMaxHeight: "324px",
+    listMaxHeight: '324px',
     mini: false,
     fixed: false,
     volume: 1,
-    storageName: "GlobalAPlayer",
+    storageName: 'GlobalAPlayer',
   });
 
-  player.on("play", () => {
-    document.getElementById("MyMusic_icon")?.setAttribute("data-spin", "");
+  player.on('play', () => {
+    document.getElementById('MyMusic_icon')?.setAttribute('data-spin', '');
   });
-  player.on("pause", () => {
-    document.getElementById("MyMusic_icon")?.removeAttribute("data-spin");
+  player.on('pause', () => {
+    document.getElementById('MyMusic_icon')?.removeAttribute('data-spin');
   });
 };
 
 const stopMusic = () => {
   let toPath = window.location.pathname;
 
-  if (toPath.includes("/music/") && player) player.pause();
+  if (toPath.includes('/music/') && player) player.pause();
 };
 
 onMounted(() => {
   const router = useRouter();
 
-  import("aplayer").then(({ default: APlayer }) => {
+  import('aplayer').then(({ default: APlayer }) => {
     nextTick(() => {
       InsertMenu();
       NewPlayer(APlayer);
@@ -156,8 +156,8 @@ onMounted(() => {
   margin-top: -217px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
   transition: 0.3s;
   transform: scale(1);
@@ -211,7 +211,7 @@ onMounted(() => {
   }
 
   .btnImg {
-    background-image: url("/img/playBtn.webp");
+    background-image: url('/img/playBtn.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

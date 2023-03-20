@@ -17,7 +17,7 @@ export default function () {
 
   body.appendChild(canvas);
 
-  var c = document.getElementById('bgCanvas'),
+  var c = document.getElementById('bgCanvas') as any,
     x = c.getContext('2d'),
     pr = window.devicePixelRatio || 1,
     w = window.innerWidth,

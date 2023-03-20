@@ -1,4 +1,4 @@
-import { onMounted } from "vue";
+import { onMounted } from 'vue';
 
 declare const BLOG_VERSION: string;
 
@@ -7,7 +7,7 @@ const info = `
 ████╗ ████║██╔═══██╗╚════██║
 ██╔████╔██║██║   ██║    ██╔╝
 ██║╚██╔╝██║██║   ██║   ██╔╝ 
-██║ ╚═╝ ██║╚██████╔╝   ██║  
+██║ ╚═╝ ██║╚██████╔╝   ██║    
 ╚═╝     ╚═╝ ╚═════╝    ╚═╝
 `;
 

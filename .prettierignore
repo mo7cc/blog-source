@@ -1,0 +1,14 @@
+*.net
+
+.routify
+
+.cache
+draft
+
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
+/dist/
+.DS_Store
+pnpm-lock.yaml
