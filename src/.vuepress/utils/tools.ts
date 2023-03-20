@@ -1,25 +1,27 @@
-import store from 'store';
+import store from "store";
 
 export const mStorage = store;
-export const LoadImage = (url) => {
-  var img = new Image();
+export const loadImage = (url) => {
+  const img = new Image();
+
   img.src = url;
   img.onload = () => {};
 };
 
-function clearAllCookie() {
-  var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
-  if (keys) {
-    for (var i = keys.length; i--; ) document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString();
-  }
-}
+const clearAllCookie = () => {
+  const keys = document.cookie.match(/[^ =;]+(?=\=)/g);
 
-export const CheckStorage = () => {
+  if (keys)
+    for (let i = keys.length; i--; )
+      document.cookie = keys[i] + "=0;expires=" + new Date(0).toUTCString();
+};
+
+export const checkStorage = () => {
   const nowTime = Date.now() - 0;
 
-  const localTime = mStorage.get('LastStoreDataTime');
+  const localTime = mStorage.get("LastStoreDataTime");
   if (!(localTime - 0)) {
-    mStorage.set('LastStoreDataTime', nowTime);
+    mStorage.set("LastStoreDataTime", nowTime);
     return;
   }
 
@@ -27,7 +29,7 @@ export const CheckStorage = () => {
 
   if (Diff > 86400000) {
     mStorage.clearAll();
-    document.cookie = '';
+    document.cookie = "";
     clearAllCookie();
     window.location.reload();
   }

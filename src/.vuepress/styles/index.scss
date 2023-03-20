@@ -1,3 +1,15 @@
+@use "blog";
+@use "comment";
+@use "hitokoto";
+@use "hr";
+@use "navbar";
+@use "spin";
+
+@font-face {
+  font-family: "mo7_font";
+  src: url("/font/mo7_font.ttf");
+}
+
 // 全局 样式
 .none {
   width: 0;
@@ -43,11 +55,6 @@
   }
 }
 
-@font-face {
-  font-family: 'mo7_font';
-  src: url('/font/mo7_font.ttf');
-}
-
 /* 
 
 字体选择
@@ -62,7 +69,7 @@ https://www.tukuppt.com/font
   .fullscreen {
     h1 {
       font-size: 3.8rem;
-      font-family: 'mo7_font';
+      font-family: "mo7_font";
     }
   }
 }

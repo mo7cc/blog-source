@@ -12,6 +12,7 @@
     "deploy": "./_shell/Deploy.sh",
     "open": "./_shell/OpenSource.sh"
   },
+  "packageManager": "pnpm@7.30.0",
   "dependencies": {
     "@types/store": "^2.0.2",
     "@vuepress/client": "2.0.0-beta.61",
@@ -21,7 +22,7 @@
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vuepress": "2.0.0-beta.61",
-    "vuepress-plugin-search-pro": "2.0.0-beta.193",
-    "vuepress-theme-hope": "2.0.0-beta.193"
+    "vuepress-plugin-search-pro": "2.0.0-beta.195",
+    "vuepress-theme-hope": "2.0.0-beta.195"
   }
 }
