@@ -121,13 +121,13 @@ export const document = [
   },
 ];
 
-/*  
+/* 
 
 {
   name: 'xxxx',
   desc: 'xxxx',
   href: 'xxxx',
-  cover: 'xxxx',  
+  cover: 'xxxx',
   type: ['xxx'],
 },
 

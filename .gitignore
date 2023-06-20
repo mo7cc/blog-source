@@ -1,6 +1,8 @@
 node_modules/
-src/.vuepress/.cache/
-src/.vuepress/.temp/
-src/.vuepress/dist/
-/dist/
+dist/
 .DS_Store
+pnpm-lock.yaml
+.temp/
+.vp-temp/
+.cache/
+.vp-cache/

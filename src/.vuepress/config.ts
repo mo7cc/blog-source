@@ -1,13 +1,14 @@
 import { defineUserConfig } from 'vuepress';
-import { searchProPlugin } from 'vuepress-plugin-search-pro';
-
 import theme from './theme.js';
-import pkg from '../../package.json';
+import { searchProPlugin } from 'vuepress-plugin-search-pro';
 
 export default defineUserConfig({
   dest: 'dist',
   host: '0.0.0.0',
   port: 9451,
+  base: '/',
+  temp: '.vscode/.vp-temp',
+  cache: '.vscode/.vp-cache',
 
   locales: {
     '/': {
@@ -29,18 +30,12 @@ export default defineUserConfig({
       // 为分类和标签添加索引
       customFields: [
         {
-          getter: (page) => page.frontmatter.category as string,
-          formatter: {
-            '/': '分类：$content',
-            '/en/': 'Category: $content',
-          },
+          getter: (page) => page.frontmatter.category as any,
+          formatter: '分类：$content',
         },
         {
-          getter: (page) => page.frontmatter.tag as string,
-          formatter: {
-            '/': '标签：$content',
-            '/en/': 'Tag: $content',
-          },
+          getter: (page) => page.frontmatter.tag as any,
+          formatter: '标签：$content',
         },
       ],
     }),
@@ -48,10 +43,6 @@ export default defineUserConfig({
 
   theme,
 
+  // Enable it with pwa
   shouldPrefetch: false,
-
-  define: () => ({
-    // @ts-ignore
-    BLOG_VERSION: `v${pkg.version}`,
-  }),
 });

@@ -3,9 +3,9 @@ export default function () {
     e.preventDefault();
   });
 
-  var body = document.body;
+  const body = document.body;
 
-  var canvas = document.createElement('canvas');
+  const canvas = document.createElement('canvas');
 
   canvas.id = 'bgCanvas';
   canvas.style.zIndex = '3';
@@ -17,7 +17,7 @@ export default function () {
 
   body.appendChild(canvas);
 
-  var c = document.getElementById('bgCanvas') as any,
+  let c = document.getElementById('bgCanvas') as any,
     x = c.getContext('2d'),
     pr = window.devicePixelRatio || 1,
     w = window.innerWidth,
@@ -45,7 +45,7 @@ export default function () {
     x.beginPath();
     x.moveTo(i.x, i.y);
     x.lineTo(j.x, j.y);
-    var k = j.x + (z() * 2 - 0.25) * f,
+    let k = j.x + (z() * 2 - 0.25) * f,
       n = y(j.y);
     x.lineTo(k, n);
     x.closePath();
@@ -58,7 +58,7 @@ export default function () {
     q[1] = { x: k, y: n };
   }
   function y(p) {
-    var t = p + (z() * 2 - 1.1) * f;
+    let t = p + (z() * 2 - 1.1) * f;
     return t > h || t < 0 ? y(p) : t;
   }
   document.onclick = i;

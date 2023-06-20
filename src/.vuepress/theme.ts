@@ -10,26 +10,29 @@ const footerICP_HTML = `
 
 export default hopeTheme({
   hostname: 'https://blog.mo7.cc',
-
   author: {
     name: '墨七',
     url: 'https://mo7.cc',
     email: 'mo7@mo7.cc',
   },
-  repo: 'https://github.com/mo7cc/BlogSource.git',
-  logo: '/pwa/144.png',
-
   iconAssets: '//at.alicdn.com/t/c/font_3855310_p3z6ugbxr7a.css',
+  logo: '/pwa/144.png',
+  docsDir: 'src',
   editLink: false,
   fullscreen: true,
-  themeColor: {
-    // blue: '#2196f3',
-    red: '#e493d0',
-    green: '#3eaf7c',
-    orange: '#fb9b5f',
-  },
-
-  pageInfo: ['Author', 'Category', 'Date', 'Original', 'Tag', 'ReadingTime', 'Word', 'PageView'],
+  navbarAutoHide: 'always',
+  footer: footerICP_HTML,
+  pageInfo: [
+    'Author',
+    'Category',
+    'Date',
+    'Original',
+    'Tag',
+    'ReadingTime',
+    'Word',
+    'PageView',
+    //..
+  ],
 
   blog: {
     avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
@@ -37,7 +40,7 @@ export default hopeTheme({
     medias: {
       Email: 'mailto:mo7@mo7.cc',
       GitHub: 'https://github.com/mo7cc',
-      Lark: 'https://www.feishu.cn/invitation/page/add_contact/?token=bd8gde7a-515c-44bb-8471-7223eec3634d&amp;unique_id=u7kWF-SYY70MOcFU2LvbXA==',
+      Lark: 'https://www.feishu.cn/invitation/page/add_contact/?token=417h7852-934c-4f08-9112-00d257d0cdae&amp;unique_id=FnKsnwD3MN8t7zjWer4tqQ==',
       Zhihu: 'https://www.zhihu.com/people/meichangliang',
     },
   },
@@ -45,11 +48,8 @@ export default hopeTheme({
   navbarLayout: {
     start: ['Brand'],
     center: [],
-    end: ['Search', 'Links', 'Language', 'Repo', 'Outlook'],
+    end: ['Search', 'Links', 'Language', 'Outlook'],
   },
-  navbarAutoHide: 'always',
-
-  footer: footerICP_HTML,
 
   locales: {
     '/': {
@@ -90,42 +90,27 @@ export default hopeTheme({
       reaction: true,
     },
 
-    components: {
-      // 你想使用的组件
-      components: ['BiliBili'],
-    },
-
-    copyCode: {
-      showInMobile: true,
-    },
-
-    feed: {
-      atom: true,
-      json: true,
-      rss: true,
-    },
-
+    // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
       attrs: true,
       chart: true,
       codetabs: true,
-      container: true,
       demo: true,
       echarts: true,
       figure: true,
-      flowchart: false,
+      flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
+      katex: true,
       mark: true,
+      mermaid: true,
       playground: {
         presets: ['ts', 'vue'],
       },
-      presentation: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
       stylize: [
         {
           matcher: 'Recommended',
@@ -145,6 +130,7 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true,
     },
+
     pwa: {
       favicon: '/favicon.png',
       cacheHTML: true,
@@ -181,6 +167,21 @@ export default hopeTheme({
             src: '/pwa/192.png',
             sizes: '192x192',
             type: 'image/png',
+          },
+        ],
+        shortcuts: [
+          {
+            name: '墨七',
+            short_name: '墨七',
+            url: '/',
+            icons: [
+              {
+                src: '/pwa/192.png',
+                sizes: '192x192',
+                purpose: 'maskable',
+                type: 'image/png',
+              },
+            ],
           },
         ],
       },

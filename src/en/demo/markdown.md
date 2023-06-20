@@ -294,7 +294,7 @@ $$
 
 #### Include files
 
-@include(./README.md{11-17})
+<!-- @include: ./README.md{11-17} -->
 
 - [View Detail](https://theme-hope.vuejs.press/guide/markdown/include.html)
 
@@ -308,8 +308,8 @@ $$
 ```
 
 ```js
-document.querySelector("#very").addEventListener("click", () => {
-  alert("Very powerful!");
+document.querySelector('#very').addEventListener('click', () => {
+  alert('Very powerful!');
 });
 ```
 
@@ -336,7 +336,7 @@ Donate Mr.Hope a cup of coffee. _Recommended_
 @file index.ts
 
 ```ts
-const msg = "hello world";
+const msg = 'hello world';
 
 const speak = (msg: string) => console.log(msg);
 
@@ -355,9 +355,9 @@ speak(msg);
 
 ```vue
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const msg = ref("Hello World!");
+const msg = ref('Hello World!');
 </script>
 
 <template>

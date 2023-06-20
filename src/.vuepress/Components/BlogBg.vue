@@ -1,3 +1,50 @@
+<script setup lang="ts">
+import { onMounted, nextTick } from 'vue';
+import { useRouter } from 'vue-router';
+
+const BlogBg = () => {
+  if (!document.querySelector('.BlogBg')) {
+    const body = document.body;
+    const bgDiv = document.createElement('div');
+    bgDiv.className = 'BlogBg';
+    body.appendChild(bgDiv);
+  }
+};
+
+const RibbonFun = () => {
+  if (!document.getElementById('bgCanvas')) {
+    const RibbonClick = import('../script/ribbonClick');
+    RibbonClick.then((res) => {
+      res.default();
+    });
+  }
+};
+
+onMounted(() => {
+  nextTick(() => {
+    BlogBg();
+    RibbonFun();
+  });
+
+  const router = useRouter();
+  router.beforeEach((to) => {
+    nextTick(() => {
+      setTimeout(() => {
+        BlogBg();
+        RibbonFun();
+      }, 50);
+    });
+  });
+});
+</script>
+
+<template>
+  <ClientOnly>
+    <div class="none">彩色背景</div>
+  </ClientOnly>
+</template>
+
+<style lang="scss">
 @keyframes move {
   0%,
   100% {
@@ -57,56 +104,10 @@
   pointer-events: none;
 }
 
+// 层级调整 ， 全部需要 > 5
 #app {
   position: relative;
   z-index: 5;
-}
-
-#main-content.page {
-  min-height: 100vh;
-  backdrop-filter: saturate(150%) blur(0.75rem);
-  box-sizing: border-box;
-}
-
-#main-content.page.not-found {
-  backdrop-filter: none;
-}
-
-.sidebar {
-  z-index: 6;
-}
-
-.article-item .article,
-.page .blogger-info,
-.page .blog-info-list,
-.pagination-wrapper .page-number div,
-.pagination-wrapper .navigate-wrapper .navigate,
-.pagination-wrapper .navigate-wrapper input,
-.back-to-top {
-  backdrop-filter: saturate(150%) blur(0.75rem);
-}
-
-// 时间轴
-.timeline-wrapper .timeline-content {
-  backdrop-filter: saturate(150%) blur(0.75rem);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 0.375rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.toggle-sidebar-wrapper + .sidebar {
-  background: transparent;
-  backdrop-filter: none;
-}
-
-.blog-page-wrapper {
-  min-height: 100vh;
-}
-
-.theme-container .page.blog {
-  background: transparent;
 }
 
 [data-theme='light'] {
@@ -116,21 +117,21 @@
       background-color: rgba($color: #fff, $alpha: 0.1);
     }
   }
-  .article-item .article,
-  .page .blogger-info,
-  .page .blog-info-list,
-  .pagination-wrapper .navigate-wrapper .navigate,
-  .pagination-wrapper .navigate-wrapper input,
-  .pagination-wrapper .page-number div,
-  .wl-panel,
-  .back-to-top {
-    background-color: rgba($color: #fff, $alpha: 0.7);
-  }
-  #main-content.page {
-    background-color: rgba($color: #fff, $alpha: 0.85);
-  }
-  #main-content.page.not-found {
-    background: transparent;
+
+  .theme-container {
+    .vp-page.vp-blog {
+      backdrop-filter: none;
+    }
+
+    .vp-page {
+      background-color: rgba($color: #f8f8f8, $alpha: 0.7);
+      backdrop-filter: saturate(150%) blur(0.75rem);
+    }
+
+    .vp-sidebar {
+      background: transparent;
+      backdrop-filter: saturate(150%) blur(0.75rem);
+    }
   }
 }
 
@@ -140,24 +141,21 @@
       background-color: rgba(29, 32, 37, 0.7);
     }
   }
-  .article-item .article,
-  .page .blogger-info,
-  .page .blog-info-list,
-  .pagination-wrapper .navigate-wrapper .navigate,
-  .pagination-wrapper .navigate-wrapper input,
-  .pagination-wrapper .page-number div,
-  .wl-panel,
-  .back-to-top {
-    background-color: rgba(29, 32, 37, 0.7);
-  }
-  #main-content.page {
-    background-color: rgba(29, 32, 37, 0.85);
-  }
-  #main-content.page.not-found {
-    background: transparent;
-  }
-}
 
-.pagination-wrapper .page-number div.active {
-  background: var(--theme-color);
+  .theme-container {
+    .vp-page.vp-blog {
+      backdrop-filter: none;
+    }
+
+    .vp-page {
+      background-color: rgba($color: #0d1117, $alpha: 0.7);
+      backdrop-filter: saturate(150%) blur(0.75rem);
+    }
+
+    .vp-sidebar {
+      background: transparent;
+      backdrop-filter: saturate(150%) blur(0.75rem);
+    }
+  }
 }
+</style>

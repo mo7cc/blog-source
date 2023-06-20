@@ -18,10 +18,13 @@ NowPath=$(pwd)
 OutPutPath="${NowPath}/dist"
 
 # 远程仓库目录地址
-DeployPath="git@github.com:mo7cc/blog.mo7.cc.git"
+DeployPath="git@github.com:mo7Web/Mo7BlogPackage.git"
 
-# 远程仓库的本地目录
-DeployLocalPath="${NowPath}/blog.mo7.cc"
+# Deploy 完成之后的输出
+DeployEndText="
+https://github.com/mo7Web/Mo7BlogPackage
+https://blog.mo7.cc
+"
 
 echo "
 ===== 初始化变量 =====
@@ -29,6 +32,6 @@ echo "
 当前目录: ${NowPath}
 输出目录: ${OutPutPath}
 远程仓库目录: ${DeployPath}
-远程仓库本地临时目录: ${DeployLocalPath}
+完成之后的输出: ${DeployEndText}
 
 "
