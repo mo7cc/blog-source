@@ -7,7 +7,7 @@ OutPutPath=${OutPutPath}
 DeployPath=${DeployPath}
 DeployEndText=${DeployEndText}
 
-## 判断参数
+# ## 判断参数
 desc=$1
 if [ -z "${desc}" ]; then
   echo -e "\033[31m Err:需要发布说明 \033[0m"
@@ -22,16 +22,24 @@ rm -rf "${OutPutPath}"
 pnpm run build &&
   cp "${NowPath}/package.json" "${OutPutPath}"
 
+###################################################
+
 # 开始进行发布步骤 OutPutPath -> 远程 DeployPath
 cd "${OutPutPath}" || exit
 git init &&
   git add . &&
   git commit -m "${desc}" &&
   git remote add origin "${DeployPath}" &&
-  git push -f --set-upstream origin master:main &&
+  git push -f --set-upstream origin main:main &&
   echo "同步完成,开始清理目录："
 rm -rf "${OutPutPath}/.git"
 
-echo "同步结果查看： ${DeployEndText}"
+###################################################
 
+# ssh root@blog.mo7.cc "rm -rf /root/ProdProject/blog.mo7.cc"
+# scp -r "${OutPutPath}" root@blog.mo7.cc:/root/ProdProject/blog.mo7.cc
+
+###################################################
+
+echo "同步结果查看： ${DeployEndText}"
 exit 0

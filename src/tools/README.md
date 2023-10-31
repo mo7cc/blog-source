@@ -6,7 +6,7 @@ index: false
 permalink: /tools
 ---
 
-# 目录
+# 工具
 
 ::: info 一些烦恼解决起来其实很容易
 
@@ -14,6 +14,7 @@ permalink: /tools
 
 :::
 
-- [原神自动签到](./原神自动签到.md)
+- [uTools](./uTools.md)
+- [mdPerfect](./mdPerfect.md)
 
 ---

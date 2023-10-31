@@ -10,7 +10,7 @@ tag:
 permalink: /posts/logoVote
 ---
 
-# OtterTrade Logo 颜色投票留言
+# OtterTrade Logo 投票【结束】
 
 ## 点击链接去飞书投票
 

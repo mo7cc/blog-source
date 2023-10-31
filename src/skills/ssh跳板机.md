@@ -22,14 +22,17 @@ Host itpo.mo7.cc
   HostName itpo.mo7.cc
   User root
 
-Host mo7.cc
-  HostName mo7.cc
+Host test-www.OtterTrade.com
+  HostName test-www.OtterTrade.com
   User root
-  ProxyCommand ssh -W %h:%p itpo.mo7.cc
+
+Host www.OtterTrade.com
+  HostName www.OtterTrade.com
+  User root
 
 Host github.com
   HostName github.com
   User git
-  ProxyCommand ssh -W %h:%p itpo.mo7.cc
+  ProxyCommand ssh -W %h:%p test-www.OtterTrade.com
 
 ```

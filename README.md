@@ -16,6 +16,14 @@ https://theme-hope.vuejs.press/zh/
 
 https://mrhope.site/
 
+## 音乐下载
+
+https://tools.liumingye.cn/music
+
+https://bailemi.com/
+
+https://zhuanlan.zhihu.com/p/577560145
+
 ## 评论服务
 
 文档\
@@ -53,9 +61,6 @@ pnpm run dev
 
 # 编译打包
 pnpm run build
-
-# 预览
-pnpm run preview
 
 # 更新同步
 pnpm run sync

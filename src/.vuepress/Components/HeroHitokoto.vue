@@ -41,7 +41,7 @@ const InsertText = (data) => {
 
   let index = 0;
   let pauseNum = 0;
-  let pauseMax = 40;
+  let pauseMax = 60; // 停留节奏
   let huan = false;
   let insertTxt = '';
   Win.Timer = setInterval(() => {

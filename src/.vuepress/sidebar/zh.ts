@@ -1,6 +1,7 @@
 import { sidebar } from 'vuepress-theme-hope';
 
 export const zhSidebar = sidebar({
+  // 子路径
   '/about/': [
     {
       text: '返回博文',
@@ -36,6 +37,13 @@ export const zhSidebar = sidebar({
       link: '/posts/',
     },
     {
+      text: 'Linux',
+      icon: 'linux',
+      prefix: '',
+      link: '/linux/',
+      children: [],
+    },
+    {
       text: 'Debian',
       icon: 'debianos',
       prefix: 'Debian/',
@@ -48,6 +56,41 @@ export const zhSidebar = sidebar({
       prefix: 'Settings/',
       children: 'structure',
       link: '/linux/Settings/',
+    },
+  ],
+  '/coder/': [
+    {
+      text: '返回博文',
+      icon: 'sort',
+      link: '/posts/',
+    },
+    {
+      text: 'Coder',
+      icon: 'coding',
+      prefix: '',
+      link: '/coder/',
+      children: [],
+    },
+    {
+      text: 'Web前端',
+      icon: 'HTML',
+      prefix: 'coder/',
+      children: 'structure',
+      link: '/coder/frontend/',
+    },
+    {
+      text: 'golang',
+      icon: 'goicon',
+      prefix: 'golang/',
+      children: 'structure',
+      link: '/coder/golang/',
+    },
+    {
+      text: 'LeetCode',
+      icon: 'leetcode',
+      prefix: 'leetcode/',
+      children: 'structure',
+      link: '/coder/leetcode/',
     },
   ],
   '/skills/': [
@@ -99,6 +142,7 @@ export const zhSidebar = sidebar({
       link: '/favorite/links/',
     },
   ],
+  // 整体路由划分
   '/': [
     '',
     {
@@ -164,6 +208,29 @@ export const zhSidebar = sidebar({
           text: 'Settings',
           icon: 'shezhi',
           link: '/linux/Settings/',
+        },
+      ],
+    },
+    {
+      text: 'Coder',
+      icon: 'coding',
+      prefix: 'coder/',
+      link: '/coder/',
+      children: [
+        {
+          text: 'Web前端',
+          icon: 'HTML',
+          link: '/coder/frontend/',
+        },
+        {
+          text: 'Golang',
+          icon: 'goicon',
+          link: '/coder/golang/',
+        },
+        {
+          text: 'LeetCode',
+          icon: 'leetcode',
+          link: '/coder/leetcode/',
         },
       ],
     },

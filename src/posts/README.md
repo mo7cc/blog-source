@@ -13,5 +13,6 @@ permalink: /posts
 :::
 
 - [Markdown](./markdown.md)
+- [logoVote](./logoVote.md)
 
 ---

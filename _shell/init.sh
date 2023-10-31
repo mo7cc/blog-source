@@ -7,6 +7,7 @@ function GitSet {
 
   git config --global core.fileMode false
   git config core.filemode false
+  git config pull.rebase false
 
   chmod -R 777 ./
 }
