@@ -3,6 +3,7 @@ icon: leetcode
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
+permalink: /leetcode
 ---
 
 # LeetCode
@@ -19,6 +20,6 @@ index: false
 
 ## 目录
 
-- [两数之和 (twoSum)](./twoSum.md)
+- [两数之和 (twoSum)](./twoSum)
 
 ---

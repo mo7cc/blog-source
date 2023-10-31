@@ -58,6 +58,20 @@ export const zhSidebar = sidebar({
       link: '/linux/Settings/',
     },
   ],
+  '/leetcode/': [
+    {
+      text: '返回博文',
+      icon: 'sort',
+      link: '/posts/',
+    },
+    {
+      text: 'LeetCode',
+      icon: 'leetcode',
+      prefix: '',
+      link: '/leetcode/',
+      children: 'structure',
+    },
+  ],
   '/coder/': [
     {
       text: '返回博文',
@@ -84,13 +98,6 @@ export const zhSidebar = sidebar({
       prefix: 'golang/',
       children: 'structure',
       link: '/coder/golang/',
-    },
-    {
-      text: 'LeetCode',
-      icon: 'leetcode',
-      prefix: 'leetcode/',
-      children: 'structure',
-      link: '/coder/leetcode/',
     },
   ],
   '/skills/': [
@@ -145,6 +152,7 @@ export const zhSidebar = sidebar({
   // 整体路由划分
   '/': [
     '',
+    '/leetcode',
     {
       text: '博文',
       icon: 'note',
@@ -226,11 +234,6 @@ export const zhSidebar = sidebar({
           text: 'Golang',
           icon: 'goicon',
           link: '/coder/golang/',
-        },
-        {
-          text: 'LeetCode',
-          icon: 'leetcode',
-          link: '/coder/leetcode/',
         },
       ],
     },

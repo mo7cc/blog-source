@@ -5,7 +5,7 @@ export const zhNavbar = navbar([
     text: '目录',
     icon: 'sort',
     link: '/posts',
-    children: ['/coder', '/linux', '/skills', '/tools', '/coder/leetcode', '/posts'],
+    children: ['/coder', '/linux', '/skills', '/tools', '/leetcode', '/posts'],
   },
   {
     text: '索引',
