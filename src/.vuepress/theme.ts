@@ -44,8 +44,14 @@ export default hopeTheme({
     medias: {
       Email: 'mailto:mo7@mo7.cc',
       GitHub: 'https://github.com/mo7cc',
-      Lark: 'https://www.feishu.cn/invitation/page/add_contact/?token=417h7852-934c-4f08-9112-00d257d0cdae&amp;unique_id=FnKsnwD3MN8t7zjWer4tqQ==',
+      Discord: 'https://discord.gg/8yXKxbSDDg',
+      Lark: 'https://www.larksuite.com/invitation/page/add_contact/?token=c8co337a-9dd7-4976-998f-5d2898o763r5&amp;unique_id=cgjGUk53Y2dh_FCZPuqY_A==',
+      WechatPay: 'https://file.mo7.cc/static/img/wx_proceeds.jpg',
+      QQ: 'https://file.mo7.cc/static/img/myqq.jpeg',
+      Wechat: 'https://file.mo7.cc/static/img/mywchart.jpeg',
       Zhihu: 'https://www.zhihu.com/people/meichangliang',
+      BiliBili: 'https://space.bilibili.com/24452567',
+      Rss: 'https://blog.mo7.cc/rss.xml',
     },
   },
 
@@ -94,6 +100,14 @@ export default hopeTheme({
 
     components: {
       components: ['Badge', 'VPCard'],
+    },
+
+    feed: {
+      atom: true,
+      json: true,
+      rss: true,
+      image: '/pwa/144.png',
+      icon: '/pwa/144.png',
     },
 
     searchPro: {
@@ -155,15 +169,15 @@ export default hopeTheme({
       vPre: true,
 
       // install chart.js before enabling it
-      // chart: true,
+      chart: true,
 
       // insert component easily
 
       // install echarts before enabling it
-      // echarts: true,
+      echarts: true,
 
       // install flowchart.ts before enabling it
-      // flowchart: true,
+      flowchart: true,
 
       // gfm requires mathjax-full to provide tex support
       gfm: true,

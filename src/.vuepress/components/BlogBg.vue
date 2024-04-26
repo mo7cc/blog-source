@@ -158,4 +158,22 @@ onMounted(() => {
     }
   }
 }
+
+@media screen and (max-width: 719px) {
+  [data-theme='dark'] {
+    .theme-container {
+      .vp-sidebar {
+        background: rgba($color: #000, $alpha: 0.7);
+      }
+    }
+  }
+
+  [data-theme='light'] {
+    .theme-container {
+      .vp-sidebar {
+        background: rgba($color: #fff, $alpha: 0.7);
+      }
+    }
+  }
+}
 </style>

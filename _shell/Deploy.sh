@@ -24,20 +24,20 @@ pnpm run build &&
 
 ###################################################
 
-# 开始进行发布步骤 OutPutPath -> 远程 DeployPath
-cd "${OutPutPath}" || exit
-git init &&
-  git add . &&
-  git commit -m "${desc}" &&
-  git remote add origin "${DeployPath}" &&
-  git push -f --set-upstream origin main:main &&
-  echo "同步完成,开始清理目录："
-rm -rf "${OutPutPath}/.git"
+# # 开始进行发布步骤 OutPutPath -> 远程 DeployPath
+# cd "${OutPutPath}" || exit
+# git init &&
+#   git add . &&
+#   git commit -m "${desc}" &&
+#   git remote add origin "${DeployPath}" &&
+#   git push -f --set-upstream origin main:main &&
+#   echo "同步完成,开始清理目录："
+# rm -rf "${OutPutPath}/.git"
 
 ###################################################
 
-# ssh root@blog.mo7.cc "rm -rf /root/ProdProject/blog.mo7.cc"
-# scp -r "${OutPutPath}" root@blog.mo7.cc:/root/ProdProject/blog.mo7.cc
+ssh root@blog.mo7.cc "rm -rf /root/ProdProject/blog.mo7.cc"
+scp -r "${OutPutPath}" root@blog.mo7.cc:/root/ProdProject/blog.mo7.cc
 
 ###################################################
 
