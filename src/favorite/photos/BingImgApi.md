@@ -1,6 +1,5 @@
 ---
 icon: bing
-# permalink: /bing_img_api
 ---
 
 # 必应每日壁纸 api

@@ -3,7 +3,6 @@ icon: gongju
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /tools
 ---
 
 # 工具

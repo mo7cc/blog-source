@@ -4,7 +4,6 @@ layout: Layout
 pageInfo: ['Author', 'PageView']
 date: 1978-12-18
 index: false
-permalink: /favorite/music
 ---
 
 # 音乐

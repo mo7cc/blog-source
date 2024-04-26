@@ -1,11 +1,3 @@
-/*
-两数之和
-https://leetcode.cn/problems/two-sum/
-
-要求：
-输入： 数组，目标
-输出 下标，下标的结果相加等于目标
-*/
 package main
 
 import (

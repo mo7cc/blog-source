@@ -3,7 +3,6 @@ icon: coding
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /coder
 ---
 
 # Coder

@@ -2,7 +2,6 @@
 icon: linux
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /linux
 ---
 
 # Linux

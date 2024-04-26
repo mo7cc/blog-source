@@ -142,7 +142,7 @@ onMounted(() => {
       }
 
       // 文字颜色
-      .nav-item {
+      .vp-nav-item {
         & > a.nav-link {
           color: #eee;
         }
@@ -177,7 +177,7 @@ onMounted(() => {
       }
 
       // 文字颜色
-      .nav-item {
+      .vp-nav-item {
         & > a.nav-link {
           color: rgba($color: #fff, $alpha: 0.7);
         }

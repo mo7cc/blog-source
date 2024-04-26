@@ -2,7 +2,6 @@
 icon: info
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /about
 ---
 
 # 关于

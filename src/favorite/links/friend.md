@@ -1,7 +1,6 @@
 ---
 icon: youlian
 pageInfo: ['Author', 'PageView']
-# permalink: /links/friend
 ---
 
 # 友链

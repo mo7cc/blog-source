@@ -22,6 +22,7 @@ rm -rf "${DeployLocalPath}"
 ## 构建源码目录
 mkdir "${OutPutPath}"
 cp -rf "${NowPath}/_shell" "${OutPutPath}/_shell"
+cp -rf "${NowPath}/.vscode" "${OutPutPath}/.vscode"
 cp -rf "${NowPath}/src" "${OutPutPath}/src"
 cp -rf "${NowPath}/package.json" "${OutPutPath}/"
 cp -rf "${NowPath}/.gitignore" "${OutPutPath}/"

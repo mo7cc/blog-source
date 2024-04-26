@@ -15,7 +15,7 @@ projects:
   - icon: jiansuo
     name: 查看索引
     desc: 站内文章索引和分类
-    link: /article
+    link: /article/
 
   - icon: youlian
     name: 友情链接
@@ -28,5 +28,4 @@ projects:
     link: /about/guestbook
 
 footer: true
-permalink: /
 ---

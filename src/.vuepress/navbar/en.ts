@@ -6,7 +6,7 @@ export const enNavbar = navbar([
   {
     text: 'Posts',
     icon: 'edit',
-    prefix: 'posts/',
+    prefix: '/en/posts/',
     children: [
       {
         text: 'Apple',

@@ -3,7 +3,6 @@ icon: zhiliangjishu
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /skills
 ---
 
 # 技巧

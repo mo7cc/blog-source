@@ -4,7 +4,7 @@ export const zhSidebar = sidebar({
   // 子路径
   '/about/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -18,7 +18,7 @@ export const zhSidebar = sidebar({
   ],
   '/tools/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -32,7 +32,7 @@ export const zhSidebar = sidebar({
   ],
   '/linux/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -60,7 +60,7 @@ export const zhSidebar = sidebar({
   ],
   '/leetcode/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -74,7 +74,7 @@ export const zhSidebar = sidebar({
   ],
   '/coder/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -88,7 +88,7 @@ export const zhSidebar = sidebar({
     {
       text: 'Web前端',
       icon: 'HTML',
-      prefix: 'coder/',
+      prefix: 'frontend/',
       children: 'structure',
       link: '/coder/frontend/',
     },
@@ -102,7 +102,7 @@ export const zhSidebar = sidebar({
   ],
   '/skills/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -116,7 +116,7 @@ export const zhSidebar = sidebar({
   ],
   '/favorite/': [
     {
-      text: '返回博文',
+      text: '返回总目录',
       icon: 'sort',
       link: '/posts/',
     },
@@ -152,7 +152,7 @@ export const zhSidebar = sidebar({
   // 整体路由划分
   '/': [
     '',
-    '/leetcode',
+    '/leetcode/',
     {
       text: '博文',
       icon: 'note',

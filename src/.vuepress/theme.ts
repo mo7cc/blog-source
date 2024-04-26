@@ -1,7 +1,6 @@
 import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
-import path from 'path';
 
 const footerICP_HTML = `
 <a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
@@ -11,14 +10,6 @@ const footerICP_HTML = `
 
 export default hopeTheme({
   hostname: 'https://blog.mo7.cc',
-  author: {
-    name: '墨七',
-    url: 'https://mo7.cc',
-    email: 'mo7@mo7.cc',
-  },
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_u33584v4jsc.css',
-  logo: '/pwa/144.png',
-  docsDir: 'src',
   editLink: false,
   fullscreen: true,
   navbarAutoHide: 'always',
@@ -34,22 +25,28 @@ export default hopeTheme({
     'PageView',
     //..
   ],
+  navbarLayout: {
+    start: ['Brand'],
+    center: [],
+    end: ['Search', 'Links', 'Language', 'Outlook'],
+  },
 
+  author: {
+    name: '墨七',
+    url: 'https://mo7.cc',
+    email: 'mo7@mo7.cc',
+  },
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_7ti71l84kua.css',
+  logo: '/pwa/144.png',
+  docsDir: 'src',
   blog: {
     avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
-    roundAvatar: true,
     medias: {
       Email: 'mailto:mo7@mo7.cc',
       GitHub: 'https://github.com/mo7cc',
       Lark: 'https://www.feishu.cn/invitation/page/add_contact/?token=417h7852-934c-4f08-9112-00d257d0cdae&amp;unique_id=FnKsnwD3MN8t7zjWer4tqQ==',
       Zhihu: 'https://www.zhihu.com/people/meichangliang',
     },
-  },
-
-  navbarLayout: {
-    start: ['Brand'],
-    center: [],
-    end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
   locales: {
@@ -63,6 +60,7 @@ export default hopeTheme({
         timeline: '美好的事情即将发生',
       },
     },
+
     '/en/': {
       navbar: enNavbar,
       sidebar: enSidebar,
@@ -81,6 +79,9 @@ export default hopeTheme({
     },
   },
 
+  // enable it to preview all changes in time
+  // hotReload: true,
+
   plugins: {
     blog: true,
 
@@ -91,58 +92,49 @@ export default hopeTheme({
       reaction: true,
     },
 
-    // all features are enabled for demo, only preserve features you need here
+    components: {
+      components: ['Badge', 'VPCard'],
+    },
+
+    searchPro: {
+      // 索引全部内容
+      indexContent: true,
+      autoSuggestions: true,
+      // 为分类和标签添加索引
+      customFields: [
+        {
+          getter(page: any) {
+            return page.frontmatter.category;
+          },
+          formatter: {
+            '/': '分类：$content',
+            '/en/': 'Category: $content',
+          },
+        },
+        {
+          getter(page: any) {
+            return page.frontmatter.tag;
+          },
+          formatter: {
+            '/': '标签：$content',
+            '/en/': 'Tag: $content',
+          },
+        },
+      ],
+    },
+
+    // These features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
       attrs: true,
-      card: true,
-
-      // install chart.js before enabling it
-      // chart: true,
-
       codetabs: true,
+      component: true,
       demo: true,
-
-      // install echarts before enabling it
-      // echarts: true,
-
       figure: true,
-
-      // install flowchart.ts before enabling it
-      // flowchart: true,
-
-      gfm: true,
       imgLazyload: true,
       imgSize: true,
-      include: {
-        resolvePath: (file) => {
-          // if (file.startsWith('@')) {
-          //   return file.replace('@', path.resolve(__dirname, '../../'));
-          // }
-          return file;
-        },
-      },
-
-      // install katex before enabling it
-      // katex: true,
-
-      // install mathjax-full before enabling it
-      // mathjax: true,
-
+      include: true,
       mark: true,
-
-      // install mermaid before enabling it
-      // mermaid: true,
-
-      playground: {
-        presets: ['ts', 'vue'],
-      },
-
-      // install reveal.js before enabling it
-      revealJs: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
-
       stylize: [
         {
           matcher: 'Recommended',
@@ -159,16 +151,53 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
+      tasklist: true,
       vPre: true,
+
+      // install chart.js before enabling it
+      // chart: true,
+
+      // insert component easily
+
+      // install echarts before enabling it
+      // echarts: true,
+
+      // install flowchart.ts before enabling it
+      // flowchart: true,
+
+      // gfm requires mathjax-full to provide tex support
+      gfm: true,
+
+      // install katex before enabling it
+      // katex: true,
+
+      // install mathjax-full before enabling it
+      // mathjax: true,
+
+      // install mermaid before enabling it
+      // mermaid: true,
+
+      playground: {
+        presets: ['ts', 'vue'],
+      },
+
+      // install reveal.js before enabling it
+      revealJs: {
+        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+      },
 
       // install @vue/repl before enabling it
       vuePlayground: true,
+
+      // install sandpack-vue3 before enabling it
+      // sandpack: true,
     },
 
+    // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     pwa: {
-      favicon: '/favicon.png',
+      favicon: '/favicon.ico',
       cacheHTML: true,
-      cachePic: true,
+      cacheImage: true,
       appendBase: true,
       apple: {
         icon: '/pwa/144.png',

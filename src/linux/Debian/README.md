@@ -2,7 +2,6 @@
 icon: debianos
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /linux/Debian
 ---
 
 # Debian

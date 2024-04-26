@@ -1,8 +1,3 @@
-/*
-两数之和
-https://leetcode.cn/problems/two-sum/
-*/
-
 // 暴力求解
 var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {

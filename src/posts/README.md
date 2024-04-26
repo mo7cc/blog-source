@@ -3,7 +3,6 @@ icon: note
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
-permalink: /posts
 ---
 
 # 博文
@@ -12,7 +11,7 @@ permalink: /posts
 
 :::
 
-- [Markdown](./markdown.md)
-- [logoVote](./logoVote.md)
+- [Markdown 语法演示](./markdown.md)
+- [墨七的书单](./墨七的书单.md)
 
 ---

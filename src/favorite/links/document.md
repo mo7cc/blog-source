@@ -1,7 +1,6 @@
 ---
 icon: docwenjian
 pageInfo: ['Author', 'PageView']
-# permalink: /links/document
 ---
 
 # 文档
