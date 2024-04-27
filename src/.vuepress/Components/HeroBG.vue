@@ -159,7 +159,8 @@ onMounted(() => {
   min-height: 1.25rem;
   z-index: 5;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   #leftNav,
   #rightNav {
     width: 2.5rem;

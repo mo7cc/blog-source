@@ -1,13 +1,13 @@
 ---
-icon: coding
+icon: developer
 layout: Layout
 pageInfo: ['Author', 'PageView']
 index: false
 ---
 
-# Coder
+# Developer
 
-::: info 代码代码
+::: info 开发者的成长之路
 
 :::
 

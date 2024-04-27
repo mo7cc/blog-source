@@ -1,13 +1,44 @@
 import { sidebar } from 'vuepress-theme-hope';
 
+const back_posts = {
+  text: '返回总目录',
+  icon: 'sort',
+  link: '/posts/',
+};
+
+const back_developer = {
+  text: '返回Developer',
+  icon: 'back',
+  link: '/developer/',
+};
+
+const coder_arr = [
+  {
+    text: 'Linux',
+    icon: 'linux',
+    link: '/linux/',
+  },
+  {
+    text: 'Web前端',
+    icon: 'HTML',
+    link: '/frontend/',
+  },
+  {
+    text: 'Golang',
+    icon: 'goicon',
+    link: '/golang/',
+  },
+  {
+    text: 'LeetCode',
+    icon: 'leetcode',
+    link: '/leetcode/',
+  },
+];
+
 export const zhSidebar = sidebar({
   // 子路径
   '/about/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
+    back_posts,
     {
       text: '关于',
       icon: 'info',
@@ -17,11 +48,7 @@ export const zhSidebar = sidebar({
     },
   ],
   '/tools/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
+    back_posts,
     {
       text: '工具',
       icon: 'gongju',
@@ -31,16 +58,13 @@ export const zhSidebar = sidebar({
     },
   ],
   '/linux/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
+    back_developer,
     {
       text: 'Linux',
       icon: 'linux',
       prefix: '',
       link: '/linux/',
+      // children: 'structure',
       children: [],
     },
     {
@@ -59,11 +83,7 @@ export const zhSidebar = sidebar({
     },
   ],
   '/leetcode/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
+    back_developer,
     {
       text: 'LeetCode',
       icon: 'leetcode',
@@ -72,40 +92,39 @@ export const zhSidebar = sidebar({
       children: 'structure',
     },
   ],
-  '/coder/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
-    {
-      text: 'Coder',
-      icon: 'coding',
-      prefix: '',
-      link: '/coder/',
-      children: [],
-    },
+  '/frontend/': [
+    back_developer,
     {
       text: 'Web前端',
       icon: 'HTML',
-      prefix: 'frontend/',
+      prefix: '',
+      link: '/frontend/',
       children: 'structure',
-      link: '/coder/frontend/',
     },
+  ],
+  '/golang/': [
+    back_developer,
     {
       text: 'golang',
       icon: 'goicon',
-      prefix: 'golang/',
+      prefix: '',
+      link: '/golang/',
       children: 'structure',
-      link: '/coder/golang/',
     },
   ],
-  '/skills/': [
+  '/developer/': [
+    back_posts,
     {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
+      text: '感悟',
+      icon: 'ganwu',
+      prefix: '',
+      link: '/developer/',
+      children: 'structure',
     },
+    ...coder_arr,
+  ],
+  '/skills/': [
+    back_posts,
     {
       text: '技巧',
       icon: 'zhiliangjishu',
@@ -115,11 +134,7 @@ export const zhSidebar = sidebar({
     },
   ],
   '/favorite/': [
-    {
-      text: '返回总目录',
-      icon: 'sort',
-      link: '/posts/',
-    },
+    back_posts,
     {
       text: '影视',
       icon: 'movie',
@@ -152,7 +167,6 @@ export const zhSidebar = sidebar({
   // 整体路由划分
   '/': [
     '',
-    '/leetcode/',
     {
       text: '博文',
       icon: 'note',
@@ -187,56 +201,42 @@ export const zhSidebar = sidebar({
         },
       ],
     },
+
     {
-      text: '技巧',
-      icon: 'zhiliangjishu',
-      prefix: 'skills/',
-      link: '/skills/',
-      children: 'structure',
-    },
-    {
-      text: '工具',
-      icon: 'gongju',
-      prefix: 'tools/',
-      link: '/tools/',
-      children: 'structure',
-    },
-    {
-      text: 'Linux',
-      icon: 'linux',
-      prefix: 'linux/',
-      link: '/linux/',
+      text: 'Developer',
+      icon: 'developer',
+      link: '/developer/',
       children: [
         {
-          text: 'Debian',
-          icon: 'debianos',
-          link: '/linux/Debian/',
+          text: '感悟',
+          icon: 'ganwu',
+          link: '/developer/',
+        },
+        ...coder_arr,
+      ],
+    },
+
+    {
+      text: '其它',
+      icon: 'other',
+      children: [
+        {
+          text: '技巧',
+          icon: 'zhiliangjishu',
+          prefix: 'skills/',
+          link: '/skills/',
+          children: 'structure',
         },
         {
-          text: 'Settings',
-          icon: 'shezhi',
-          link: '/linux/Settings/',
+          text: '工具',
+          icon: 'gongju',
+          prefix: 'tools/',
+          link: '/tools/',
+          children: 'structure',
         },
       ],
     },
-    {
-      text: 'Coder',
-      icon: 'coding',
-      prefix: 'coder/',
-      link: '/coder/',
-      children: [
-        {
-          text: 'Web前端',
-          icon: 'HTML',
-          link: '/coder/frontend/',
-        },
-        {
-          text: 'Golang',
-          icon: 'goicon',
-          link: '/coder/golang/',
-        },
-      ],
-    },
+
     {
       text: '关于',
       icon: 'info',

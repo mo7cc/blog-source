@@ -2,6 +2,8 @@
 import { ref, onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
+let hitokotoUrl = 'https://v1.hitokoto.cn';
+// let hitokotoUrl = 'https://international.v1.hitokoto.cn'
 
 const InsertText = (data) => {
   const Win: any = window;
@@ -59,13 +61,14 @@ const InsertText = (data) => {
 
       if (insertTxt.length == 0 && pauseNum == 0) {
         clearInterval(Win.Timer);
-        GetWord();
+        // GetWord();  // 播放完成后填充新的文字
       }
       return;
     }
 
     if (huan) {
-      insertTxt = insertTxt.slice(0, index);
+      clearInterval(Win.Timer); // 禁用自动删除
+      // insertTxt = insertTxt.slice(0, index);  // 自动删除
     } else {
       insertTxt += el;
     }
@@ -101,11 +104,16 @@ const GetWord = (path?) => {
   if (toPath == '/') {
     axios({
       method: 'get',
-      url: 'https://v1.hitokoto.cn',
+      url: hitokotoUrl,
       params: {},
-    }).then((response) => {
-      InsertText(response.data);
-    });
+    })
+      .then((response) => {
+        InsertText(response.data);
+      })
+      .catch((error) => {
+        hitokotoUrl = 'https://international.v1.hitokoto.cn';
+        GetWord();
+      });
   }
 };
 

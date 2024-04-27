@@ -1,20 +1,20 @@
-# 个人博客
+# 墨七的个人博客
 
 https://blog.mo7.cc
 
-博客源码，基于 `VuePress Theme Hope` 搭建
+基于 [VuePress Theme Hope](https://theme-hope.vuejs.press) 搭建
 
 ## 博客框架
 
-https://v2.vuepress.vuejs.org/zh/
+https://v2.vuepress.vuejs.org/
 
 ## 主题文档
 
-https://theme-hope.vuejs.press/zh/
+https://theme-hope.vuejs.press/
 
 ## 官方案例
 
-https://mrhope.site/
+https://theme-hope.vuejs.press/zh/demo/blog-home.html
 
 ## 音乐下载
 
@@ -41,9 +41,11 @@ https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.22&manage_type
 
 ## 运行
 
-编译环境: Debian 11 bullseye
+编译环境: Debian 12
 
-node 版本: v18 LTS
+node 版本: v20
+
+pnpm 版本: 9.0.6
 
 ```bash
 
@@ -54,7 +56,7 @@ npm install -g pnpm
 pnpm install
 
 # 更新依赖
-pnpm run update
+pnpm run update-package
 
 # 运行
 pnpm run dev

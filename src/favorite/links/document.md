@@ -24,4 +24,8 @@ pageInfo: ['Author', 'PageView']
 
 <MyLinks type="Serve" src="document" />
 
+## <MyIcon name="other" /> Other
+
+<MyLinks type="Other" src="document" />
+
 ---

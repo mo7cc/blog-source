@@ -36,7 +36,7 @@ export default hopeTheme({
     url: 'https://mo7.cc',
     email: 'mo7@mo7.cc',
   },
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_7ti71l84kua.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_967jvr2oe6.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
@@ -51,7 +51,7 @@ export default hopeTheme({
       Wechat: 'https://file.mo7.cc/static/img/mywchart.jpeg',
       Zhihu: 'https://www.zhihu.com/people/meichangliang',
       BiliBili: 'https://space.bilibili.com/24452567',
-      Rss: 'https://blog.mo7.cc/rss.xml',
+      Rss: 'https://blog.mo7.cc/atom.xml',
     },
   },
 
@@ -61,9 +61,9 @@ export default hopeTheme({
       sidebar: zhSidebar,
       blog: {
         name: '墨七',
-        description: '简单快乐，理应如此。',
+        description: '专心致志做事，大气温和待人。',
         intro: '/about/me.html',
-        timeline: '美好的事情即将发生',
+        timeline: '简单快乐，理应如此。',
       },
     },
 

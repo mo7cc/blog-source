@@ -81,6 +81,9 @@ onMounted(() => {
     .toggle-sidebar-wrapper {
       top: 0;
     }
+    .vp-toc-placeholder {
+      top: 0.5rem;
+    }
   }
 }
 

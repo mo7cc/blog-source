@@ -17,7 +17,7 @@ export const document = [
     name: 'vuepress-theme-hope',
     desc: '一个具有强大功能的 vuepress 主题✨',
     href: 'https://theme-hope.vuejs.press',
-    cover: 'https://theme-hope.vuejs.press/logo.svg',
+    cover: 'https://theme-hope-assets.vuejs.press/logo.svg',
     type: ['local'],
   },
 
@@ -26,7 +26,7 @@ export const document = [
     desc: '🍭 一款很漂亮的 HTML5 播放器',
     href: 'https://aplayer.js.org',
     cover:
-      'https://camo.githubusercontent.com/5e1e7eda4ea5c1a2da695eab72033d799316671d86b5cc0aba5e49bc07ef0e65/68747470733a2f2f692e696d6775722e636f6d2f4c6e50765a764f2e706e67',
+      'https://camo.githubusercontent.com/945862845a2aa812b8cf50b9238b74524cb8e87b7420b647f37e69d968e09d40/68747470733a2f2f692e696d6775722e636f6d2f4c6e50765a764f2e706e67',
     type: ['localUp'],
   },
 
@@ -69,7 +69,7 @@ export const document = [
     name: 'Sass',
     desc: 'Sass 是世界上最成熟、稳定、强大的专业级 CSS 扩展语言。',
     href: 'https://www.sasscss.com/',
-    cover: 'https://www.sasscss.com/assets/img/logos/sass-77bd637b.png',
+    cover: 'https://www.sasscss.com/assets/img/logos/logo.svg',
     type: ['localUp'],
   },
   {
@@ -108,7 +108,7 @@ export const document = [
     name: 'Go语言中文网',
     desc: 'Golang中文社区,包括 golang 的最新安装包下载。',
     href: 'https://studygolang.com/',
-    cover: '/img/golangjob.ico',
+    cover: '/img/golang.jpg',
     type: ['Serve'],
   },
 
@@ -117,7 +117,7 @@ export const document = [
     desc: '处理时间的 js 工具,Moment.js 的 2kB 轻量化方案',
     href: 'https://day.js.org/',
     cover: 'https://day.js.org/img/logo.png',
-    type: ['none'],
+    type: ['Other'],
   },
 ];
 
