@@ -1,7 +1,7 @@
 export const friend = [
   {
     name: '墨七',
-    desc: '博客 & 记录 & 分享',
+    desc: '专心致志做事，大气温和待人。',
     href: 'https://blog.mo7.cc',
     cover: 'https://file.mo7.cc/static/lxh_gif/lxh_71.gif',
     type: ['friend'],
@@ -36,6 +36,20 @@ export const friend = [
     desc: '质量是1到100的事情!',
     href: 'https://testyuan1024.com',
     cover: 'https://testyuan1024.com/avatar.png',
+    type: ['friend'],
+  },
+  {
+    name: 'CoderChen',
+    desc: '这里是CK的小世界!',
+    href: 'http://ckblogs.cn/',
+    cover: 'https://imgtable.oss-cn-chengdu.aliyuncs.com/img/ECC5A66FD27C9118F1B57C4451B3B045.jpg',
+    type: ['friend'],
+  },
+  {
+    name: 'Salvely',
+    desc: 'Salvely',
+    cover: 'https://salvely.github.io/logo.svg',
+    href: 'https://salvely.github.io/',
     type: ['friend'],
   },
 ];
