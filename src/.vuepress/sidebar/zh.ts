@@ -112,6 +112,16 @@ export const zhSidebar = sidebar({
       children: 'structure',
     },
   ],
+  '/devBlogProcess/': [
+    back_posts,
+    {
+      text: '博客美化教程',
+      icon: 'lujing',
+      prefix: '',
+      link: '/devBlogProcess/',
+      children: 'structure',
+    },
+  ],
   '/developer/': [
     back_posts,
     {
@@ -234,6 +244,7 @@ export const zhSidebar = sidebar({
           link: '/tools/',
           children: 'structure',
         },
+        '/devBlogProcess/',
       ],
     },
 
