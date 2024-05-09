@@ -10,6 +10,11 @@ const footerICP_HTML = `
 
 export default hopeTheme({
   hostname: 'https://blog.mo7.cc',
+  author: {
+    name: '墨七',
+    url: 'https://mo7.cc',
+    email: 'mo7@mo7.cc',
+  },
   editLink: false,
   fullscreen: true,
   navbarAutoHide: 'always',
@@ -31,16 +36,14 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
-  author: {
-    name: '墨七',
-    url: 'https://mo7.cc',
-    email: 'mo7@mo7.cc',
-  },
   iconAssets: '//at.alicdn.com/t/c/font_3855310_967jvr2oe6.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
+    name: '墨七',
     avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
+    description: '专心致志做事，大气温和待人。',
+    intro: 'https://blog.mo7.cc/about/me.html',
     medias: {
       Email: 'mailto:mo7@mo7.cc',
       GitHub: 'https://github.com/mo7cc',
@@ -86,7 +89,7 @@ export default hopeTheme({
   },
 
   // enable it to preview all changes in time
-  // hotReload: true,
+  hotReload: true,
 
   plugins: {
     blog: true,
@@ -99,15 +102,17 @@ export default hopeTheme({
     },
 
     components: {
-      components: ['Badge', 'VPCard'],
+      components: ['Badge', 'VPCard', 'BiliBili'],
     },
+
+    copyright: false,
 
     feed: {
       atom: true,
       json: true,
       rss: true,
-      image: '/pwa/144.png',
-      icon: '/pwa/144.png',
+      image: '/pwa/72.png',
+      icon: '/pwa/512.png',
     },
 
     searchPro: {
@@ -149,6 +154,7 @@ export default hopeTheme({
       imgSize: true,
       include: true,
       mark: true,
+      imgMark: true,
       stylize: [
         {
           matcher: 'Recommended',
@@ -167,44 +173,50 @@ export default hopeTheme({
       tabs: true,
       tasklist: true,
       vPre: true,
+      breaks: true,
+      linkify: true,
+      alert: true,
+      footnote: true,
+      obsidianImgSize: true,
 
       // install chart.js before enabling it
-      chart: true,
+      chart: false,
 
       // insert component easily
 
       // install echarts before enabling it
-      echarts: true,
+      echarts: false,
 
       // install flowchart.ts before enabling it
-      flowchart: true,
+      flowchart: false,
 
       // gfm requires mathjax-full to provide tex support
-      gfm: true,
+      gfm: false,
 
       // install katex before enabling it
-      // katex: true,
+      // katex: false,
 
       // install mathjax-full before enabling it
-      // mathjax: true,
+      // mathjax: false,
 
       // install mermaid before enabling it
-      // mermaid: true,
+      // mermaid: false,
 
       playground: {
         presets: ['ts', 'vue'],
       },
 
       // install reveal.js before enabling it
-      revealJs: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      // revealJs: {
+      //   plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+      // },
+      revealJs: false,
 
       // install @vue/repl before enabling it
-      vuePlayground: true,
+      vuePlayground: false,
 
       // install sandpack-vue3 before enabling it
-      // sandpack: true,
+      // sandpack: false,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA

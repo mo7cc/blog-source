@@ -6,10 +6,6 @@
     "target": "ES2022",
     "allowJs": true
   },
-  "include": [
-    "src/.vuepress/**/*.ts",
-    "src/.vuepress/**/*.vue",
-    "src/.vuepress/**/*"
-  ],
-  "exclude": ["node_modules", "dist", "____draft"]
+  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue", "src/.vuepress/**/*"],
+  "exclude": ["node_modules", "dist", "__private"]
 }

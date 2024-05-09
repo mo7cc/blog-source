@@ -47,24 +47,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-// 搜索按钮简化
-.search-pro-button {
-  .search-pro-placeholder,
-  .search-pro-key-hints {
-    display: none;
-  }
-  border-radius: 100%;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-// 隐藏导航栏 Links 下拉图标
-.vp-navbar {
-  .dropdown-wrapper .dropdown-title .arrow {
-    display: none;
-  }
-}
-
 // sidebar 跟随顶栏一起上下移动
 .theme-container {
   .vp-sidebar {
@@ -103,7 +85,7 @@ onMounted(() => {
   }
 }
 
-// 顶部
+// hero 背景置顶
 .theme-container .vp-page.vp-blog {
   padding-top: 0;
 }
@@ -121,9 +103,20 @@ onMounted(() => {
   }
 }
 
-// 去除跳转图标
-.vp-nav-links {
-  .external-link-icon {
+// 简化搜索按钮
+.search-pro-button {
+  .search-pro-placeholder,
+  .search-pro-key-hints {
+    display: none;
+  }
+  border-radius: 100%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+// 去除下拉图标
+.vp-navbar {
+  .vp-dropdown-title .arrow {
     display: none;
   }
 }
@@ -131,7 +124,7 @@ onMounted(() => {
 // 白天
 [data-theme='light'] {
   .theme-container.scroll-top {
-    // 顶栏颜色修改
+    // 搜索按钮
     .search-pro-button {
       color: #eee;
       &:hover {
@@ -139,26 +132,29 @@ onMounted(() => {
       }
     }
 
+    .vp-dropdown-title {
+      color: #eee;
+    }
     .vp-navbar {
-      .vp-site-name {
+      .vp-nav-item > .vp-link {
         color: #eee;
       }
-
-      // 文字颜色
-      .vp-nav-item {
-        & > a.nav-link {
-          color: #eee;
-        }
-        .dropdown-title > .title {
-          color: #eee;
-        }
-        .dropdown-wrapper > .dropdown-title {
-          color: #eee;
-        }
-        .outlook-button {
-          color: #eee;
-        }
+      .vp-outlook-button {
+        color: #eee;
       }
+    }
+
+    // 移动端
+    .vp-toggle-sidebar-button::before,
+    .vp-toggle-sidebar-button::after,
+    .vp-toggle-sidebar-button .icon {
+      background: #eee;
+    }
+
+    .vp-toggle-navbar-button .vp-top,
+    .vp-toggle-navbar-button .vp-middle,
+    .vp-toggle-navbar-button .vp-bottom {
+      background: #eee;
     }
   }
 }
@@ -174,26 +170,29 @@ onMounted(() => {
       }
     }
 
+    .vp-dropdown-title {
+      color: rgba($color: #fff, $alpha: 0.7);
+    }
     .vp-navbar {
-      .vp-site-name {
+      .vp-nav-item > .vp-link {
         color: rgba($color: #fff, $alpha: 0.7);
       }
-
-      // 文字颜色
-      .vp-nav-item {
-        & > a.nav-link {
-          color: rgba($color: #fff, $alpha: 0.7);
-        }
-        .dropdown-title > .title {
-          color: rgba($color: #fff, $alpha: 0.7);
-        }
-        .dropdown-wrapper > .dropdown-title {
-          color: rgba($color: #fff, $alpha: 0.7);
-        }
-        .outlook-button {
-          color: rgba($color: #fff, $alpha: 0.7);
-        }
+      .vp-outlook-button {
+        color: rgba($color: #fff, $alpha: 0.7);
       }
+    }
+
+    // 移动端
+    .vp-toggle-sidebar-button::before,
+    .vp-toggle-sidebar-button::after,
+    .vp-toggle-sidebar-button .icon {
+      background: rgba($color: #fff, $alpha: 0.7);
+    }
+
+    .vp-toggle-navbar-button .vp-top,
+    .vp-toggle-navbar-button .vp-middle,
+    .vp-toggle-navbar-button .vp-bottom {
+      background: rgba($color: #fff, $alpha: 0.7);
     }
   }
 }

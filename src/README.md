@@ -27,5 +27,10 @@ projects:
     desc: 欢迎交换友情链接
     link: /about/guestbook
 
+  - icon: lujing
+    name: 博客美化教程
+    desc: 记录本站搭建的全过程，适合小白阅读。
+    link: /devBlogProcess/
+
 footer: true
 ---

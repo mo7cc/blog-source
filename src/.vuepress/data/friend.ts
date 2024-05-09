@@ -52,6 +52,14 @@ export const friend = [
     href: 'https://salvely.github.io/',
     type: ['friend'],
   },
+
+  {
+    name: 'JavaQuan',
+    desc: '一只爱折腾的攻城狮',
+    cover: 'https://javaquan.cn/img/logo.png',
+    href: 'https://javaquan.cn',
+    type: ['friend'],
+  },
 ];
 
 /* 

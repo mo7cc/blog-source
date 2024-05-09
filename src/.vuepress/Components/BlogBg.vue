@@ -124,8 +124,8 @@ onMounted(() => {
     }
 
     .vp-page {
-      background-color: rgba($color: #f8f8f8, $alpha: 0.7);
-      backdrop-filter: saturate(150%) blur(0.75rem);
+      background-color: rgba($color: #f8f8f8, $alpha: 0.8);
+      backdrop-filter: saturate(100%) blur(0.75rem);
     }
 
     .vp-sidebar {
@@ -138,7 +138,7 @@ onMounted(() => {
 [data-theme='dark'] {
   .BlogBg {
     &::after {
-      background-color: rgba(29, 32, 37, 0.7);
+      background-color: rgba(29, 32, 37, 0.8);
     }
   }
 
@@ -149,7 +149,7 @@ onMounted(() => {
 
     .vp-page {
       background-color: rgba($color: #0d1117, $alpha: 0.7);
-      backdrop-filter: saturate(150%) blur(0.75rem);
+      backdrop-filter: saturate(100%) blur(0.75rem);
     }
 
     .vp-sidebar {
@@ -163,7 +163,7 @@ onMounted(() => {
   [data-theme='dark'] {
     .theme-container {
       .vp-sidebar {
-        background: rgba($color: #000, $alpha: 0.7);
+        background: rgba($color: #000, $alpha: 0.8);
       }
     }
   }
@@ -171,7 +171,7 @@ onMounted(() => {
   [data-theme='light'] {
     .theme-container {
       .vp-sidebar {
-        background: rgba($color: #fff, $alpha: 0.7);
+        background: rgba($color: #fff, $alpha: 0.8);
       }
     }
   }
