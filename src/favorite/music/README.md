@@ -1,9 +1,10 @@
 ---
 icon: music
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false
+permalink: /favorite/music/
 ---
 
 # 音乐
@@ -12,6 +13,8 @@ index: false
 
 :::
 
-- [网易云歌单](./网易云歌单.md)
+---
+
+<Catalog base='/favorite/music/' />
 
 ---

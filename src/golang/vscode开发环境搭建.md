@@ -1,3 +1,7 @@
+---
+permalink: /golang/vscode_golang.html
+---
+
 # golang vscode 开发环境搭建
 
 按住 F1 按键

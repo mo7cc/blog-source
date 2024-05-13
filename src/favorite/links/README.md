@@ -3,14 +3,17 @@ icon: link
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false
+permalink: /favorite/links/
 ---
 
 # 链接
 
-- [常用文档](./document.md)
+::: info 好的东西应该共享
 
-- [友情链接](./friend.md)
+:::
 
-- [在线工具](./tools.md)
+---
+
+<Catalog base='/favorite/links/' />
 
 ---

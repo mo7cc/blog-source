@@ -2,6 +2,7 @@
 icon: goicon
 pageInfo: ['Author', 'PageView']
 index: false
+permalink: /golang/
 ---
 
 # Golang
@@ -10,6 +11,8 @@ index: false
 
 :::
 
-- [go-zero](./go-zero/)
+---
+
+<Catalog base='/golang/' />
 
 ---

@@ -1,5 +1,6 @@
 ---
 icon: bing
+permalink: /favorite/photos/bing_img_api.html
 ---
 
 # 必应每日壁纸 api

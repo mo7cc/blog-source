@@ -5,7 +5,17 @@ export const zhNavbar = navbar([
     text: '目录',
     icon: 'sort',
     link: '/posts',
-    children: ['/posts/', '/developer/', '/linux/', '/skills/', '/tools/', '/leetcode/'],
+    children: [
+      '/posts/',
+      '/developer/',
+      '/devBlogGuide/',
+      '/linux/',
+      '/golang/',
+      '/front_end_web/',
+      '/leetcode/',
+      '/tips/',
+      '/tools/',
+    ],
   },
   {
     text: '索引',

@@ -1,19 +1,20 @@
 ---
 icon: gongju
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 index: false
+
+permalink: /tools/
 ---
 
-# 工具
+# 工具分享
 
-::: info 一些烦恼解决起来其实很容易
-
-帮你省下十年光阴
+::: info 你只是缺一件趁手的兵器而已
 
 :::
 
-- [uTools](./uTools.md)
-- [mdPerfect](./mdPerfect.md)
+---
+
+<Catalog base='/tools/' />
 
 ---

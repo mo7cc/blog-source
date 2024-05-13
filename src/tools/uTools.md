@@ -6,6 +6,8 @@ category:
 tag:
   - uTools
   - uTools
+
+permalink: /tools/uTools.html
 ---
 
 # uTools

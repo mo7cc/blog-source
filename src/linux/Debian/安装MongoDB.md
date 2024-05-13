@@ -6,6 +6,8 @@ category:
 tag:
   - Linux
   - Debian
+
+permalink: /linux/debian/install_mongo.html
 ---
 
 # Debian 下安装 Mongodb

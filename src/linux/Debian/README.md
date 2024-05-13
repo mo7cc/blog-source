@@ -2,6 +2,7 @@
 icon: debianos
 pageInfo: ['Author', 'PageView']
 index: false
+permalink: /linux/debian/
 ---
 
 # Debian
@@ -10,6 +11,8 @@ index: false
 
 :::
 
-- [准备工作](./准备工作.md)
+---
+
+<Catalog base='/linux/debian/' />
 
 ---

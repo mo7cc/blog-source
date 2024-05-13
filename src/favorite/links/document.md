@@ -12,7 +12,7 @@ pageInfo: ['Author', 'PageView']
 
 <MyLinks type="local" src="document" />
 
-## <MyIcon name="lujing" /> 本站进阶
+## <MyIcon name="bokex" /> 本站进阶
 
 <MyLinks type="localUp" src="document" />
 

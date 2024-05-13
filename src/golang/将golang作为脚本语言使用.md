@@ -1,3 +1,7 @@
+---
+permalink: /golang/golang_shell.html
+---
+
 # 将 golang 作为脚本语言使用
 
 为什么？

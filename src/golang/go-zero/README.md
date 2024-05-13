@@ -4,6 +4,8 @@ category:
   - Go
 tag:
   - go-zero
+
+permalink: /golang/go-zero/
 ---
 
 # go-zero
@@ -17,3 +19,7 @@ https://go-zero.dev/
 https://www.bilibili.com/video/BV1Fg4y1W7Na
 
 ---·
+
+<Catalog base='/golang/go-zero/' />
+
+---

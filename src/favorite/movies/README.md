@@ -1,9 +1,10 @@
 ---
 icon: movie
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false
+permalink: /favorite/movies/
 ---
 
 # 影视
@@ -12,6 +13,8 @@ index: false
 
 :::
 
-- [阿甘正传](./阿甘正传.md)
+---
+
+<Catalog base='/favorite/movies/' />
 
 ---

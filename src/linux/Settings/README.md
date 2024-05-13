@@ -2,6 +2,7 @@
 icon: shezhi
 pageInfo: ['Author', 'PageView']
 index: false
+permalink: /linux/settings/
 ---
 
 # Linux 设置
@@ -10,6 +11,8 @@ index: false
 
 :::
 
-- [Curl 证书安装](./curl%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98.md)
+---
+
+<Catalog base='/linux/settings/' />
 
 ---

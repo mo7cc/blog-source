@@ -1,3 +1,7 @@
+---
+permalink: /golang/shell-format.html
+---
+
 # shell-format 插件
 
 vscode 的 shfmt 插件配置

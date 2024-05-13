@@ -1,3 +1,7 @@
+---
+permalink: /golang/go_mongo.html
+---
+
 # mongo - golang 操作
 
 任务：

@@ -2,6 +2,8 @@
 icon: linux
 pageInfo: ['Author', 'PageView']
 index: false
+
+permalink: /linux/
 ---
 
 # Linux
@@ -10,7 +12,8 @@ index: false
 
 :::
 
-- [Debian](./Debian/)
-- [Linux 设置](./Settings/)
+---
+
+<Catalog base='/linux/' />
 
 ---

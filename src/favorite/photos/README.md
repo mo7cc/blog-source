@@ -1,9 +1,10 @@
 ---
 icon: xiangce
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false
+permalink: /favorite/photos/
 ---
 
 # 相册
@@ -12,6 +13,8 @@ index: false
 
 :::
 
-- [必应壁纸 Api](./BingImgApi.md)
+---
+
+<Catalog base='/favorite/photos/' />
 
 ---

@@ -1,9 +1,10 @@
 ---
 icon: favoritea
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false
+permalink: /favorite/
 ---
 
 # 收藏
@@ -12,9 +13,8 @@ index: false
 
 :::
 
-- [影视](./movies/)
-- [音乐](./music/)
-- [照片](./photos/)
-- [链接](./links/)
+---
+
+<Catalog base='/favorite' />
 
 ---

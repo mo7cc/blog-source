@@ -21,7 +21,7 @@ const coder_arr = [
   {
     text: 'Web前端',
     icon: 'HTML',
-    link: '/frontend/',
+    link: '/front_end_web/',
   },
   {
     text: 'Golang',
@@ -65,21 +65,21 @@ export const zhSidebar = sidebar({
       prefix: '',
       link: '/linux/',
       // children: 'structure',
-      children: [],
+      // children: [],
     },
     {
       text: 'Debian',
       icon: 'debianos',
-      prefix: 'Debian/',
+      prefix: 'debian/',
       children: 'structure',
-      link: '/linux/Debian/',
+      link: '/linux/debian/',
     },
     {
       text: 'Settings',
       icon: 'shezhi',
-      prefix: 'Settings/',
+      prefix: 'settings/',
       children: 'structure',
-      link: '/linux/Settings/',
+      link: '/linux/settings/',
     },
   ],
   '/leetcode/': [
@@ -92,13 +92,13 @@ export const zhSidebar = sidebar({
       children: 'structure',
     },
   ],
-  '/frontend/': [
+  '/front_end_web/': [
     back_developer,
     {
       text: 'Web前端',
       icon: 'HTML',
       prefix: '',
-      link: '/frontend/',
+      link: '/front_end_web/',
       children: 'structure',
     },
   ],
@@ -112,34 +112,34 @@ export const zhSidebar = sidebar({
       children: 'structure',
     },
   ],
-  '/devBlogProcess/': [
+  '/devBlogGuide/': [
     back_posts,
     {
-      text: '博客美化教程',
-      icon: 'lujing',
+      text: '本博客搭建指南',
+      icon: 'boke',
       prefix: '',
-      link: '/devBlogProcess/',
+      link: '/devBlogGuide/',
       children: 'structure',
     },
   ],
   '/developer/': [
     back_posts,
+    ...coder_arr,
     {
-      text: '感悟',
-      icon: 'ganwu',
+      text: 'Developer',
+      icon: 'developer',
       prefix: '',
       link: '/developer/',
       children: 'structure',
     },
-    ...coder_arr,
   ],
-  '/skills/': [
+  '/tips/': [
     back_posts,
     {
       text: '技巧',
-      icon: 'zhiliangjishu',
+      icon: 'tips',
       prefix: '',
-      link: '/skills/',
+      link: '/tips/',
       children: 'structure',
     },
   ],
@@ -217,12 +217,12 @@ export const zhSidebar = sidebar({
       icon: 'developer',
       link: '/developer/',
       children: [
+        ...coder_arr,
         {
-          text: '感悟',
-          icon: 'ganwu',
+          text: 'Developer',
+          icon: 'developer',
           link: '/developer/',
         },
-        ...coder_arr,
       ],
     },
 
@@ -231,10 +231,10 @@ export const zhSidebar = sidebar({
       icon: 'other',
       children: [
         {
-          text: '技巧',
-          icon: 'zhiliangjishu',
-          prefix: 'skills/',
-          link: '/skills/',
+          text: '技巧分享',
+          icon: 'tips',
+          prefix: 'tips/',
+          link: '/tips/',
           children: 'structure',
         },
         {
@@ -244,7 +244,7 @@ export const zhSidebar = sidebar({
           link: '/tools/',
           children: 'structure',
         },
-        '/devBlogProcess/',
+        '/devBlogGuide/',
       ],
     },
 

@@ -1,14 +1,19 @@
 ---
 icon: developer
-layout: Layout
+
 pageInfo: ['Author', 'PageView']
 index: false
+permalink: /developer/
 ---
 
 # Developer
 
-::: info 开发者的成长之路
+::: info 开发者杂谈
 
 :::
+
+---
+
+<Catalog base='/developer/' />
 
 ---
