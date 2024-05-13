@@ -1,6 +1,6 @@
 ---
 icon: web
-star: 1
+star: 2
 order: 1
 ---
 

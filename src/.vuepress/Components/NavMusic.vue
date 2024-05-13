@@ -112,9 +112,7 @@ function AddBtnSpin() {
 //   }
 // }
 
-onMounted(() => {
-  const router = useRouter();
-
+const LoadMusicList = (callback) => {
   axios({
     method: 'get',
     url: '//file.mo7.cc/music/list.json',
@@ -124,27 +122,31 @@ onMounted(() => {
     if (listData && listData.length > 0) {
       GlobalMusicList = listData;
     }
+    console.log('加载音乐列表', GlobalMusicList);
+    callback && callback();
   });
+};
 
-  import('aplayer').then((res) => {
-    nextTick(() => {
-      APlayer = res.default;
-      InsertMenu();
-      NewPlayer();
-      // 在这里插入全局事件监听
-      window.document.body.onclick = () => {
-        CloseStatus();
-      };
-    });
+onMounted(() => {
+  const router = useRouter();
 
-    router.beforeEach(() => {
-      setTimeout(() => {
+  LoadMusicList(() => {
+    import('aplayer').then((res) => {
+      nextTick(() => {
+        APlayer = res.default;
         InsertMenu();
         NewPlayer();
-      }, 50);
-      // setTimeout(() => {
-      //   StopMusic();
-      // }, 5000);
+        // 在这里插入全局事件监听
+        window.document.body.onclick = () => {
+          CloseStatus();
+        };
+      });
+      router.beforeEach(() => {
+        setTimeout(() => {
+          InsertMenu();
+          NewPlayer();
+        }, 50);
+      });
     });
   });
 });
@@ -190,7 +192,8 @@ onMounted(() => {
   transform: scale(1);
   opacity: 1;
   &.hide {
-    top: 6%;
+    top: 0;
+    right: 0;
     opacity: 0;
     transform: scale(0);
     visibility: hidden;

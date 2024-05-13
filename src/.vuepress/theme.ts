@@ -2,12 +2,6 @@ import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 
-const footerICP_HTML = `
-<a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
-  <img src="//file.mo7.cc/static/img/beian.png">
-  陕ICP备2022011574号
-</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-about" href="/about/website.html">关于本站</a>`;
-
 export default hopeTheme({
   hostname: 'https://blog.mo7.cc',
   author: {
@@ -17,8 +11,8 @@ export default hopeTheme({
   },
   editLink: false,
   fullscreen: true,
+  print: true,
   navbarAutoHide: 'always',
-  footer: footerICP_HTML,
   pageInfo: [
     'Author',
     'Category',

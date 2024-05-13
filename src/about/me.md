@@ -1,5 +1,6 @@
 ---
 icon: selfinfo
+star: 3
 order: 3
 ---
 
