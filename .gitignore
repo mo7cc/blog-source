@@ -2,10 +2,8 @@ node_modules/
 dist/
 .DS_Store
 pnpm-lock.yaml
-
 .cache
 .temp
 .vp-cache
 .vp-temp
-
 .sum

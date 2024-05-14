@@ -3,7 +3,7 @@ import { onMounted } from 'vue';
 import { defineAsyncComponent } from 'vue';
 import 'vuepress-theme-hope/presets/bounce-icon.scss'; // 为页面图标添加鼠标悬停的跳动效果。
 
-const NavBarBeautify = defineAsyncComponent(() => import('./components/NavBarBeautify.vue'));
+const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 const HeroBG = defineAsyncComponent(() => import('./components/HeroBG.vue'));
 const HeroHitokoto = defineAsyncComponent(() => import('./components/HeroHitokoto.vue'));
 const NavMusic = defineAsyncComponent(() => import('./components/NavMusic.vue'));
@@ -24,15 +24,15 @@ export default defineClientConfig({
     onMounted(() => {});
   },
   rootComponents: [
-    NavBarBeautify,
+    TopNavBeautify,
     HeroBG,
     HeroHitokoto,
     NavMusic,
     PrintVersion,
     CommentHideBtn,
-    BlogBg,
     BlogBeautify,
     FooterEdit,
+    BlogBg,
     // ...
   ],
 });

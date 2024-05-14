@@ -8,21 +8,6 @@
   display: none;
 }
 
-// 首页边栏信息按钮的颜色
-.vp-blog-type-button .icon-wrapper.active {
-  color: #fff;
-}
-
-// 字体
-@font-face {
-  font-family: 'mo7_font';
-  src: url('/font/mo7_font.ttf');
-}
-.vp-blog-hero-title {
-  font-size: 3.8rem;
-  font-family: 'mo7_font';
-}
-
 // klipse 插件
 .klipse-demo pre {
   margin: 0;

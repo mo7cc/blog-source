@@ -150,6 +150,16 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
+// 字体
+@font-face {
+  font-family: 'mo7_font';
+  src: url('/font/mo7_font.ttf');
+}
+.vp-blog-hero-title {
+  font-size: 3.8rem;
+  font-family: 'mo7_font';
+}
+
 // 图片切换按钮
 #BingSwitchWrapper {
   position: absolute;

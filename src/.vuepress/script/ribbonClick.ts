@@ -7,7 +7,7 @@ export default function () {
 
   const canvas = document.createElement('canvas');
 
-  canvas.id = 'bgCanvas';
+  canvas.id = 'mo7_bgCanvas';
   canvas.style.zIndex = '3';
   canvas.style.width = '100vw';
   canvas.style.height = '100vh';
@@ -17,7 +17,7 @@ export default function () {
 
   body.appendChild(canvas);
 
-  let c = document.getElementById('bgCanvas') as any,
+  let c = document.getElementById('mo7_bgCanvas') as any,
     x = c.getContext('2d'),
     pr = window.devicePixelRatio || 1,
     w = window.innerWidth,
