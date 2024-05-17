@@ -3,27 +3,40 @@ import { onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 
 const BlogBg = () => {
-  if (!document.querySelector('.mo7_BlogBg')) {
-    const body = document.body;
+  if (!document.getElementById('mo7_BlogBg')) {
     const bgDiv = document.createElement('div');
-    bgDiv.className = 'mo7_BlogBg';
-    body.appendChild(bgDiv);
+    bgDiv.id = 'mo7_BlogBg';
+    document.body.appendChild(bgDiv);
   }
 };
 
-// const RibbonFun = () => {
-//   if (!document.getElementById('mo7_bgCanvas')) {
-//     const RibbonClick = import('../script/ribbonClick');
-//     RibbonClick.then((res) => {
-//       res.default();
-//     });
-//   }
-// };
+const RibbonFun = () => {
+  if (!document.getElementById('mo7_bgCanvas')) {
+    const canvasElm = document.createElement('canvas');
+    canvasElm.id = 'mo7_bgCanvas';
+    document.body.appendChild(canvasElm);
+    const RibbonClick = import('../script/canvas-nest');
+
+    RibbonClick.then((res) => {
+      res.default({
+        ElemID: 'mo7_bgCanvas',
+      });
+    });
+  }
+};
+/* 
+https://www.jq22.com/code3511
+https://www.jq22.com/code2347
+https://www.jq22.com/code3541
+https://www.jq22.com/code2555
+https://www.jq22.com/code3274
+https://www.jq22.com/code1365
+*/
 
 onMounted(() => {
   nextTick(() => {
     BlogBg();
-    // RibbonFun();
+    RibbonFun();
   });
 
   const router = useRouter();
@@ -31,7 +44,7 @@ onMounted(() => {
     nextTick(() => {
       setTimeout(() => {
         BlogBg();
-        // RibbonFun();
+        RibbonFun();
       }, 50);
     });
   });
@@ -52,12 +65,13 @@ onMounted(() => {
 
 @mixin bgCode_daytime {
   background-image: url('/img/asfalt-dark.png');
+  // background-image: url('/img/bedge-grunge.png');
   background-color: rgba(224, 200, 170, 0.6);
 }
 
 @mixin bgCode_night {
-  background-image: url('/img/asfalt-light.png');
-  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url('/img/bedge-grunge.png');
+  background-color: rgba(0, 0, 0, 1);
 }
 
 html[data-theme='light'] {
@@ -68,7 +82,7 @@ html[data-theme='dark'] {
   --border-color: rgba(158, 158, 158, 0.2);
 }
 
-.mo7_BlogBg {
+#mo7_BlogBg {
   // 布局代码
   position: fixed;
   z-index: 1;
@@ -88,13 +102,19 @@ html[data-theme='dark'] {
     width: 100vw;
     height: 100vh;
     @include noEvent;
+    background-color: transparent;
   }
 }
 
-// 插入彩带
 #mo7_bgCanvas {
-  display: none;
   @include noEvent;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
 }
 
 // 层级调整 ， 全部需要 > 5
@@ -110,7 +130,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='light'] {
-  .mo7_BlogBg {
+  #mo7_BlogBg {
     @include bgCode_daytime;
   }
 
@@ -123,7 +143,7 @@ html[data-theme='dark'] {
 }
 
 [data-theme='dark'] {
-  .mo7_BlogBg {
+  #mo7_BlogBg {
     @include bgCode_night;
   }
 
@@ -166,6 +186,8 @@ html[data-theme='dark'] {
 }
 
 @media screen and (min-width: 1440px) {
+  // 插入彩带
+
   [data-theme='light'] {
     .theme-container {
       .vp-sidebar {
@@ -173,6 +195,13 @@ html[data-theme='dark'] {
       }
       .vp-sidebar > .vp-sidebar-links {
         padding-right: 8px;
+      }
+
+      .theme-hope-content {
+        background-color: #fff;
+        padding-top: 1.4rem !important;
+        border-radius: 0.4rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       }
 
       .vp-sidebar > .vp-sidebar-links {
@@ -193,6 +222,13 @@ html[data-theme='dark'] {
       }
       .vp-sidebar > .vp-sidebar-links {
         padding-right: 8px;
+      }
+
+      .theme-hope-content {
+        background-color: #000;
+        padding-top: 1.4rem !important;
+        border-radius: 0.4rem;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px 0px;
       }
 
       .vp-sidebar > .vp-sidebar-links {
