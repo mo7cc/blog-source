@@ -413,8 +413,8 @@ export default function (param) {
     clearCanvas();
     updatePosition();
 
-    ctx.fillStyle = '#fff';
-    ctx.fillText(`FPS:${fps} lines:${lines} Average FPS:${averageFps}`, 10, 20);
+    // ctx.fillStyle = '#fff';
+    // ctx.fillText(`FPS:${fps} lines:${lines} Average FPS:${averageFps}`, 10, 20);
 
     lines = 0;
 
