@@ -1,8 +1,21 @@
 ---
+category:
+  - 前端
+tag:
+  - 工具
+  - 技巧
+  - 环境搭建
+
 permalink: /front_end_web/es6_modules.html
 ---
 
 # CommonJS 和 ES6 Modules
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 https://zhuanlan.zhihu.com/p/27644026
 

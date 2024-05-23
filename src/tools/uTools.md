@@ -1,11 +1,9 @@
 ---
 category:
-  - 技巧
-  - 使用指南
   - 工具
 tag:
   - uTools
-  - uTools
+  - 使用指南
 
 permalink: /tools/uTools.html
 ---

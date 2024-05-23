@@ -4,6 +4,11 @@ icon: tips
 pageInfo: ['Author', 'PageView']
 index: false
 
+category:
+  - 技巧
+tag:
+  - 目录
+
 permalink: /tips/
 ---
 

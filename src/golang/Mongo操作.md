@@ -1,8 +1,21 @@
 ---
+category:
+  - Golang
+tag:
+  - 库
+  - 技巧
+  - 教程
+
 permalink: /golang/go_mongo.html
 ---
 
 # mongo - golang 操作
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 任务：
 

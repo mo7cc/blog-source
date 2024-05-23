@@ -101,7 +101,20 @@
   }
 }
 
-// 文章末尾加分割线
+//  hover 后出现 的小标签
+[aria-label][data-balloon-pos]:after {
+  border-radius: 0.8rem;
+}
+[aria-label][data-balloon-pos]:hover:before,
+[aria-label][data-balloon-pos]:hover:after,
+[aria-label][data-balloon-pos][data-balloon-visible]:before,
+[aria-label][data-balloon-pos][data-balloon-visible]:after,
+[aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:before,
+[aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:after {
+  opacity: 0.7;
+}
+
+// 文章分割线变成小汽车
 hr {
   position: relative;
   margin: 0.8rem auto;

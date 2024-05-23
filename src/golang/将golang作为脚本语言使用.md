@@ -1,8 +1,20 @@
 ---
+category:
+  - Golang
+tag:
+  - 技巧
+  - 教程
+
 permalink: /golang/golang_shell.html
 ---
 
 # 将 golang 作为脚本语言使用
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 为什么？
 

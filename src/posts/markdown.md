@@ -2,13 +2,21 @@
 title: Markdown 语法展示
 icon: markdown
 order: 2
+
 category:
-  - 使用指南
+  - 博文
 tag:
+  - 演示
   - Markdown
 
 permalink: /posts/markdown.html
 ---
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 VuePress 主要从 Markdown 文件生成页面。因此，你可以使用它轻松生成文档或博客站点。
 

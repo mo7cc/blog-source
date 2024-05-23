@@ -1,4 +1,10 @@
 ---
+category:
+  - 博客搭建教程
+tag:
+  - 教程
+  - 工具
+
 permalink: /devBlogGuide/klipse.html
 ---
 

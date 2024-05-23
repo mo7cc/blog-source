@@ -1,16 +1,23 @@
 ---
 category:
-  - 技巧
+  - developer
 tag:
-  - 科学上网
   - 代理
-  - github
-  - ssh
+  - 技巧
+  - 教程
 
-permalink: /tips/ssh_jump.html
+order: 4
+
+permalink: /developer/ssh_jump.html
 ---
 
 # ssh 跳板机
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 > 通过设置 ProxyCommand 来进行 ssh 跳板机
 

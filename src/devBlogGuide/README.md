@@ -3,6 +3,12 @@ icon: boke
 
 pageInfo: ['Author', 'PageView']
 index: false
+
+category:
+  - 博客搭建教程
+tag:
+  - 教程
+
 permalink: /devBlogGuide/
 ---
 

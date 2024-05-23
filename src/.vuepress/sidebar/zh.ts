@@ -184,33 +184,6 @@ export const zhSidebar = sidebar({
       link: '/posts/',
       children: 'structure',
     },
-    {
-      text: '收藏',
-      icon: 'favoritea',
-      link: '/favorite/',
-      children: [
-        {
-          text: '影视',
-          icon: 'movie',
-          link: '/favorite/movies/',
-        },
-        {
-          text: '音乐',
-          icon: 'music',
-          link: '/favorite/music/',
-        },
-        {
-          text: '相册',
-          icon: 'xiangce',
-          link: '/favorite/photos/',
-        },
-        {
-          text: '链接',
-          icon: 'link',
-          link: '/favorite/links/',
-        },
-      ],
-    },
 
     {
       text: 'Developer',
@@ -245,6 +218,34 @@ export const zhSidebar = sidebar({
           children: 'structure',
         },
         '/devBlogGuide/',
+      ],
+    },
+
+    {
+      text: '收藏',
+      icon: 'favoritea',
+      link: '/favorite/',
+      children: [
+        {
+          text: '影视',
+          icon: 'movie',
+          link: '/favorite/movies/',
+        },
+        {
+          text: '音乐',
+          icon: 'music',
+          link: '/favorite/music/',
+        },
+        {
+          text: '相册',
+          icon: 'xiangce',
+          link: '/favorite/photos/',
+        },
+        {
+          text: '链接',
+          icon: 'link',
+          link: '/favorite/links/',
+        },
       ],
     },
 

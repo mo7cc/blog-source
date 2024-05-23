@@ -1,15 +1,20 @@
 ---
 category:
-  - 技巧
-  - 使用指南
   - 工具
 tag:
   - Markdown
+  - 使用指南
 
 permalink: /tools/mdPerfect.html
 ---
 
 # Markdown 流程图与思维导图
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 ::: info 个人笔记的终极形态
 

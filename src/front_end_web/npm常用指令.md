@@ -1,20 +1,32 @@
 ---
+category:
+  - 前端
+tag:
+  - 工具
+  - 技巧
+
 permalink: /front_end_web/npm.html
 ---
 
 # npm 常用命令
 
+::: warning
+
+该文档有待补充和完善
+
+:::
+
 ## 阿里巴巴开源镜像站
 
 https://developer.aliyun.com/mirror/
 
-## npm 代理加速设置
+## npm 镜像站
 
 http://www.npmmirror.com/
 
 ## windows 下 使用 git-bash 来运行 npm run
 
-```
+```bash
 npm config set script-shell "C:\\meichangliang\\soft\\Git\\bin\\bash.exe"
 
 ```

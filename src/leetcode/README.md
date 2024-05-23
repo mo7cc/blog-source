@@ -3,6 +3,12 @@ icon: leetcode
 
 pageInfo: ['Author', 'PageView']
 index: false
+
+category:
+  - leetcode
+tag:
+  - 目录
+
 permalink: /leetcode/
 ---
 

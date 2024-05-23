@@ -1,8 +1,19 @@
 ---
+category:
+  - 前端
+tag:
+  - 工具
+
 permalink: /front_end_web/pm2.html
 ---
 
 # pm2 最好用的后台守护进程
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 ```bash shell
 #安装

@@ -2,6 +2,12 @@
 icon: debianos
 pageInfo: ['Author', 'PageView']
 index: false
+
+category:
+  - Linux
+tag:
+  - 目录
+
 permalink: /linux/debian/
 ---
 

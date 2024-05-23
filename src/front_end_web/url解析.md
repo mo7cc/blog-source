@@ -1,8 +1,19 @@
 ---
+category:
+  - 前端
+tag:
+  - 技巧
+
 permalink: /front_end_web/url_parse.html
 ---
 
 # url 解析
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 ```js
 parse  解析

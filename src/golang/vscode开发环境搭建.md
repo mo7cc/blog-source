@@ -1,8 +1,19 @@
 ---
+category:
+  - Golang
+tag:
+  - 工具
+
 permalink: /golang/vscode_golang.html
 ---
 
 # golang vscode 开发环境搭建
+
+::: warning
+
+该文档有待补充和完善
+
+:::
 
 按住 F1 按键
 

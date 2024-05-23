@@ -3,6 +3,11 @@ icon: note
 
 pageInfo: ['Author', 'PageView']
 
+category:
+  - 博文
+tag:
+  - 目录
+
 permalink: /posts/
 ---
 

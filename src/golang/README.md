@@ -2,6 +2,12 @@
 icon: goicon
 pageInfo: ['Author', 'PageView']
 index: false
+
+category:
+  - Golang
+tag:
+  - 目录
+
 permalink: /golang/
 ---
 

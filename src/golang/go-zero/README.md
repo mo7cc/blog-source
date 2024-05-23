@@ -1,9 +1,9 @@
 ---
 category:
-  - 编程
   - Go
 tag:
   - go-zero
+  - 库
 
 permalink: /golang/go-zero/
 ---
