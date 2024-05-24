@@ -108,6 +108,10 @@ npm config delete registry
 
 > 具体细节可参考文章 [科学上网与本地代理](../developer/科学上网与本地代理.md)
 
+如果你把代理关了，使用 npm 更新依赖时会有如下显示
+
+![npm更新依赖报错](./image/npm_local_propxy.png)
+
 ---
 
 ::: info 提示

@@ -88,6 +88,10 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    catalog: {
+      index: true,
+    },
+
     comment: {
       provider: 'Waline',
       serverURL: 'https://talk.mo7.cc',
