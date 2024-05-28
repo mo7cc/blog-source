@@ -2,6 +2,7 @@
 icon: note
 
 pageInfo: ['Author', 'PageView']
+index: false
 
 category:
   - 博文
@@ -11,7 +12,7 @@ tag:
 permalink: /posts/
 ---
 
-# 总目录
+# 博文
 
 ::: info 记录一些所思所想
 
@@ -19,6 +20,6 @@ permalink: /posts/
 
 ---
 
-<Catalog base='/' />
+<Catalog base='/posts/' />
 
 ---

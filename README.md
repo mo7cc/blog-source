@@ -45,9 +45,9 @@ https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.22&manage_type
 
 编译环境: Debian 12
 
-node 版本: v20
+node 版本: v20.x
 
-pnpm 版本: 9.0.6
+pnpm 版本: 9.x
 
 ```bash
 

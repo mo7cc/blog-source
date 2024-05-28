@@ -2,6 +2,13 @@ import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 
+const footerICP_HTML = `
+<a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
+  <img src="//file.mo7.cc/static/img/beian.png">
+  陕ICP备2022011574号
+</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="footer-about" href="/about/website.html">关于本站</a>
+`;
+
 export default hopeTheme({
   hostname: 'https://blog.mo7.cc',
   author: {
@@ -11,7 +18,6 @@ export default hopeTheme({
   },
   editLink: false,
   fullscreen: true,
-  print: true,
   navbarAutoHide: 'always',
   pageInfo: [
     'Author',
@@ -30,7 +36,7 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_3g6rv8jcxju.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_y1h36ir3mu.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
@@ -51,6 +57,10 @@ export default hopeTheme({
       Rss: 'https://blog.mo7.cc/atom.xml',
     },
   },
+
+  footer: footerICP_HTML,
+  // displayFooter: true,
+  sidebarSorter: ['order', 'readme', 'title', 'filename'],
 
   locales: {
     '/': {
@@ -87,10 +97,6 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-
-    catalog: {
-      index: true,
-    },
 
     comment: {
       provider: 'Waline',
@@ -178,18 +184,15 @@ export default hopeTheme({
       obsidianImgSize: true,
 
       // install chart.js before enabling it
-      chart: false,
+      // chart: false,
 
       // insert component easily
 
       // install echarts before enabling it
-      echarts: false,
+      // echarts: false,
 
       // install flowchart.ts before enabling it
-      flowchart: false,
-
-      // gfm requires mathjax-full to provide tex support
-      gfm: false,
+      // flowchart: false,
 
       // install katex before enabling it
       // katex: false,
@@ -200,18 +203,18 @@ export default hopeTheme({
       // install mermaid before enabling it
       // mermaid: false,
 
-      playground: {
-        presets: ['ts', 'vue'],
-      },
+      // playground: {
+      //   presets: ['ts', 'vue'],
+      // },
 
       // install reveal.js before enabling it
       // revealJs: {
       //   plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
       // },
-      revealJs: false,
+      // revealJs: false,
 
       // install @vue/repl before enabling it
-      vuePlayground: false,
+      // vuePlayground: false,
 
       // install sandpack-vue3 before enabling it
       // sandpack: false,

@@ -8,169 +8,154 @@ const back_posts = {
 
 const back_developer = {
   text: '返回Developer',
-  icon: 'back',
+  icon: 'developer',
   link: '/developer/',
 };
 
-const coder_arr = [
-  {
-    text: 'Linux',
-    icon: 'linux',
-    link: '/linux/',
-  },
-  {
-    text: 'Web前端',
-    icon: 'HTML',
-    link: '/front_end_web/',
-  },
-  {
-    text: 'Golang',
-    icon: 'goicon',
-    link: '/golang/',
-  },
-  {
-    text: 'LeetCode',
-    icon: 'leetcode',
-    link: '/leetcode/',
-  },
-];
+const back_tutorial = {
+  text: '返回教程',
+  icon: 'bookone',
+  link: '/tutorial/',
+};
 
 export const zhSidebar = sidebar({
-  // 子路径
+  // 关于
   '/about/': [
     back_posts,
     {
       text: '关于',
       icon: 'info',
-      prefix: '',
       link: '/about/',
       children: 'structure',
     },
   ],
+  // 工具
   '/tools/': [
     back_posts,
     {
       text: '工具',
       icon: 'gongju',
-      prefix: '',
       link: '/tools/',
       children: 'structure',
     },
   ],
-  '/linux/': [
-    back_developer,
-    {
-      text: 'Linux',
-      icon: 'linux',
-      prefix: '',
-      link: '/linux/',
-      // children: 'structure',
-      // children: [],
-    },
-    {
-      text: 'Debian',
-      icon: 'debianos',
-      prefix: 'debian/',
-      children: 'structure',
-      link: '/linux/debian/',
-    },
-    {
-      text: 'Settings',
-      icon: 'shezhi',
-      prefix: 'settings/',
-      children: 'structure',
-      link: '/linux/settings/',
-    },
-  ],
-  '/leetcode/': [
-    back_developer,
-    {
-      text: 'LeetCode',
-      icon: 'leetcode',
-      prefix: '',
-      link: '/leetcode/',
-      children: 'structure',
-    },
-  ],
-  '/front_end_web/': [
-    back_developer,
-    {
-      text: 'Web前端',
-      icon: 'HTML',
-      prefix: '',
-      link: '/front_end_web/',
-      children: 'structure',
-    },
-  ],
-  '/golang/': [
-    back_developer,
-    {
-      text: 'golang',
-      icon: 'goicon',
-      prefix: '',
-      link: '/golang/',
-      children: 'structure',
-    },
-  ],
-  '/devBlogGuide/': [
-    back_posts,
-    {
-      text: '本博客搭建指南',
-      icon: 'boke',
-      prefix: '',
-      link: '/devBlogGuide/',
-      children: 'structure',
-    },
-  ],
-  '/developer/': [
-    back_posts,
-    ...coder_arr,
-    {
-      text: 'Developer',
-      icon: 'developer',
-      prefix: '',
-      link: '/developer/',
-      children: 'structure',
-    },
-  ],
+  // 小技巧
   '/tips/': [
     back_posts,
     {
       text: '技巧',
       icon: 'tips',
-      prefix: '',
       link: '/tips/',
       children: 'structure',
     },
   ],
+  // 开发者
+  '/developer/': [
+    back_posts,
+    {
+      text: '开发者',
+      icon: 'developer',
+      link: '/developer/',
+      children: 'structure',
+    },
+  ],
+  '/developer/basic/': [
+    back_developer,
+    {
+      text: '基础',
+      icon: 'basic',
+      link: '/developer/basic/',
+      children: 'structure',
+    },
+  ],
+  '/developer/linux/': [
+    back_developer,
+    {
+      text: 'Linux',
+      icon: 'linux',
+      link: '/developer/linux/',
+      children: 'structure',
+    },
+  ],
+
+  '/developer/front_end_web/': [
+    back_developer,
+    {
+      text: 'Web前端',
+      icon: 'HTML',
+      link: '/developer/front_end_web/',
+      children: 'structure',
+    },
+  ],
+  '/developer/golang/': [
+    back_developer,
+    {
+      text: 'golang',
+      icon: 'goicon',
+      link: '/developer/golang/',
+      children: 'structure',
+    },
+  ],
+
+  // leetcode
+  '/leetcode/': [
+    back_developer,
+    {
+      text: 'LeetCode',
+      icon: 'leetcode',
+      link: '/leetcode/',
+      children: 'structure',
+    },
+  ],
+
+  // 教程
+  '/tutorial/': [
+    back_posts,
+    {
+      text: '教程',
+      icon: 'bookone',
+      link: '/tutorial/',
+      children: 'structure',
+    },
+  ],
+  '/tutorial/vuepress-hope/': [
+    back_tutorial,
+    {
+      text: '本博客搭建指南',
+      icon: 'boke',
+      link: '/tutorial/vuepress-hope/',
+      children: 'structure',
+    },
+  ],
+  // 收藏
   '/favorite/': [
     back_posts,
     {
       text: '影视',
       icon: 'movie',
-      prefix: 'movies/',
       link: '/favorite/movies/',
+      prefix: 'movies/',
       children: 'structure',
     },
     {
       text: '音乐',
       icon: 'music',
-      prefix: 'music/',
       children: 'structure',
+      prefix: 'music/',
       link: '/favorite/music/',
     },
     {
       text: '相册',
       icon: 'xiangce',
-      prefix: 'photos/',
       children: 'structure',
+      prefix: 'photos/',
       link: '/favorite/photos/',
     },
     {
       text: '链接',
       icon: 'link',
-      prefix: 'links/',
       children: 'structure',
+      prefix: 'links/',
       link: '/favorite/links/',
     },
   ],
@@ -186,17 +171,27 @@ export const zhSidebar = sidebar({
     },
 
     {
-      text: 'Developer',
+      text: '开发者',
       icon: 'developer',
+      prefix: 'developer/',
       link: '/developer/',
-      children: [
-        ...coder_arr,
-        {
-          text: 'Developer',
-          icon: 'developer',
-          link: '/developer/',
-        },
-      ],
+      children: 'structure',
+    },
+
+    {
+      text: '教程',
+      icon: 'bookone',
+      prefix: 'tutorial/',
+      link: '/tutorial/',
+      children: 'structure',
+    },
+
+    {
+      text: '收藏',
+      icon: 'favoritea',
+      prefix: 'favorite/',
+      link: '/favorite/',
+      children: 'structure',
     },
 
     {
@@ -217,35 +212,6 @@ export const zhSidebar = sidebar({
           link: '/tools/',
           children: 'structure',
         },
-        '/devBlogGuide/',
-      ],
-    },
-
-    {
-      text: '收藏',
-      icon: 'favoritea',
-      link: '/favorite/',
-      children: [
-        {
-          text: '影视',
-          icon: 'movie',
-          link: '/favorite/movies/',
-        },
-        {
-          text: '音乐',
-          icon: 'music',
-          link: '/favorite/music/',
-        },
-        {
-          text: '相册',
-          icon: 'xiangce',
-          link: '/favorite/photos/',
-        },
-        {
-          text: '链接',
-          icon: 'link',
-          link: '/favorite/links/',
-        },
       ],
     },
 
@@ -253,7 +219,7 @@ export const zhSidebar = sidebar({
       text: '关于',
       icon: 'info',
       prefix: 'about/',
-      link: '/about/website.html',
+      link: '/about/',
       children: 'structure',
     },
   ],

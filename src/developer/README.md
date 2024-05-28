@@ -13,13 +13,7 @@ index: false
 permalink: /developer/
 ---
 
-# Developer
-
-::: info 开发者杂谈
-
-:::
-
----
+# 开发者
 
 <Catalog base='/developer/' />
 
