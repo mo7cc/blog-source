@@ -6,8 +6,6 @@ tag:
   - 技巧
   - 教程
 
-order: 3
-
 permalink: /tutorial/ssh_jump.html
 ---
 

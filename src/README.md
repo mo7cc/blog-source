@@ -30,7 +30,12 @@ projects:
   - icon: boke
     name: 博客美化教程
     desc: 记录本站搭建的全过程，适合小白阅读。
-    link: /devBlogGuide/
+    link: /tutorial/vuepress-hope/
+
+  - icon: jiaocheng
+    name: OtterTrade文档站
+    desc: 做最好用的的量化平台。
+    link: /posts/ot-doc_ready.html
 
 footer: true
 ---

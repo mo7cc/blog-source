@@ -160,7 +160,7 @@ npm config set script-shell "C:\\mo7cc\\soft\\Git\\bin\\bash.exe"
 地址里面 `\\` 中的第一个 `\` 实为转义符。
 :::
 
-详细可 参考 [Git 的基本安装和使用](../../tools/Git的基本安装和使用.md)
+详细可 参考 [Git 的基本安装和使用](../../tools/git/)
 
 ## 环境安装结果的验证
 
