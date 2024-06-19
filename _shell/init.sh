@@ -2,7 +2,7 @@
 
 ## git 设置初始化
 function GitConfigInit() {
-  echo " 已覆盖 Git 设置 "
+  echo "覆盖 Git 默认设置 "
   # 设置大小写敏感
   git config core.ignorecase false
   # 忽略文件权限的变更
@@ -29,7 +29,7 @@ OutPutPath="${NowPath}/dist"
 GitRemotePackagePath="git@github.com:mo7-web/mo7-web.github.io.git"
 
 # Deploy 完成之后的输出
-DeployEndText="
+ShellEndInfo="
 https://github.com/mo7-web/mo7-web.github.io
 https://blog.mo7.cc
 "
@@ -40,6 +40,6 @@ echo "
 当前目录: ${NowPath}
 输出目录: ${OutPutPath}
 远程仓库目录: ${GitRemotePackagePath}
-完成之后的输出: ${DeployEndText}
+完成之后的输出: ${ShellEndInfo}
 
 "

@@ -8,7 +8,15 @@
 
 ## {{weekList[i].date}} {{weekList[i].week}}
 
-- {{weekList[i].week}}任务
+**工作**
+
+- ✅ {{weekList[i].week}}工作任务一
+- {{weekList[i].week}}工作任务二 ❌
+
+**个人**
+
+- ✅ {{weekList[i].week}}个人任务一
+- {{weekList[i].week}}个人任务二 ❌
 
 <% } %>
 

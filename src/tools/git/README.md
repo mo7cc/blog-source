@@ -6,7 +6,9 @@ category:
 tag:
   - Git
   - 目录
-order: 1
+dir:
+  order: 1
+
 permalink: /tools/git/
 ---
 

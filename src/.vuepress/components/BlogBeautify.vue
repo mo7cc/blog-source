@@ -155,16 +155,4 @@ hr {
     }
   }
 }
-
-// 选中的 的顶部标签高亮
-.theme-container {
-  .vp-nav-links {
-    .route-link-active {
-      &::after {
-        inset: auto 0 0;
-        visibility: visible;
-      }
-    }
-  }
-}
 </style>

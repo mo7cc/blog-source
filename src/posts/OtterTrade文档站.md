@@ -21,12 +21,18 @@ https://www.zhihu.com/question/35977425/answer/3001448431
 并成立了一个 [Github 组织](https://github.com/otter-trade) ，\
 然后大家一起研发了[OtterTrade.com](https://OtterTrade.com) ，\
 在最开始进行产品定位的时候，就要求主站必须精简、美观、大方、易使用。但是再怎么易使用，必要的文档说明是无法避免的。
-于是所有的解释说明的工作全部计划交给一个独立的文档站去承担。
+于是计划所有的解释说明的工作全部交给一个独立的文档站去承担。
 
 文档站中包含了平台介绍，快速上手，系列教程，团队介绍，起源，愿景，规划等等等。可以说现阶段文档站的重要程度不亚于 OtterTrade.com 主站。在运营设计上，文档站有三个地址:
 
 文档站(Github Pages)
 https://otter-trade.github.io
+
+::: details 宣发主站
+`Github Pages` 的好处是完全免费，且不用担心服务器挂掉，或者出什么问题，维护简单，没有任何成本。而且 `github.io` 具有高度的辨识性，不用担心会被封禁。所以这个地址将会作为将来的宣发主站。
+
+缺点是国内访问速度可能略慢。
+:::
 
 文档站(新加坡备用地址)
 https://doc.OtterTrade.com
@@ -34,19 +40,19 @@ https://doc.OtterTrade.com
 文档站(国内备用地址)
 https://ot-doc.mo7.cc
 
-因为文档站是导航，是回家的路。
+文档站是导航，是回家的路，所以安全可靠的访问途径非常重要。
 
 ## 文档站的构成
 
 文档站的源码存放于 <https://github.com/otter-trade/doc-otter-trade> ，是个开源仓库，主体由 [vuepress-hope](https://theme-hope.vuejs.press/zh/) 搭建。
 
-其编译结果存放于 <https://github.com/otter-trade/otter-trade.github.io> 仓库，因此可以直接使用 [Github Pages](https://pages.github.com/) 来访问其编译后的静态站点。
+其编译结果存放于 <https://github.com/otter-trade/otter-trade.github.io> 仓库，因此可以直接利用 [Github Pages](https://pages.github.com/) 的特性。
 
 然后通过 [Webhooks](https://cloud.tencent.com/developer/article/2151039) 机制同时部署在两台不同的服务器之上。
 
 所以文档站的基本工作流就是:
 
-1. 向 [墨七](https://github.com/mo7cc) 申请 [doc-otter-trade](https://github.com/otter-trade/doc-otter-trade) 的仓库权限；
+1. 向 [墨七](https://github.com/mo7cc) 申请 [doc-otter-trade](https://github.com/otter-trade/doc-otter-trade) 和 [otter-trade.github.io](https://github.com/otter-trade/otter-trade.github.io) 这两个仓库的权限；
 2. 利用 `git clone` 命令下载文档站源码；
 3. 在编写完对应文档之后，编译打包并推送至 [otter-trade.github.io](https://github.com/otter-trade/otter-trade.github.io) 仓库完成发布。
 
@@ -57,7 +63,6 @@ https://ot-doc.mo7.cc
 3. [VSCode 的介绍和基本使用](../tools/vscode/VSCode的介绍和基本使用.md)
 4. [学习基本的 Markdown 语法](https://markdown.com.cn/intro.html)
 5. [学习 Github 的基本使用](https://docs.github.com/zh/get-started)
-6. 向 [墨七](https://github.com/mo7cc) 索要两个仓库的写入权限
 
 ::: details
 

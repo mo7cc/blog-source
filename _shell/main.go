@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// 启动一个静态服务
 func main() {
 	prot := "9988"
 

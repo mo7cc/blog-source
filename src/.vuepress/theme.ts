@@ -1,7 +1,9 @@
 import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
+import { getDirname, path } from 'vuepress/utils';
 
+const __dirname = getDirname(import.meta.url);
 const footerICP_HTML = `
 <a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
   <img src="//file.mo7.cc/static/img/beian.png">
@@ -60,7 +62,6 @@ export default hopeTheme({
 
   footer: footerICP_HTML,
   // displayFooter: true,
-  sidebarSorter: ['order', 'readme', 'title', 'filename'],
 
   locales: {
     '/': {
@@ -156,7 +157,14 @@ export default hopeTheme({
       figure: true,
       imgLazyload: true,
       imgSize: true,
-      include: true,
+      include: {
+        resolvePath: (file) => {
+          if (file.startsWith('@src')) {
+            return file.replace('@src', path.resolve(__dirname, '..'));
+          }
+          return file;
+        },
+      },
       mark: true,
       imgMark: true,
       stylize: [

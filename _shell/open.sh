@@ -1,10 +1,12 @@
 #!/bin/bash
 
 ## 设置并加载变量
+# shellcheck disable=SC1091
 source "./_shell/init.sh"
-NowPath=${NowPath}
-OutPutPath=${OutPutPath}
-DeployPath="git@github.com:mo7cc/blog-source.git"
+
+NowPath=${NowPath:?}
+OutPutPath=${OutPutPath:?}
+GitRemotePath="git@github.com:mo7cc/blog-source.git"
 DeployLocalPath="${NowPath}/blog-source"
 
 ## 判断参数
@@ -34,7 +36,7 @@ cp -rf "${NowPath}/.prettierrc.cjs" "${OutPutPath}/"
 
 # 开始进行发布步骤 OutPutPath -> 远程 DeployPath
 ## 拉取远程仓库
-git clone "${DeployPath}"
+git clone "${GitRemotePath}"
 
 ## git 本地仓库中 .git 移动到 dist 目录中
 mv "${DeployLocalPath}/.git" "${OutPutPath}/.git"
@@ -57,6 +59,6 @@ git add . &&
 echo "${OutPutPath}"
 # 将名字改回来
 mv "${DeployLocalPath}" "${OutPutPath}" &&
-  echo "已推送至${DeployPath}"
+  echo "已推送至${GitRemotePath}"
 
 exit 0

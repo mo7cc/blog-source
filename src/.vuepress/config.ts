@@ -1,14 +1,14 @@
 import { defineUserConfig } from 'vuepress';
 import theme from './theme.js';
+import { getDirname, path } from 'vuepress/utils';
+const __dirname = getDirname(import.meta.url);
+const SrcPath = path.resolve(__dirname, '../');
 
 export default defineUserConfig({
-  head: [
-    [
-      'link',
-      { rel: 'stylesheet', type: 'text/css', href: '//storage.googleapis.com/app.klipse.tech/css/codemirror.css' },
-    ],
-    ['link', { rel: 'stylesheet', type: 'text/css', href: '//storage.googleapis.com/app.klipse.tech/css/prolog.css' }],
-  ],
+  alias: {
+    '@components': path.resolve(__dirname, 'components'),
+    '@src': SrcPath,
+  },
 
   dest: 'dist',
   host: '0.0.0.0',

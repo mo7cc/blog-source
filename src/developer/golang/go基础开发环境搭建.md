@@ -16,6 +16,9 @@ permalink: /developer/golang/golang_install.html
 官网地址：
 https://golang.google.cn/
 
+国内 Wiki
+https://learnku.com/go/wikis
+
 ## Windows && MacOS
 
 第一步，在命令行输入 `arch` 查看机器硬件架构类型
@@ -45,17 +48,17 @@ MacOS 下载 `.pkg` 文件，无脑下一步
 相关操作脚本如下:
 
 注意区分 amd 和 arm 架构，
-每次版本更新时 只需要将版本号 `go1.22.3` 换成最新版本号即可。
+每次版本更新时 只需要将版本号 `go1.22.4` 换成最新版本号即可。
 
 ```bash
 # 查看机器硬件架构类型
 arch
 
 # 下载 x86 版本
-curl -o "goPackage" https://dl.google.com/go/go1.22.3.linux-amd64.tar.gz
+curl -o "goPackage" https://dl.google.com/go/go1.22.4.linux-amd64.tar.gz
 
 # 或者 下载 ARM 版本
-curl -o "goPackage" https://dl.google.com/go/go1.22.3.linux-arm64.tar.gz
+curl -o "goPackage" https://dl.google.com/go/go1.22.4.linux-arm64.tar.gz
 
 # 删除老版本(亲测，不删除老版本会出现各种莫名其妙的问题)
 rm -rf /usr/lib/go

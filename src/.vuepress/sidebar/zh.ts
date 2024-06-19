@@ -193,26 +193,19 @@ export const zhSidebar = sidebar({
       link: '/favorite/',
       children: 'structure',
     },
-
     {
-      text: '其它',
-      icon: 'other',
-      children: [
-        {
-          text: '技巧分享',
-          icon: 'tips',
-          prefix: 'tips/',
-          link: '/tips/',
-          children: 'structure',
-        },
-        {
-          text: '工具',
-          icon: 'gongju',
-          prefix: 'tools/',
-          link: '/tools/',
-          children: 'structure',
-        },
-      ],
+      text: '技巧分享',
+      icon: 'tips',
+      prefix: 'tips/',
+      link: '/tips/',
+      children: 'structure',
+    },
+    {
+      text: '工具',
+      icon: 'gongju',
+      prefix: 'tools/',
+      link: '/tools/',
+      children: 'structure',
     },
 
     {

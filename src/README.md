@@ -13,9 +13,9 @@ article: false
 index: false
 projects:
   - icon: jiansuo
-    name: 查看索引
-    desc: 站内文章索引和分类
-    link: /article/
+    name: 站点地图
+    desc: 查看本站全部文章目录
+    link: /posts/catalog.html
 
   - icon: youlian
     name: 友情链接
@@ -24,13 +24,23 @@ projects:
 
   - icon: liuyan
     name: 留言板
-    desc: 欢迎交换友情链接
+    desc: '我轻轻地走,正如我轻轻地来'
     link: /about/guestbook
 
   - icon: boke
     name: 博客美化教程
     desc: 记录本站搭建的全过程，适合小白阅读。
     link: /tutorial/vuepress-hope/
+
+  - icon: developer
+    name: 开发者的成长之路
+    desc: 作为一名开发者，我觉得这是很酷的一件事情。
+    link: /developer/
+
+  - icon: leetcode
+    name: LeetCode
+    desc: 没事刷一刷算法，预防老年痴呆。
+    link: /leetcode/
 
   - icon: jiaocheng
     name: OtterTrade文档站

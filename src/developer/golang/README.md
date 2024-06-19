@@ -1,7 +1,8 @@
 ---
 icon: goicon
 pageInfo: ['Author', 'PageView']
-index: false
+dir:
+  order: 3
 
 category:
   - Golang
@@ -25,8 +26,9 @@ permalink: /developer/golang/
 
 ## 该分类之下会包含 如下内容
 
-golang 的基本介绍，资料，环境搭建，常用库，工作方式等
+golang 的基本介绍，
+环境搭建，常用库，工作方式等。
 
-::: info
+::: warning
 但是由于作者很懒，详细文章，日后整理出来。
 :::

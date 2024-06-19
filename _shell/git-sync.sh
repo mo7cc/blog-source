@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## 设置并加载变量
+# shellcheck disable=SC1091
 source "./_shell/init.sh"
 
 GitConfigInit

@@ -6,7 +6,8 @@ tag:
   - 技巧
   - 教程
 
-order: 2
+order: 3
+
 permalink: /tools/wsl_ready.html
 ---
 
