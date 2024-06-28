@@ -1,5 +1,5 @@
 ---
-icon: link
+icon: ganwu
 pageInfo: ['Author', 'PageView']
 date: 1993-02-13
 index: false

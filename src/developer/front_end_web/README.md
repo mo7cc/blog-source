@@ -5,6 +5,8 @@ pageInfo: ['Author', 'PageView']
 dir:
   order: 2
 
+index: false
+
 category:
   - 前端
 tag:

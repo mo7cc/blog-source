@@ -22,9 +22,14 @@ projects:
     desc: 欢迎交换友情链接
     link: /favorite/links/friend
 
+  - icon: basic
+    name: 编程基础
+    desc: 可能是最好的零基础入门教程了
+    link: /developer/basic/
+
   - icon: liuyan
     name: 留言板
-    desc: '我轻轻地走,正如我轻轻地来'
+    desc: '留下一些你想说的话。'
     link: /about/guestbook
 
   - icon: boke

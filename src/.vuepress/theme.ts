@@ -18,6 +18,7 @@ export default hopeTheme({
     url: 'https://mo7.cc',
     email: 'mo7@mo7.cc',
   },
+  darkmode: 'toggle',
   editLink: false,
   fullscreen: true,
   navbarAutoHide: 'always',
@@ -107,7 +108,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ['Badge', 'VPCard', 'BiliBili'],
+      components: ['Badge', 'VPCard', 'BiliBili', 'PDF'],
     },
 
     copyright: false,

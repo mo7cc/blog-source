@@ -4,6 +4,8 @@ pageInfo: ['Author', 'PageView']
 dir:
   order: 3
 
+index: false
+
 category:
   - Golang
 tag:

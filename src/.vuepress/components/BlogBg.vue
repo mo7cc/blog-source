@@ -10,20 +10,20 @@ const BlogBg = () => {
   }
 };
 
-// const RibbonFun = () => {
-//   if (!document.getElementById('mo7_bgCanvas')) {
-//     const canvasElm = document.createElement('canvas');
-//     canvasElm.id = 'mo7_bgCanvas';
-//     document.body.appendChild(canvasElm);
-//     const RibbonClick = import('../script/canvas-nest');
+const RibbonFun = () => {
+  if (!document.getElementById('mo7_bgCanvas')) {
+    const canvasElm = document.createElement('canvas');
+    canvasElm.id = 'mo7_bgCanvas';
+    document.body.appendChild(canvasElm);
+    const RibbonClick = import('../script/canvas-nest');
 
-//     RibbonClick.then((res) => {
-//       res.default({
-//         ElemID: 'mo7_bgCanvas',
-//       });
-//     });
-//   }
-// };
+    RibbonClick.then((res) => {
+      res.default({
+        ElemID: 'mo7_bgCanvas',
+      });
+    });
+  }
+};
 /* 
 https://www.jq22.com/code3511
 https://www.jq22.com/code2347
@@ -44,7 +44,7 @@ onMounted(() => {
     nextTick(() => {
       setTimeout(() => {
         BlogBg();
-        // RibbonFun();
+        RibbonFun();
       }, 50);
     });
   });
@@ -63,15 +63,17 @@ onMounted(() => {
   pointer-events: none; // 禁止点击
 }
 
-@mixin bgCode_daytime {
-  background-image: url('/img/asfalt-dark.png');
-  // background-image: url('/img/bedge-grunge.png');
-  background-color: rgba(224, 200, 170, 0.6);
+@mixin bgStyle_light {
+  // background-color: rgba(255, 255, 255, 1); // 原色
+  background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+  // background-color: rgba($color: #ffd1ff, $alpha: 0.6);
 }
 
-@mixin bgCode_night {
-  background-image: url('/img/bedge-grunge.png');
-  background-color: rgba(0, 0, 0, 1);
+@mixin bgStyle_dark {
+  // background-color: rgba(13, 17, 24, 1); // 原色
+
+  background-image: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 56%, #ffbac3 100%);
+  // background-color: rgba($color: #c5c1ff, $alpha: 0.4);
 }
 
 html[data-theme='light'] {
@@ -126,13 +128,18 @@ html[data-theme='dark'] {
 .theme-container {
   .vp-page.vp-blog,
   .vp-page.vp-blog-home {
-    background: transparent; // 博客背景
+    background: transparent; // 博客背景设置为透明
   }
+}
+
+@mixin theme-hope-content-style {
+  border-radius: 0.4rem;
+  padding-top: 1px !important;
 }
 
 [data-theme='light'] {
   #mo7_BlogBg {
-    @include bgCode_daytime;
+    @include bgStyle_light;
   }
 
   .theme-container {
@@ -140,18 +147,64 @@ html[data-theme='dark'] {
       background: transparent; // 侧边栏透明度
       backdrop-filter: blur(2px); // 毛玻璃效果
     }
+
+    .theme-hope-content {
+      background-color: #fff;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      @include theme-hope-content-style;
+    }
   }
 }
 
 [data-theme='dark'] {
   #mo7_BlogBg {
-    @include bgCode_night;
+    @include bgStyle_dark;
+    &::after {
+      background-color: rgba(13, 17, 24, 0.78); // 原色
+    }
   }
 
   .theme-container {
     .vp-sidebar {
       background: transparent; // 侧边栏透明度
       backdrop-filter: blur(2px); // 毛玻璃效果
+    }
+
+    .theme-hope-content {
+      background-color: #000;
+      box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px 0px;
+      @include theme-hope-content-style;
+    }
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .theme-container {
+    .theme-hope-content {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .theme-container {
+    .theme-hope-content {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .theme-container {
+    .theme-hope-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -187,8 +240,6 @@ html[data-theme='dark'] {
 }
 
 @media screen and (min-width: 1440px) {
-  // 插入彩带
-
   [data-theme='light'] {
     .theme-container {
       .vp-sidebar {
@@ -196,13 +247,6 @@ html[data-theme='dark'] {
       }
       .vp-sidebar > .vp-sidebar-links {
         padding-right: 8px;
-      }
-
-      .theme-hope-content {
-        background-color: #fff;
-        padding-top: 1.4rem !important;
-        border-radius: 0.4rem;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       }
 
       .vp-sidebar > .vp-sidebar-links {
@@ -223,13 +267,6 @@ html[data-theme='dark'] {
       }
       .vp-sidebar > .vp-sidebar-links {
         padding-right: 8px;
-      }
-
-      .theme-hope-content {
-        background-color: #000;
-        padding-top: 1.4rem !important;
-        border-radius: 0.4rem;
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px 0px;
       }
 
       .vp-sidebar > .vp-sidebar-links {

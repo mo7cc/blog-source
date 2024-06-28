@@ -6,3 +6,6 @@ dist/
 .vp-cache
 .vp-temp
 .sum
+
+/data
+/logs

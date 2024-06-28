@@ -58,7 +58,7 @@ https://ot-doc.mo7.cc
 
 ## 上手前的准备工作
 
-1. [搭建本地 NodeJs 环境](../developer/front_end_web/nodejs基础环境搭建.md)
+1. [搭建本地 NodeJs 环境](/developer/front_end_web/nodejs_ready.html)
 2. [Git 的基本安装和使用](../tools/git/Git的介绍与安装.md)
 3. [VSCode 的介绍和基本使用](../tools/vscode/VSCode的介绍和基本使用.md)
 4. [学习基本的 Markdown 语法](https://markdown.com.cn/intro.html)

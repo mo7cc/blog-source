@@ -136,6 +136,13 @@ onMounted(() => {
   }
 }
 
+// 给文章顶部添加过渡，让其更加自然
+#main-content {
+  .vp-toc-placeholder {
+    transition: top 0.3s;
+  }
+}
+
 // 白天
 [data-theme='light'] {
   .theme-container {

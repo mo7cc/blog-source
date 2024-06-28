@@ -7,13 +7,13 @@
 </template>
 
 <style lang="scss">
-// 首页边栏信息按钮的颜色
+// 首页边栏信息按钮的选中颜色
 .vp-blog-type-button .icon-wrapper.active {
   color: rgba($color: #fff, $alpha: 0.8);
 }
 
 .vp-back-to-top-button {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .vp-project-card {
@@ -24,38 +24,35 @@
   color: inherit;
 }
 
+@mixin articleLightBg {
+  $my-alpha: 0.6;
+  background: rgba($color: #fff, $alpha: $my-alpha);
+  background-color: rgba($color: #fff, $alpha: $my-alpha);
+}
+
 // 主题 白天
 [data-theme='light'] {
-  hr {
-    &::before {
-      border-color: #000;
-    }
-    &::after {
-      color: #000;
-    }
-  }
-
   .theme-container {
     .vp-page {
       .vp-blogger-info {
-        background: rgba($color: #fff, $alpha: 0.6);
+        @include articleLightBg;
       }
       .vp-blog-infos {
-        background: rgba($color: #fff, $alpha: 0.6);
+        @include articleLightBg;
       }
       .vp-article-item {
-        background: rgba($color: #fff, $alpha: 0.6);
+        @include articleLightBg;
       }
     }
 
     .vp-pagination-nav input {
-      background-color: rgba($color: #fff, $alpha: 0.6);
+      @include articleLightBg;
     }
     .vp-pagination-button {
-      background-color: rgba($color: #fff, $alpha: 0.6);
+      @include articleLightBg;
     }
     .vp-pagination-number div {
-      background-color: rgba($color: #fff, $alpha: 0.6);
+      @include articleLightBg;
       &.active {
         background-color: var(--theme-color);
       }
@@ -63,36 +60,33 @@
   }
 }
 
+@mixin articleDarkBg {
+  $my-alpha: 0.7;
+  background: rgba($color: #000, $alpha: $my-alpha);
+  background-color: rgba($color: #000, $alpha: $my-alpha);
+}
+
 // 主题 黑夜
 [data-theme='dark'] {
-  hr {
-    &::before {
-      border-color: #fff;
-    }
-    &::after {
-      color: #fff;
-    }
-  }
-
   .theme-container {
     .vp-page {
       .vp-blogger-info {
-        background: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
       }
       .vp-blog-infos {
-        background: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
       }
       .vp-article-item {
-        background: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
       }
       .vp-pagination-nav input {
-        background-color: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
       }
       .vp-pagination-button {
-        background-color: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
       }
       .vp-pagination-number div {
-        background-color: rgba($color: #000, $alpha: 0.4);
+        @include articleDarkBg;
         &.active {
           background-color: var(--theme-color);
         }

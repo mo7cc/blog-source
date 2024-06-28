@@ -5,6 +5,8 @@ dir:
 
 pageInfo: ['Author', 'PageView']
 
+index: false
+
 category:
   - developer
   - 基础
@@ -18,7 +20,7 @@ permalink: /developer/basic/
 
 ::: info
 
-如果不明白和掌握这些最基本的概念和知识，你的编程之路将会阻碍重重。
+如果不明白和掌握这些最基本的概念和知识，您不是零基础，而是 **负基础**。
 
 :::
 
@@ -31,19 +33,16 @@ permalink: /developer/basic/
 ## 一、操作系统的基本知识
 
 操作系统简介:
-认识操作系统，Windows，MacOS，Linux
+认识操作系统，Windows，MacOS，Linux 之间的关系和区别
 
-路径：
+路径和文件：
 认识路径系统 相对路径，绝对路径。
-
-文件：
-认识 什么是文件，文件的特点。文件是以什么一种状态在系统中存在的
+认识 什么是文件，文件的特点。文件是以什么一种状态在系统中存在的。
 
 命令行：
 认识文字界面，命令行基础，命令行入门。
 
 增删改查
-
 系统环境，命名规则，系统变量 等
 
 ---
@@ -55,11 +54,8 @@ permalink: /developer/basic/
 
 软件包管理系统:
 MacOS -> Homebrew
-Windows -> winget
 Linux -> apt
-
-编程语言市场现状:
-各种编程语言的市场现状
+Windows -> winget
 
 Git 与 Github:
 使用最广泛的版本管理系统
@@ -67,10 +63,9 @@ Git 与 Github:
 VSCode:
 在这里你甚至能敲代码。
 
+编程语言市场现状:
+各种编程语言的市场现状
+
 ## 一个最完美的工作环境
 
 一个最完美的工作环境应该是什么样的。
-
-::: warning
-但是由于作者很懒，详细文章，日后整理出来。
-:::

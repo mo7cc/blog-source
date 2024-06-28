@@ -152,6 +152,13 @@ export const zhSidebar = sidebar({
       link: '/favorite/photos/',
     },
     {
+      text: '随笔',
+      icon: 'ganwu',
+      children: 'structure',
+      prefix: 'essays/',
+      link: '/favorite/essays/',
+    },
+    {
       text: '链接',
       icon: 'link',
       children: 'structure',
