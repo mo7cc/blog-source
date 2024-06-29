@@ -47,3 +47,29 @@
     }
   }
 }
+
+// 首页内容
+.mo7-blog-home-content {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.mo7-blog-home {
+  .theme-hope-content {
+    background-color: transparent !important;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+// 宽屏显示
+
+:root {
+  --content-width: 830px;
+}
+
+@media screen and (min-width: 1770px) {
+  :root {
+    --content-width: calc(100vw - 15rem - 6rem - var(--sidebar-width) - 20rem);
+  }
+}

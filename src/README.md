@@ -11,6 +11,7 @@ tagline: 简单快乐，理应如此。
 description: 墨七,博客,记录,分享
 article: false
 index: false
+containerClass: mo7-blog-home
 projects:
   - icon: jiansuo
     name: 站点地图
@@ -54,3 +55,7 @@ projects:
 
 footer: true
 ---
+
+<div class="mo7-blog-home-content">
+专心致志做事，大气温和待人。
+</div>

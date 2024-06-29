@@ -1,13 +1,12 @@
-export default function (param) {
+(function () {
   // JavaScript Document
-
   var requestAnimationFrame =
     window.requestAnimationFrame ||
     function (callback) {
       window.setTimeout(callback, 1000 / 60);
     };
   // 选取 canvas 并开始
-  var canvas = document.getElementById(param.ElemID);
+  var canvas = document.getElementById('mo7_bg_canvas_box');
   var ctx = canvas.getContext('2d');
   var maximumPossibleDistance;
   var centerX;
@@ -63,12 +62,12 @@ export default function (param) {
     connectionRed: 178,
     connectionGreen: 182,
     connectionBlue: 182,
-    connectionOpacity: 0.2,
+    connectionOpacity: 0.4,
     // 鼠标连线的颜色 和透明度
     mouseConnectionRed: 178,
     mouseConnectionGreen: 182,
     mouseConnectionBlue: 182,
-    mouseConnectionOpacity: 0.2,
+    mouseConnectionOpacity: 0.4,
   };
 
   // ----------------------------------------------------
@@ -425,4 +424,4 @@ export default function (param) {
 
   initAnimation();
   loop();
-}
+})();
