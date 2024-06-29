@@ -55,7 +55,3 @@ projects:
 
 footer: true
 ---
-
-<div class="mo7-blog-home-content">
-专心致志做事，大气温和待人。
-</div>

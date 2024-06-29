@@ -1,5 +1,5 @@
 (function () {
-  'use strict';
+  console.log('加载 grain-parallax.js');
   !(function (a, b) {
     function c(a) {
       a = a || {};

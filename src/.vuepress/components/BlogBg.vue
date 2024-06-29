@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, nextTick } from 'vue';
-import { useRouter } from 'vue-router';
 
 const BlogBg = () => {
   if (!document.getElementById('mo7_BlogBg')) {
@@ -12,9 +11,9 @@ const BlogBg = () => {
 
 const CanvasNest = () => {
   // 创建 dom
-  if (!document.getElementById('mo7_bg_canvas_box')) {
+  if (!document.getElementById('mo7_bg_canvas_nest')) {
     const canvasElm = document.createElement('canvas');
-    canvasElm.id = 'mo7_bg_canvas_box';
+    canvasElm.id = 'mo7_bg_canvas_nest';
     document.body.appendChild(canvasElm);
   }
   // 引入 js 文件
@@ -22,6 +21,7 @@ const CanvasNest = () => {
     var jsElm = document.createElement('script');
     jsElm.id = 'canvas_nest_js';
     jsElm.src = '/mo7-script/canvas-nest.js';
+    jsElm.type = 'text/javascript';
     document.body.appendChild(jsElm);
   }
 };
@@ -38,11 +38,10 @@ const GrainParallax = () => {
   }
 
   // 创建 dom
-  if (!document.getElementById('mo7_bg_canvas_box')) {
+  if (!document.getElementById('mo7_bg_grain_parallax')) {
     const boxElm = document.createElement('div');
-    boxElm.id = 'mo7_bg_canvas_box';
+    boxElm.id = 'mo7_bg_grain_parallax';
     document.body.appendChild(boxElm);
-
     boxElm.innerHTML = `
 <div id="particles-background"></div>
 <div id="particles-foreground"></div>
@@ -51,53 +50,41 @@ const GrainParallax = () => {
 
   // 插入 js
   if (!document.getElementById('mo7_grain_parallax_js')) {
+    console.log('执行 mo7_grain_parallax_js');
     var jsElm = document.createElement('script');
     jsElm.id = 'mo7_grain_parallax_js';
+    jsElm.type = 'text/javascript';
     jsElm.src = '/mo7-script/grain-parallax.js';
     document.body.appendChild(jsElm);
   }
 };
 
-function ClearCanvasBg() {
-  var rmIds = ['mo7_bg_canvas_box', 'canvas_nest_js', 'mo7_grain_parallax_js', 'mo7_grain_parallax_css'];
-  for (const id of rmIds) {
-    var elm = document.getElementById(id);
-    if (elm) {
-      elm.parentNode.removeChild(elm);
-    }
-  }
-}
-
 // 根据主题模式加载不同的动态
 function LoadColorModelCanvas() {
-  const targetNode = document.getElementsByTagName('html')[0];
-  const themColor = targetNode.getAttribute('data-theme');
-  ClearCanvasBg();
-  if (themColor === 'dark') {
-    GrainParallax();
-  } else if (themColor === 'light') {
-    CanvasNest();
-  }
+  setTimeout(() => {
+    const targetNode = document.getElementsByTagName('html')[0];
+    const themColor = targetNode.getAttribute('data-theme');
+    if (themColor === 'dark') {
+      GrainParallax();
+    } else if (themColor === 'light') {
+      CanvasNest();
+    }
+  }, 100);
 }
 
 // 监听主题模式的切换
 var ObserverColorModel = () => {
-  const targetNode = document.getElementsByTagName('html')[0];
-  const config = { attributes: true };
-  const callback = (mutationsList) => {
-    for (let mutation of mutationsList) {
-      if (mutation.type === 'attributes') {
-        LoadColorModelCanvas();
-      }
-    }
-  };
-  const observer = new MutationObserver(callback);
-  observer.disconnect();
-  observer.observe(targetNode, config);
+  const ColorModelBtn = document.getElementById('color-mode-switch');
+  if (ColorModelBtn) {
+    ColorModelBtn.removeEventListener('click', LoadColorModelCanvas);
+    ColorModelBtn.addEventListener('click', LoadColorModelCanvas);
+  }
 };
 
 onMounted(() => {
   nextTick(() => {
+    console.log('执行背景美化');
+
     BlogBg();
     LoadColorModelCanvas();
     ObserverColorModel();
@@ -159,7 +146,7 @@ html[data-theme='dark'] {
   }
 }
 
-#mo7_bg_canvas_box {
+@mixin bg-canvas-style {
   @include noEvent;
   position: fixed;
   z-index: 2;
@@ -169,6 +156,10 @@ html[data-theme='dark'] {
   height: 100vh;
   background-color: transparent;
   overflow: hidden;
+}
+#mo7_bg_canvas_nest,
+#mo7_bg_grain_parallax {
+  @include bg-canvas-style;
 }
 
 // 层级调整 ， 全部需要 > 5
@@ -194,6 +185,9 @@ html[data-theme='dark'] {
 }
 
 [data-theme='light'] {
+  #mo7_bg_grain_parallax {
+    display: none;
+  }
   #mo7_BlogBg {
     @include bgStyle_light;
   }
@@ -222,6 +216,9 @@ html[data-theme='dark'] {
 }
 
 [data-theme='dark'] {
+  #mo7_bg_canvas_nest {
+    display: none;
+  }
   #mo7_BlogBg {
     @include bgStyle_dark;
   }
@@ -268,12 +265,11 @@ html[data-theme='dark'] {
   [data-theme='light'] {
     .theme-container {
       .vp-sidebar {
-        // background: rgba(#fff, 0.8);
+        background: rgba(#fff, 0.6);
         backdrop-filter: blur(18px); // 毛玻璃效果
       }
       .vp-nav-screen {
-        // background: rgba(#fff, 0.8);
-        background: transparent;
+        background: rgba(#fff, 0.6);
         backdrop-filter: blur(18px); // 毛玻璃效果
       }
     }

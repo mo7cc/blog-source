@@ -1,4 +1,5 @@
 (function () {
+  console.log('加载 canvas-nest.js');
   // JavaScript Document
   var requestAnimationFrame =
     window.requestAnimationFrame ||
@@ -6,7 +7,7 @@
       window.setTimeout(callback, 1000 / 60);
     };
   // 选取 canvas 并开始
-  var canvas = document.getElementById('mo7_bg_canvas_box');
+  var canvas = document.getElementById('mo7_bg_canvas_nest');
   var ctx = canvas.getContext('2d');
   var maximumPossibleDistance;
   var centerX;
