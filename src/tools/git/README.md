@@ -1,4 +1,5 @@
 ---
+icon: git
 pageInfo: ['Author', 'PageView']
 
 category:

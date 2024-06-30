@@ -18,6 +18,12 @@ const back_tutorial = {
   link: '/tutorial/',
 };
 
+const back_tools = {
+  text: '返回工具',
+  icon: 'gongju',
+  link: '/tools/',
+};
+
 export const zhSidebar = sidebar({
   // 关于
   '/about/': [
@@ -36,6 +42,24 @@ export const zhSidebar = sidebar({
       text: '工具',
       icon: 'gongju',
       link: '/tools/',
+      children: 'structure',
+    },
+  ],
+  '/tools/git/': [
+    back_tools,
+    {
+      text: 'Git',
+      icon: 'git',
+      link: '/tools/git/',
+      children: 'structure',
+    },
+  ],
+  '/tools/vscode/': [
+    back_tools,
+    {
+      text: 'Visual Studio Code',
+      icon: 'vscode',
+      link: '/tools/vscode/',
       children: 'structure',
     },
   ],
@@ -178,6 +202,14 @@ export const zhSidebar = sidebar({
     },
 
     {
+      text: '收藏',
+      icon: 'favoritea',
+      prefix: 'favorite/',
+      link: '/favorite/',
+      children: 'structure',
+    },
+
+    {
       text: '开发者',
       icon: 'developer',
       prefix: 'developer/',
@@ -194,12 +226,13 @@ export const zhSidebar = sidebar({
     },
 
     {
-      text: '收藏',
-      icon: 'favoritea',
-      prefix: 'favorite/',
-      link: '/favorite/',
+      text: '工具',
+      icon: 'gongju',
+      prefix: 'tools/',
+      link: '/tools/',
       children: 'structure',
     },
+
     {
       text: '技巧分享',
       icon: 'tips',
@@ -207,11 +240,12 @@ export const zhSidebar = sidebar({
       link: '/tips/',
       children: 'structure',
     },
+
     {
-      text: '工具',
-      icon: 'gongju',
-      prefix: 'tools/',
-      link: '/tools/',
+      text: 'LeetCode',
+      icon: 'leetcode',
+      prefix: 'leetcode/',
+      link: '/leetcode/',
       children: 'structure',
     },
 

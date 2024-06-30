@@ -1,4 +1,5 @@
 ---
+icon: vscode
 pageInfo: ['Author', 'PageView']
 
 category:

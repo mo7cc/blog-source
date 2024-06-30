@@ -15,7 +15,7 @@ containerClass: mo7-blog-home
 projects:
   - icon: jiansuo
     name: 站点地图
-    desc: 查看本站全部文章目录
+    desc: 本站全部文章索引
     link: /posts/catalog.html
 
   - icon: youlian
@@ -24,14 +24,9 @@ projects:
     link: /favorite/links/friend
 
   - icon: basic
-    name: 编程基础
-    desc: 可能是最好的零基础入门教程了
+    name: 小白的编程入门
+    desc: 可能是最好的零基础入门教程
     link: /developer/basic/
-
-  - icon: liuyan
-    name: 留言板
-    desc: '留下一些你想说的话。'
-    link: /about/guestbook
 
   - icon: boke
     name: 博客美化教程
@@ -47,6 +42,11 @@ projects:
     name: LeetCode
     desc: 没事刷一刷算法，预防老年痴呆。
     link: /leetcode/
+
+  - icon: liuyan
+    name: 留言板
+    desc: '留下一些你想说的话。'
+    link: /about/guestbook
 
   - icon: jiaocheng
     name: OtterTrade文档站

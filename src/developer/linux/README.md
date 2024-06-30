@@ -3,7 +3,7 @@ icon: linux
 pageInfo: ['Author', 'PageView']
 index: false
 dir:
-  order: 4
+  order: 3
 
 category:
   - Linux
