@@ -114,7 +114,7 @@ export const zhSidebar = sidebar({
   '/developer/golang/': [
     back_developer,
     {
-      text: 'golang',
+      text: 'Go',
       icon: 'goicon',
       link: '/developer/golang/',
       children: 'structure',

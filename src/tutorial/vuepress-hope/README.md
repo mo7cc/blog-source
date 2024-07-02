@@ -2,7 +2,6 @@
 icon: boke
 
 pageInfo: ['Author', 'PageView']
-index: false
 
 category:
   - 博客搭建教程
@@ -25,3 +24,12 @@ permalink: /tutorial/vuepress-hope/
 <Catalog base='/tutorial/vuepress-hope/' />
 
 ---
+
+## 本章节包含如下内容
+
+vuepress-hope 环境搭建
+官方文档阅读指南
+教程
+一些使用技巧
+美化技巧与方案
+插件编写等

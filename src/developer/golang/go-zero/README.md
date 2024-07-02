@@ -5,6 +5,9 @@ tag:
   - go-zero
   - 库
 
+dir:
+  order: 99
+
 permalink: /developer/golang/go-zero/
 ---
 

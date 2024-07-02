@@ -4,7 +4,7 @@
 function GitConfigInit() {
   echo "覆盖 Git 默认设置 "
   # 设置大小写敏感
-  git config --global core.ignorecase false
+  git config core.ignorecase false
   # 忽略文件权限的变更
   git config core.filemode false
   # 禁用 pull.rebase

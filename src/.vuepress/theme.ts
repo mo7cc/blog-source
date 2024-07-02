@@ -99,6 +99,7 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+    photoSwipe: false, // 这个插件难用的 一 B
 
     comment: {
       provider: 'Waline',
