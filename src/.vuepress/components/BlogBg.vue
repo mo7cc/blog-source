@@ -260,6 +260,11 @@ html[data-theme='dark'] {
     .vp-blog-type-switcher {
       padding-top: 20px;
     }
+
+    .theme-hope-content {
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+    }
   }
 
   [data-theme='light'] {

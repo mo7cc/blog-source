@@ -12,7 +12,10 @@ export const enNavbar = navbar([
         text: 'Apple',
         icon: 'edit',
         prefix: 'apple/',
-        children: [{ text: 'Apple1', icon: 'edit', link: '1' }, { text: 'Apple2', icon: 'edit', link: '2' }, '3', '4'],
+        children: [
+          { text: 'Apple1', icon: 'edit', link: '1' },
+          { text: 'Apple2', icon: 'edit', link: '2' },
+        ],
       },
       {
         text: 'Banana',
@@ -29,8 +32,6 @@ export const enNavbar = navbar([
             icon: 'edit',
             link: '2',
           },
-          '3',
-          '4',
         ],
       },
       { text: 'Cherry', icon: 'edit', link: 'cherry' },

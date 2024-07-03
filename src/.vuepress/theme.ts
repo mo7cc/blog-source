@@ -2,8 +2,9 @@ import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 import { getDirname, path } from 'vuepress/utils';
-
+import { BlogPassword } from '../../__private/password.js';
 const __dirname = getDirname(import.meta.url);
+
 const footerICP_HTML = `
 <a class="footer-icp" href="https://beian.miit.gov.cn" target="_blank">
   <img src="//file.mo7.cc/static/img/beian.png">
@@ -62,8 +63,6 @@ export default hopeTheme({
   },
 
   footer: footerICP_HTML,
-  // displayFooter: true,
-
   locales: {
     '/': {
       navbar: zhNavbar,
@@ -90,7 +89,7 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      '/en/demo/encrypt.html': ['1234'],
+      '/en/demo/encrypt.html': [BlogPassword],
     },
   },
 
@@ -192,42 +191,6 @@ export default hopeTheme({
       alert: true,
       footnote: true,
       obsidianImgSize: true,
-
-      // install chart.js before enabling it
-      // chart: false,
-
-      // insert component easily
-
-      // install echarts before enabling it
-      // echarts: false,
-
-      // install flowchart.ts before enabling it
-      // flowchart: false,
-
-      // install katex before enabling it
-      // katex: false,
-
-      // install mathjax-full before enabling it
-      // mathjax: false,
-
-      // install mermaid before enabling it
-      // mermaid: false,
-
-      // playground: {
-      //   presets: ['ts', 'vue'],
-      // },
-
-      // install reveal.js before enabling it
-      // revealJs: {
-      //   plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      // },
-      // revealJs: false,
-
-      // install @vue/repl before enabling it
-      // vuePlayground: false,
-
-      // install sandpack-vue3 before enabling it
-      // sandpack: false,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA

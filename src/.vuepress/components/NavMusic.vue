@@ -168,7 +168,7 @@ onMounted(() => {
   position: fixed;
   right: 0.5rem;
   top: 0.5rem;
-  z-index: 12;
+  z-index: 100;
   cursor: pointer;
   user-select: none;
 }
