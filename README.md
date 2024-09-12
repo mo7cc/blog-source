@@ -2,7 +2,7 @@
 
 https://blog.mo7.cc
 
-基于 [VuePress Theme Hope](https://theme-hope.vuejs.press) 搭建
+用于 个人 日常 ，心得 ，笔记 记录
 
 ## 博客框架
 

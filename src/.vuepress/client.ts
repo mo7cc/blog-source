@@ -12,6 +12,7 @@ const CommentHideBtn = defineAsyncComponent(() => import('./components/CommentHi
 const MyIcon = defineAsyncComponent(() => import('./components/MyIcon.vue'));
 const BlogBg = defineAsyncComponent(() => import('./components/BlogBg.vue'));
 const BlogBeautify = defineAsyncComponent(() => import('./components/BlogBeautify.vue'));
+const PreviewImage = defineAsyncComponent(() => import('./components/PreviewImage.vue'));
 
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
@@ -29,6 +30,7 @@ export default defineClientConfig({
     CommentHideBtn,
     BlogBeautify,
     BlogBg,
+    PreviewImage,
     // ...
   ],
 });

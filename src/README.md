@@ -34,8 +34,8 @@ projects:
     link: /tutorial/vuepress-hope/
 
   - icon: developer
-    name: 开发者的成长之路
-    desc: 作为一名开发者，我觉得这是很酷的一件事情。
+    name: 墨七的编程笔记
+    desc: 作为一名开发者，我觉得这是很酷。
     link: /developer/
 
   - icon: leetcode
@@ -43,13 +43,28 @@ projects:
     desc: 没事刷一刷算法，预防老年痴呆。
     link: /leetcode/
 
+  - icon: bookone
+    name: 教程
+    desc: 墨七编写的一些教程
+    link: /tutorial/
+
+  - icon: gongju
+    name: 工具分享
+    desc: 好用的工具推荐
+    link: /tools/
+
+  - icon: tips
+    name: 小技巧
+    desc: 生活和工作技巧的一些总结
+    link: /tips/
+
   - icon: liuyan
     name: 留言板
     desc: '留下一些你想说的话。'
     link: /about/guestbook
 
   - icon: jiaocheng
-    name: OtterTrade文档站
+    name: OtterTrade 文档站
     desc: 做最好用的的量化平台。
     link: /posts/ot-doc_ready.html
 

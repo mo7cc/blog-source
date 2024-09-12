@@ -48,7 +48,7 @@ onMounted(() => {
   });
 
   const router = useRouter();
-  router.beforeEach(() => {
+  router.afterEach(() => {
     nextTick(() => {
       setTimeout(() => {
         CheckScrollTopClass(); // 切换时顶栏修改

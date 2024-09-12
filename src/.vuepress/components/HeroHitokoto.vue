@@ -123,7 +123,7 @@ onMounted(() => {
   });
 
   const router = useRouter();
-  router.beforeEach((to) => {
+  router.afterEach((to) => {
     nextTick(() => {
       GetWord(to.fullPath);
     });
