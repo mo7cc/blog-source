@@ -155,9 +155,6 @@ export default hopeTheme({
       codetabs: true,
       component: true,
       demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
       include: {
         resolvePath: (file) => {
           if (file.startsWith('@src')) {
@@ -167,7 +164,6 @@ export default hopeTheme({
         },
       },
       mark: true,
-      imgMark: true,
       stylize: [
         {
           matcher: 'Recommended',
@@ -188,9 +184,7 @@ export default hopeTheme({
       vPre: true,
       breaks: true,
       linkify: true,
-      alert: true,
       footnote: true,
-      obsidianImgSize: true,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA

@@ -33,6 +33,7 @@ cp -rf "${NowPath}/tsconfig.json" "${OutPutPath}/"
 cp -rf "${NowPath}/README.md" "${OutPutPath}/"
 cp -rf "${NowPath}/.prettierignore" "${OutPutPath}/"
 cp -rf "${NowPath}/.prettierrc.cjs" "${OutPutPath}/"
+cp -rf "${NowPath}/go.mod" "${OutPutPath}/"
 
 # 开始进行发布步骤 OutPutPath -> 远程 DeployPath
 ## 拉取远程仓库
