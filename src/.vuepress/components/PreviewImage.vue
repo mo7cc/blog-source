@@ -136,14 +136,9 @@ let mouseDownX = 0;
 let mouseDownY = 0;
 let imgElmLeft = 0;
 let imgElmTop = 0;
-
-function Mousemove(event) {
+function Mousemove(e) {
   if (!mouseStatus) {
     return;
-  }
-  let e = event;
-  if (event.type == 'touchmove') {
-    e = event.touches[0];
   }
 
   const xDiff = e.clientX - mouseDownX;
@@ -157,21 +152,22 @@ function Mousemove(event) {
   imgElm.style.top = top + 'px';
 }
 
-function ImgMouseUp(e) {
+function ImgMouseUp() {
   const imgElm = document.getElementById('Mo7PreviewBox-img');
   imgElm.style.cursor = 'default';
   mouseStatus = false;
+  mouseDownX = 0;
+  mouseDownY = 0;
+  imgElmLeft = 0;
+  imgElmTop = 0;
 }
 
-function ImgMouseDown(event) {
+function ImgMouseDown(e) {
   const imgElm = document.getElementById('Mo7PreviewBox-img');
   imgElm.style.cursor = 'move';
   mouseStatus = true;
 
-  let e = event;
-  if (event.type == 'touchstart') {
-    e = event.touches[0];
-  }
+  console.log('按下', e);
 
   mouseDownX = e.clientX;
   mouseDownY = e.clientY;
@@ -185,6 +181,32 @@ function ImgMouseDown(event) {
 
   imgElmLeft = parseInt(computedStyle.left);
   imgElmTop = parseInt(computedStyle.top);
+}
+
+function on_mousemove(e) {
+  if (e.type === 'touchmove') {
+    if (e.touches.length == 1) {
+      Mousemove(e.touches[0]);
+    }
+  }
+  if (e.type === 'mousemove') {
+    Mousemove(e);
+  }
+}
+
+function on_mouseup(e) {
+  ImgMouseUp();
+}
+
+function on_mousedown(e) {
+  if (e.type === 'touchstart') {
+    if (e.touches.length == 1) {
+      ImgMouseDown(e.touches[0]);
+    }
+  }
+  if (e.type === 'mousedown') {
+    ImgMouseDown(e);
+  }
 }
 
 onMounted(() => {
@@ -218,10 +240,10 @@ onMounted(() => {
     <div
       v-if="ShowPreviewBox"
       id="Mo7PreviewBox"
-      @mousemove="Mousemove"
-      @touchmove="Mousemove"
-      @mouseup="ImgMouseUp"
-      @touchend="ImgMouseUp"
+      @mousemove="on_mousemove"
+      @touchmove="on_mousemove"
+      @mouseup="on_mouseup"
+      @touchend="on_mouseup"
     >
       <div class="Mo7PreviewBox-topBar">
         <div class="btn" @click="leftFunc" :class="{ hide: CurrentImgIdx === 0 }">
@@ -249,8 +271,8 @@ onMounted(() => {
 
       <img
         id="Mo7PreviewBox-img"
-        @mousedown="ImgMouseDown"
-        @touchstart="ImgMouseDown"
+        @mousedown="on_mousedown"
+        @touchstart="on_mousedown"
         :src="ImageArr[CurrentImgIdx].src"
         :alt="ImageArr[CurrentImgIdx].alt"
         srcset=""
