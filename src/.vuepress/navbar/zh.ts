@@ -20,7 +20,7 @@ export const zhNavbar = navbar([
     text: '收藏',
     icon: 'start',
     link: '/favorite',
-    children: ['/favorite/links/', '/favorite/movies/', '/favorite/music/', '/favorite/photos/'],
+    children: ['favorite/essays/', '/favorite/links/', '/favorite/movies/', '/favorite/music/', '/favorite/photos/'],
   },
   '/about/',
 ]);

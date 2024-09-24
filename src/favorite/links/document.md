@@ -1,6 +1,8 @@
 ---
 icon: docwenjian
 pageInfo: ['Author', 'PageView']
+
+permalink: /favorite/links/document.html
 ---
 
 # 文档

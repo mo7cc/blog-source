@@ -1,6 +1,8 @@
 ---
 icon: youlian
 pageInfo: ['Author', 'PageView']
+
+permalink: /favorite/links/friend.html
 ---
 
 # 友链
@@ -59,6 +61,13 @@ pageInfo: ['Author', 'PageView']
   desc="一只爱折腾的攻城狮"
   logo="https://javaquan.cn/img/logo.png"
   link="https://javaquan.cn"
+/>
+
+<VPCard
+  title="海若博客"
+  desc="法学法律工作者"
+  logo="https://hyruo.com/img/avatar_hu698e6481e382b7430117d6568731f48e_67900_300x0_resize_box_3.png"
+  link="https://hyruo.com"
 />
 
 ---

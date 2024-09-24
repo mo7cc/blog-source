@@ -1,6 +1,8 @@
 ---
 icon: gongju
 pageInfo: ['Author', 'PageView']
+
+permalink: /favorite/links/tools.html
 ---
 
 # 在线工具

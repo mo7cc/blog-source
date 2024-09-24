@@ -152,7 +152,6 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      codetabs: true,
       component: true,
       demo: true,
       include: {
@@ -179,7 +178,6 @@ export default hopeTheme({
       ],
       sub: true,
       sup: true,
-      tabs: true,
       tasklist: true,
       vPre: true,
       breaks: true,
