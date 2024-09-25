@@ -18,7 +18,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/plugin-feed": "2.0.0-rc.47",
     "@vuepress/plugin-pwa": "2.0.0-rc.47",
-    "@vuepress/plugin-redirect": "2.0.0-rc.8",
+    "@vuepress/plugin-redirect": "2.0.0-rc.51",
     "@waline/client": "^3.3.2",
     "aplayer": "^1.10.1",
     "art-template": "^4.13.2",
