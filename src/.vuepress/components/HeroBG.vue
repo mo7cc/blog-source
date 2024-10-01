@@ -65,6 +65,15 @@ const InsertBtn = (path?) => {
     return;
   }
 
+  const heroTitle = document.querySelector('.vp-blog-hero-title');
+  heroTitle.addEventListener('click', () => {
+    window.location.href = '//mo7.cc';
+  });
+
+  if (!heroTitle) {
+    return;
+  }
+
   const imgList = mStorage.get('BingImgList');
 
   if (imgList && imgList.length < 1) {
@@ -159,6 +168,7 @@ onMounted(() => {
 .vp-blog-hero-title {
   font-size: 3.8rem;
   font-family: 'mo7_font';
+  cursor: pointer;
 }
 
 // 图片切换按钮
