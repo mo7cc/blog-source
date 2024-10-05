@@ -178,6 +178,9 @@ onMounted(() => {
       .vp-nav-item > .auto-link {
         color: #eee;
       }
+      .vp-dropdown-title .i18n-icon {
+        color: #eee;
+      }
       .vp-outlook-button {
         color: #eee;
       }

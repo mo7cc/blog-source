@@ -3,8 +3,11 @@
 # 查看系统类型
 arch
 # 下载地址(x86_64)
-DownloadUrl="https://dl.google.com/go/go1.23.1.linux-amd64.tar.gz"
-# DownloadUrl="https://dl.google.com/go/go1.23.1.linux-arm64.tar.gz"
+DownloadUrl="https://dl.google.com/go/go1.23.2.linux-amd64.tar.gz"
+
+# 下载地址(aarch64 arm64)
+# DownloadUrl="https://dl.google.com/go/go1.23.2.linux-arm64.tar.gz"
+
 # 其余系统类型的下载地址可以查看 https://golang.google.cn/dl/
 
 # 开始下载

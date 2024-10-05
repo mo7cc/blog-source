@@ -46,7 +46,8 @@ mv "${DeployLocalPath}/.git" "${OutPutPath}/.git"
 rm -rf "${DeployLocalPath}"
 
 ## dist 更名为 本地 git 仓库名
-mv "${OutPutPath}" "${DeployLocalPath}"
+cp -af "${OutPutPath}" "${DeployLocalPath}" &&
+  rm -rf "${OutPutPath}"
 
 # 将仓库推送到远端
 cd "${DeployLocalPath}" || exit

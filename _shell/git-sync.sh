@@ -20,5 +20,4 @@ git pull &&
   git push &&
   echo "同步完成"
 
-GitConfigInit &&
-  exit 0
+exit 0

@@ -7,5 +7,7 @@ dist/
 .vp-temp
 .sum
 
+blog-source
+
 /data
 /logs
