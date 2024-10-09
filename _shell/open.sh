@@ -40,7 +40,7 @@ cp -rf "${NowPath}/go.mod" "${OutPutPath}/"
 git clone "${GitRemotePath}"
 
 ## git 本地仓库中 .git 移动到 dist 目录中
-mv "${DeployLocalPath}/.git" "${OutPutPath}/.git"
+cp -af "${DeployLocalPath}/.git" "${OutPutPath}/.git"
 
 ## 删除本地 git 仓库
 rm -rf "${DeployLocalPath}"
