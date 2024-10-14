@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress';
 import theme from './theme.js';
 import { getDirname, path } from 'vuepress/utils';
+
 const __dirname = getDirname(import.meta.url);
 const SrcPath = path.resolve(__dirname, '../');
 
@@ -29,6 +30,8 @@ export default defineUserConfig({
       description: 'Mo7 - Simple and happy, as it should be.',
     },
   },
+
+  plugins: [],
 
   theme,
   // Enable it with pwa

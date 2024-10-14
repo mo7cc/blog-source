@@ -3,6 +3,7 @@ import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 import { getDirname, path } from 'vuepress/utils';
 import { BlogPassword } from '../../__private/password.js';
+
 const __dirname = getDirname(import.meta.url);
 
 const footerICP_HTML = `
@@ -99,6 +100,8 @@ export default hopeTheme({
   plugins: {
     blog: true,
     photoSwipe: false, // 这个插件难用的 一 B
+
+    markdownTab: true,
 
     comment: {
       provider: 'Waline',
