@@ -2,7 +2,7 @@
 
 ## git 设置初始化
 function GitConfigInit() {
-  echo "覆盖 Git 默认设置 "
+  echo "修改文件权限，覆盖 Git 默认设置。"
   # 设置大小写敏感
   git config core.ignorecase false
   # 忽略文件权限的变更

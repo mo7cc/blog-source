@@ -20,8 +20,13 @@ projects:
 
   - icon: youlian
     name: 友情链接
-    desc: 欢迎交换友情链接
+    desc: 欢迎交换友链
     link: /favorite/links/friend
+
+  - icon: ganwu
+    name: 随笔
+    desc: 写一些乱七八糟的还没有分类的小作文
+    link: /favorite/essays/
 
   - icon: basic
     name: 小白的编程入门
@@ -35,22 +40,22 @@ projects:
 
   - icon: developer
     name: 墨七的编程笔记
-    desc: 作为一名开发者，我觉得这是很酷。
+    desc: 整理编程的一些技巧相关的东西
     link: /developer/
 
   - icon: leetcode
     name: LeetCode
-    desc: 没事刷一刷算法，预防老年痴呆。
+    desc: 没事刷一刷 LeetCode，预防老年痴呆。
     link: /leetcode/
 
   - icon: bookone
     name: 教程
-    desc: 墨七编写的一些教程
+    desc: 墨七编写的一些杂七杂八的小教程
     link: /tutorial/
 
   - icon: gongju
     name: 工具分享
-    desc: 好用的工具推荐
+    desc: 好用的工具分享与推荐
     link: /tools/
 
   - icon: tips
@@ -63,10 +68,10 @@ projects:
     desc: '留下一些你想说的话。'
     link: /about/guestbook
 
-  - icon: jiaocheng
-    name: OtterTrade 文档站
-    desc: 做最好用的的量化平台。
-    link: /posts/ot-doc_ready.html
+  - icon: https://otter-trade.github.io/pwa/512x512.png
+    name: OtterTrade
+    desc: 励志做最好用的量化平台。
+    link: https://otter-trade.github.io
 
 footer: true
 ---

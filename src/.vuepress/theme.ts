@@ -3,6 +3,8 @@ import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 import { getDirname, path } from 'vuepress/utils';
 import { BlogPassword } from '../../__private/password.js';
+import manifest_json from './public/pwa/manifest.json';
+const manifestJson: any = manifest_json;
 
 const __dirname = getDirname(import.meta.url);
 
@@ -100,8 +102,7 @@ export default hopeTheme({
   plugins: {
     blog: true,
     photoSwipe: false, // 这个插件难用的 一 B
-
-    markdownTab: true,
+    linksCheck: true,
 
     comment: {
       provider: 'Waline',
@@ -115,6 +116,14 @@ export default hopeTheme({
     },
 
     copyright: false,
+
+    markdownTab: {
+      tabs: true,
+    },
+    markdownHint: {
+      // 启用 GFM 警告
+      alert: true,
+    },
 
     feed: {
       atom: true,
@@ -156,7 +165,9 @@ export default hopeTheme({
       align: true,
       attrs: true,
       component: true,
+      spoiler: true,
       demo: true,
+      echarts: true,
       include: {
         resolvePath: (file) => {
           if (file.startsWith('@src')) {
@@ -191,58 +202,11 @@ export default hopeTheme({
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     pwa: {
       favicon: '/favicon.ico',
+      themeColor: '#af7ac5',
       cacheHTML: true,
       cacheImage: true,
       appendBase: true,
-      apple: {
-        icon: '/pwa/144.png',
-        statusBarColor: 'black',
-      },
-      msTile: {
-        image: '/pwa/144.png',
-        color: '#000',
-      },
-      manifest: {
-        icons: [
-          {
-            src: '/pwa/512.png',
-            sizes: '512x512',
-            purpose: 'maskable',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/192.png',
-            sizes: '192x192',
-            purpose: 'maskable',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-        ],
-        shortcuts: [
-          {
-            name: '墨七',
-            short_name: '墨七',
-            url: '/',
-            icons: [
-              {
-                src: '/pwa/192.png',
-                sizes: '192x192',
-                purpose: 'maskable',
-                type: 'image/png',
-              },
-            ],
-          },
-        ],
-      },
+      manifest: manifestJson,
     },
   },
 });
