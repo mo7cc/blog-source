@@ -2,7 +2,7 @@
 
 ## 上周遗留任务
 
-## 本周任务
+## 本周计划和目标
 
 <% for(let i = 0; i < weekList.length; i++){ %>
 
@@ -10,8 +10,6 @@
 
 - ✅ {{weekList[i].week}}工作任务一
 - {{weekList[i].week}}工作任务二 ❌
-- ✅ {{weekList[i].week}}个人任务一
-- {{weekList[i].week}}个人任务二 ❌
 
 | Time     | ToDo     | Done |
 | -------- | -------- | ---- |

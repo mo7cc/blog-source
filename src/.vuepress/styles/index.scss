@@ -51,3 +51,16 @@
     --content-width: calc(100vw - 15rem - 6rem - var(--sidebar-width) - 20rem);
   }
 }
+
+// 图片合组
+
+.ImgGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: baseline;
+  width: 100%;
+  figure {
+    margin: 2px;
+  }
+}
