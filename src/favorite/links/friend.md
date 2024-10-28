@@ -70,6 +70,13 @@ permalink: /favorite/links/friend.html
   link="https://hyruo.com"
 />
 
+<VPCard
+  title="耳朵同"
+  desc="这里是耳朵同的博客"
+  logo="https://erduotong.github.io/logo.png"
+  link="https://erduotong.github.io/"
+/>
+
 ---
 
 ::: tip 欢迎交换友情链接

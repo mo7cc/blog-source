@@ -1,6 +1,6 @@
 {
   "name": "mo7-blog",
-  "version": "1.7.13",
+  "version": "1.7.14",
   "description": "墨七的个人博客",
   "license": "MIT",
   "type": "module",
@@ -16,15 +16,16 @@
   "dependencies": {
     "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
-    "@vuepress/plugin-feed": "2.0.0-rc.56",
-    "@vuepress/plugin-pwa": "2.0.0-rc.56",
-    "@vuepress/plugin-redirect": "2.0.0-rc.56",
+    "@vuepress/plugin-feed": "2.0.0-rc.57",
+    "@vuepress/plugin-pwa": "2.0.0-rc.57",
+    "@vuepress/plugin-redirect": "2.0.0-rc.57",
     "@waline/client": "^3.3.2",
     "aplayer": "^1.10.1",
     "art-template": "^4.13.2",
     "axios": "^1.7.7",
     "dayjs": "^1.11.13",
-    "sass-embedded": "^1.80.3",
+    "echarts": "^5.5.1",
+    "sass-embedded": "^1.80.4",
     "store": "^2.0.12",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
@@ -32,8 +33,5 @@
     "vuepress-plugin-search-pro": "2.0.0-rc.59",
     "vuepress-theme-hope": "2.0.0-rc.59",
     "x": "^0.1.2"
-  },
-  "devDependencies": {
-    "echarts": "^5.5.1"
   }
 }
