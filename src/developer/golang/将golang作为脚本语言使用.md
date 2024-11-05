@@ -2,7 +2,7 @@
 category:
   - Golang
 tag:
-  - 技巧
+  - Tips
   - 教程
 
 permalink: /developer/golang/golang_shell.html

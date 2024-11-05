@@ -21,5 +21,3 @@ permalink: /posts/
 ---
 
 <Catalog base='/posts/' />
-
----

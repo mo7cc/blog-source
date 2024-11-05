@@ -3,7 +3,7 @@ category:
   - Golang
 tag:
   - 库
-  - 技巧
+  - Tips
   - 教程
 
 permalink: /developer/golang/go_mongo.html

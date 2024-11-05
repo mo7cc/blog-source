@@ -9,10 +9,10 @@ permalink: /about/
 
 ::: info 关于本站
 
+About Some Things
+
 :::
 
 ---
 
 <Catalog base='/about/' />
-
----

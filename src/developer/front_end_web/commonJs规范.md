@@ -3,7 +3,7 @@ category:
   - 前端
 tag:
   - 工具
-  - 技巧
+  - Tips
   - 环境搭建
 
 order: -1

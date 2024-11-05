@@ -3,7 +3,7 @@ category:
   - 前端
 tag:
   - 工具
-  - 技巧
+  - Tips
 
 permalink: /developer/front_end_web/npm.html
 ---
