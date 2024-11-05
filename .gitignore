@@ -11,3 +11,5 @@ blog-source
 
 /data
 /logs
+
+pnpm-lock.yaml

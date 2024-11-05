@@ -13,4 +13,5 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 dist/
 .DS_Store
+
 pnpm-lock.yaml
