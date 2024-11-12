@@ -35,3 +35,6 @@ git config --global core.filemode false
 
 # 设置 init 时 默认分支为 main
 git config --global init.defaultBranch main
+
+# 关闭分支显示分页 显示
+git config --global pager.branch false

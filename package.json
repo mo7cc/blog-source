@@ -1,8 +1,9 @@
 {
-  "name": "mo7-blog",
-  "version": "1.7.17",
-  "description": "墨七的个人博客",
+  "name": "mo7_obsidian_data",
+  "version": "1.0.0",
+  "description": "墨七的 Obsidian 笔记仓库。",
   "license": "MIT",
+  "author": "墨七",
   "type": "module",
   "scripts": {
     "build": "vuepress-vite build src",
@@ -16,9 +17,9 @@
   "dependencies": {
     "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
-    "@vuepress/plugin-feed": "2.0.0-rc.57",
-    "@vuepress/plugin-pwa": "2.0.0-rc.57",
-    "@vuepress/plugin-redirect": "2.0.0-rc.57",
+    "@vuepress/plugin-feed": "2.0.0-rc.60",
+    "@vuepress/plugin-pwa": "2.0.0-rc.60",
+    "@vuepress/plugin-redirect": "2.0.0-rc.60",
     "@waline/client": "^3.3.2",
     "aplayer": "^1.10.1",
     "art-template": "^4.13.2",

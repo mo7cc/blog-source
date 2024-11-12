@@ -8,6 +8,6 @@
     "allowJs": true,
     "outDir": "./dist"
   },
-  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue", "src/.vuepress/**/*"],
+  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue", "src/.vuepress/**/*", "src/.vuepress/public"],
   "exclude": ["node_modules", "dist", "__private"]
 }

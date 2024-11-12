@@ -59,7 +59,7 @@ projects:
     link: /tools/
 
   - icon: tips
-    name: 小技巧
+    name: Tips
     desc: 生活和工作技巧的一些总结
     link: /tips/
 

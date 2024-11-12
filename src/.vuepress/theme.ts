@@ -2,7 +2,9 @@ import { hopeTheme } from 'vuepress-theme-hope';
 import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 import { getDirname, path } from 'vuepress/utils';
-import { BlogPassword } from '../../__private/password.js';
+import { BlogPassword } from '../../private/password.js';
+import AppPackage from '../../package.json';
+
 import manifest_json from './public/pwa/manifest.json';
 const manifestJson: any = manifest_json;
 
@@ -22,9 +24,12 @@ export default hopeTheme({
     url: 'https://mo7.cc',
     email: 'mo7@mo7.cc',
   },
+  lastUpdated: true,
   darkmode: 'toggle',
-  editLink: false,
+  // editLink: true,
+  contributors: true,
   fullscreen: true,
+  license: AppPackage.license,
   navbarAutoHide: 'always',
   pageInfo: [
     'Author',

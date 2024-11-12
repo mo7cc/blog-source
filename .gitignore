@@ -6,10 +6,10 @@ dist/
 .vp-cache
 .vp-temp
 .sum
-
-blog-source
-
-/data
 /logs
-
 pnpm-lock.yaml
+package-lock.json
+*.foldersync.old
+.trash
+rs-test-folder-*
+.obsidian/workspace.json

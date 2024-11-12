@@ -6,8 +6,9 @@ source "./_shell/init.sh"
 
 NowPath=${NowPath:?}
 OutPutPath=${OutPutPath:?}
+CachePath="${NowPath}/.cache"
 GitRemotePath="git@github.com:mo7cc/blog-source.git"
-DeployLocalPath="${NowPath}/blog-source"
+DeployLocalPath="${CachePath}/blog-source"
 
 ## 判断参数
 desc=$1
@@ -17,9 +18,9 @@ if [ -z "${desc}" ]; then
 fi
 echo "git commit: ${desc}"
 
-## 清理本地 dist 目录  和 git 仓库
+## 清理本地 dist 目录  和 .cache 工作区目录
 rm -rf "${OutPutPath}"
-rm -rf "${DeployLocalPath}"
+rm -rf "${CachePath}"
 
 ## 构建源码目录
 mkdir "${OutPutPath}"
@@ -37,6 +38,8 @@ cp -rf "${NowPath}/go.mod" "${OutPutPath}/"
 
 # 开始进行发布步骤 OutPutPath -> 远程 DeployPath
 ## 拉取远程仓库
+mkdir "${CachePath}"
+cd "${CachePath}" || exit
 git clone "${GitRemotePath}"
 
 ## git 本地仓库中 .git 移动到 dist 目录中
@@ -60,7 +63,6 @@ git add . &&
   echo "${DeployLocalPath}"
 echo "${OutPutPath}"
 # 将名字改回来
-mv "${DeployLocalPath}" "${OutPutPath}" &&
-  echo "已推送至${GitRemotePath}"
+echo "已推送至${GitRemotePath}"
 
 exit 0

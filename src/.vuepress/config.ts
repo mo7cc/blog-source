@@ -15,8 +15,8 @@ export default defineUserConfig({
   host: '0.0.0.0',
   port: 9451,
   base: '/',
-  temp: '.vscode/.vp-temp',
-  cache: '.vscode/.vp-cache',
+  temp: '.vscode/.cache/.vp-temp',
+  cache: '.vscode/.cache/.vp-cache',
 
   locales: {
     '/': {
