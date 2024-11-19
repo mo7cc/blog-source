@@ -18,7 +18,7 @@ function GitConfigInit() {
   # 关闭分支显示分页 显示
   git config --global pager.branch false
   # 修改文件权限为开放
-  # chmod -R 777 ./
+  chmod -R 777 ./
 }
 
 # 当前项目根目录

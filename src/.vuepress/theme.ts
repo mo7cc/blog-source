@@ -48,7 +48,7 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_3p4qtirn5xz.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_zryb8yvudr.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {

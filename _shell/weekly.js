@@ -11,7 +11,7 @@ dayjs.extend(weekOfYear); // 加载插件
 dayjs.locale('zh-cn'); // 设置周一为第一天
 
 const dayObj = dayjs(); // 设定日期为今天
-const localPath = path.join(__dirname, 'weekly'); // 设定目录
+const localPath = path.join(__dirname, 'diary'); // 设定目录
 
 // 获取当前星期列表
 const weekStr = ['周一', '周二', '周三', '周四', '周五', '周六', '周天'];

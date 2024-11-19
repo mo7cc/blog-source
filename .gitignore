@@ -13,3 +13,6 @@ package-lock.json
 .trash
 rs-test-folder-*
 .obsidian/workspace.json
+.obsidian/workspace-mobile.json
+big_file
+.obsidian/plugins/remotely-save/data.json
