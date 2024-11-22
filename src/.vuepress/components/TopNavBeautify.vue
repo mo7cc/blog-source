@@ -2,6 +2,10 @@
 import { onMounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 
+const CheckSidebarOpen = () => {
+  CheckScrollTopClass();
+};
+
 const CheckScrollTopClass = () => {
   const themeElms = document.getElementsByClassName('theme-container');
   if (themeElms.length < 1) {
@@ -34,6 +38,14 @@ const CheckScrollTopClass = () => {
     } else {
       themeElm.classList.remove('mo7-scroll-blog-hero-inner');
     }
+  }
+
+  const toggleSidebarElms = document.getElementsByClassName('vp-toggle-sidebar-button');
+
+  if (toggleSidebarElms.length > 0) {
+    const toggleSidebarElm = toggleSidebarElms[0];
+    toggleSidebarElm.removeEventListener('click', CheckSidebarOpen);
+    toggleSidebarElm.addEventListener('click', CheckSidebarOpen);
   }
 };
 

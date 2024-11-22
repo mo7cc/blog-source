@@ -41,8 +41,8 @@ rm -rf "${OutPutPath}"
 ###################################################
 
 # 服务器直传
-# ssh root@blog.mo7.cc "rm -rf /root/ProdProject/blog.mo7.cc"
-# scp -r "${OutPutPath}" root@blog.mo7.cc:/root/ProdProject/blog.mo7.cc
+# ssh root@mo7.cc "rm -rf /root/ProdProject/mo7.cc"
+# scp -r "${OutPutPath}" root@mo7.cc:/root/ProdProject/mo7.cc
 
 ###################################################
 

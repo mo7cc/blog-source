@@ -75,3 +75,30 @@ projects:
 
 footer: true
 ---
+
+<div id="mo7-blog-hero-content">
+  <a target="_blank" class="link image-link link-1" href="https://mo7.cc">
+    <img class="vp-blog-hero-image" src="//file.mo7.cc/static/lxh_gif/lxh_71.gif" alt="" srcset="" />
+  </a>
+  <a target="_blank" class="link  link-2" href="https://mo7cc.github.io">
+    <h1 class="vp-blog-hero-title">
+      墨七<span class="vp-blog-hero-subtitle">(mo7.cc)</span>
+    </h1>
+  </a>
+  <a target="_blank" class="link  link-3" href="/posts/catalog.html">
+    <h2>My Blog</h2>
+    <span>https://mo7.cc</span>
+  </a>
+  <a target="_blank" class="link  link-4" href="https://github.com/mo7cc">
+    <h2>My Github</h2>
+    <span>https://github.com/mo7cc</span>
+  </a>
+  <a target="_blank" class="link  link-5" href="https://otter-trade.github.io">
+    <h2>OtterTrade.com</h2>
+    <span>https://otter-trade.github.io</span>
+  </a>
+  <a target="_blank" class="link  link-6" href="mailto: meichangliang@outlook.com">
+    <h2>E-mail</h2>
+    <span>meichangliang@outlook.com</span>
+  </a>
+</div>

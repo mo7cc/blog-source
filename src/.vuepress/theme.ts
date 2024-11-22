@@ -18,7 +18,7 @@ const footerICP_HTML = `
 `;
 
 export default hopeTheme({
-  hostname: 'https://blog.mo7.cc',
+  hostname: 'https://mo7.cc',
   author: {
     name: '墨七',
     url: 'https://mo7.cc',
@@ -48,14 +48,14 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_zryb8yvudr.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_719xr3yczbn.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
     name: '墨七',
     avatar: '//file.mo7.cc/static/lxh_gif/lxh_71.gif',
-    description: '专心致志做事，大气温和待人。',
-    intro: 'https://blog.mo7.cc/about/me.html',
+    description: '简单快乐，理应如此。',
+    intro: 'https://mo7.cc/about/me.html',
     medias: {
       Email: 'mailto:mo7@mo7.cc',
       GitHub: 'https://github.com/mo7cc',
@@ -66,7 +66,7 @@ export default hopeTheme({
       Wechat: 'https://file.mo7.cc/static/img/mywchart.jpeg',
       Zhihu: 'https://www.zhihu.com/people/meichangliang',
       BiliBili: 'https://space.bilibili.com/24452567',
-      Rss: 'https://blog.mo7.cc/atom.xml',
+      Rss: 'https://mo7.cc/atom.xml',
     },
   },
 
@@ -77,7 +77,7 @@ export default hopeTheme({
       sidebar: zhSidebar,
       blog: {
         name: '墨七',
-        description: '专心致志做事，大气温和待人。',
+        description: '简单快乐，理应如此。',
         intro: '/about/me.html',
         timeline: '简单快乐，理应如此。',
       },
@@ -139,30 +139,9 @@ export default hopeTheme({
     },
 
     searchPro: {
-      // 索引全部内容
       indexContent: true,
       autoSuggestions: true,
-      // 为分类和标签添加索引
-      customFields: [
-        {
-          getter(page: any) {
-            return page.frontmatter.category;
-          },
-          formatter: {
-            '/': '分类：$content',
-            '/en/': 'Category: $content',
-          },
-        },
-        {
-          getter(page: any) {
-            return page.frontmatter.tag;
-          },
-          formatter: {
-            '/': '标签：$content',
-            '/en/': 'Tag: $content',
-          },
-        },
-      ],
+      // hotReload: true,
     },
 
     // These features are enabled for demo, only preserve features you need here

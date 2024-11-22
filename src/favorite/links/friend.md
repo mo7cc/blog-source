@@ -9,9 +9,9 @@ permalink: /favorite/links/friend.html
 
 <VPCard
   title="墨七"
-  desc="专心致志做事，大气温和待人。"
+  desc="简单快乐，理应如此。"
   logo="https://file.mo7.cc/static/lxh_gif/lxh_71.gif"
-  link="https://blog.mo7.cc"
+  link="https://mo7.cc"
 />
 
 <VPCard
@@ -102,8 +102,8 @@ permalink: /favorite/links/friend.html
 
 ```yaml
 昵称: 墨七
-描述: 专心致志做事，大气温和待人。
-地址: https://blog.mo7.cc
+描述: 简单快乐，理应如此。
+地址: https://mo7.cc
 头像: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
 ```
 
@@ -112,8 +112,8 @@ permalink: /favorite/links/friend.html
 ```json
 {
   "name": "墨七",
-  "description": "专心致志做事，大气温和待人。",
-  "link": "https://blog.mo7.cc",
+  "description": "简单快乐，理应如此。",
+  "link": "https://mo7.cc",
   "avatar": "https://file.mo7.cc/static/lxh_gif/lxh_71.gif"
 }
 ```

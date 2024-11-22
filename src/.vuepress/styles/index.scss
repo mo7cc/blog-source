@@ -64,3 +64,14 @@
     margin: 2px;
   }
 }
+
+// 字体
+@font-face {
+  font-family: 'mo7_font';
+  src: url('/font/mo7_font.ttf');
+}
+
+.vp-blog-hero-title,
+.vp-site-name {
+  font-family: 'mo7_font';
+}

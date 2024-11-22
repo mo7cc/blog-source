@@ -18,7 +18,14 @@ function GitConfigInit() {
   # 关闭分支显示分页 显示
   git config --global pager.branch false
   # 修改文件权限为开放
-  chmod -R 777 ./
+  if [[ $(uname) == 'Darwin' ]]; then
+    chmod -R 777 ./
+    echo "Mac OS"
+  fi
+  if [[ $(uname) == 'Linux' ]]; then
+    chmod -R 777 ./
+    echo "Linux"
+  fi
 }
 
 # 当前项目根目录
@@ -28,12 +35,12 @@ NowPath=$(pwd)
 OutPutPath="${NowPath}/dist"
 
 # 远程仓库目录地址
-GitRemotePackagePath="git@github.com:mo7-web/mo7-web.github.io.git"
+GitRemotePackagePath="git@github.com:mo7cc/mo7cc.github.io.git"
 
 # Deploy 完成之后的输出
 ShellEndInfo="
-https://github.com/mo7-web/mo7-web.github.io
-https://blog.mo7.cc
+https://github.com/mo7cc/mo7cc.github.io
+https://mo7.cc
 "
 
 echo "

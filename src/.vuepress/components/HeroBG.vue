@@ -65,15 +65,6 @@ const InsertBtn = (path?) => {
     return;
   }
 
-  const heroTitle = document.querySelector('.vp-blog-hero-title');
-  heroTitle.addEventListener('click', () => {
-    window.location.href = '//mo7.cc';
-  });
-
-  if (!heroTitle) {
-    return;
-  }
-
   const imgList = mStorage.get('BingImgList');
 
   if (imgList && imgList.length < 1) {
@@ -160,30 +151,23 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-// 字体
-@font-face {
-  font-family: 'mo7_font';
-  src: url('/font/mo7_font.ttf');
-}
-.vp-blog-hero-title {
-  font-size: 3.8rem;
-  font-family: 'mo7_font';
-  cursor: pointer;
-}
-
 // 图片切换按钮
 #BingSwitchWrapper {
   position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  box-sizing: border-box;
   min-width: 1.25rem;
   min-height: 1.25rem;
+  max-width: 100%;
   z-index: 5;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   #leftNav,
   #rightNav {
+    flex-shrink: 0;
     width: 2.5rem;
     height: 2.5rem;
     background-color: rgba(34, 34, 34, 0.8);
@@ -225,6 +209,7 @@ onMounted(() => {
     position: relative;
     width: 2.5rem;
     height: 2.5rem;
+    flex-shrink: 0;
     .mapPin {
       fill: #fff;
       transform: translate3d(-50%, -50%, 0);
@@ -234,21 +219,26 @@ onMounted(() => {
     }
   }
   #bingLink {
+    flex-shrink: 1;
     display: flex;
     align-items: center;
     background-color: rgba(34, 34, 34, 0.4);
     border-radius: 0.375rem;
     cursor: pointer;
+    height: 2.5rem;
   }
   #bingLink_text {
+    flex-shrink: 1;
     text-align: left;
     box-sizing: border-box;
     padding: 0.625rem;
     min-height: 2.5rem;
-    max-width: 14rem;
-    // line-height: 2.5rem;
+    max-width: 12rem;
     color: #fff;
     padding-left: 0rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
