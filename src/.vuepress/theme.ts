@@ -116,6 +116,11 @@ export default hopeTheme({
       reaction: true,
     },
 
+    searchPro: {
+      indexContent: true,
+      autoSuggestions: true,
+    },
+
     components: {
       components: ['Badge', 'VPCard', 'BiliBili', 'PDF'],
     },
@@ -136,12 +141,6 @@ export default hopeTheme({
       rss: true,
       image: '/pwa/72.png',
       icon: '/pwa/512.png',
-    },
-
-    searchPro: {
-      indexContent: true,
-      autoSuggestions: true,
-      // hotReload: true,
     },
 
     // These features are enabled for demo, only preserve features you need here

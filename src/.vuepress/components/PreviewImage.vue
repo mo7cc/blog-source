@@ -3,6 +3,7 @@ import { onMounted, nextTick, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import MyIcon from './MyIcon.vue';
+// 图标需要引入 iconfont
 
 let ImageArr = ref([]);
 let ShowPreviewBox = ref(false);
@@ -100,6 +101,28 @@ function ImageClick(e) {
   });
 }
 
+function keyUpFunc(event) {
+  if (event.key === 'Enter') {
+    fullscreenFunc();
+  }
+
+  if (event.key === 'Escape') {
+    ClosePreviewBox();
+  }
+  if (event.key === 'ArrowUp') {
+    zoomFunc();
+  }
+  if (event.key === 'ArrowDown') {
+    shrinkFunc();
+  }
+  if (event.key === 'ArrowLeft') {
+    leftFunc();
+  }
+  if (event.key === 'ArrowRight') {
+    rightFunc();
+  }
+}
+
 function InitPreviewImage(type) {
   console.log('初始化图片预览', type);
   let contentElms = document.getElementsByClassName('theme-hope-content');
@@ -124,11 +147,18 @@ function InitPreviewImage(type) {
     }
 
     elm.removeEventListener('click', ImageClick);
+    document.removeEventListener('keyup', keyUpFunc);
     if (type === 'bind') {
       elm.addEventListener('click', ImageClick);
+      document.addEventListener('keyup', keyUpFunc);
     }
   }
   ImageArr.value = imaArr;
+
+  document.removeEventListener('keyup', keyUpFunc);
+  if (type === 'bind') {
+    document.addEventListener('keyup', keyUpFunc);
+  }
 }
 
 let mouseStatus = false;
@@ -284,6 +314,7 @@ onMounted(() => {
           <div class="Mo7PreviewBox-idxView-alt" v-if="ImageArr[CurrentImgIdx].alt">
             {{ ImageArr[CurrentImgIdx].alt }}
           </div>
+          <div class="Mo7PreviewBox-idxView-key">快捷键: ↑:放大 ↓:缩小 ←:上一张 →:下一张 ↵:新页面打开 Esc:关闭预览</div>
         </div>
       </div>
     </div>
@@ -341,7 +372,7 @@ onMounted(() => {
 
   .Mo7PreviewBox-idxView {
     position: absolute;
-    bottom: 90px;
+    bottom: 40px;
     left: 0;
     width: 100%;
     display: flex;
@@ -358,11 +389,14 @@ onMounted(() => {
     text-align: center;
   }
   .Mo7PreviewBox-idxView-idx {
-    font-size: 24px;
+    font-size: 20px;
   }
   .Mo7PreviewBox-idxView-alt {
-    margin-top: 10px;
     font-size: 20px;
+  }
+  .Mo7PreviewBox-idxView-key {
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 

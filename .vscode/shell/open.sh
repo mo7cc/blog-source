@@ -2,7 +2,7 @@
 
 ## 设置并加载变量
 # shellcheck disable=SC1091
-source "./_shell/init.sh"
+source "./.vscode/shell/init.sh"
 
 NowPath=${NowPath:?}
 OutPutPath=${OutPutPath:?}
@@ -24,14 +24,13 @@ rm -rf "${CachePath}"
 
 ## 构建源码目录
 mkdir "${OutPutPath}"
-cp -rf "${NowPath}/_shell" "${OutPutPath}/_shell"
+cp -rf "${NowPath}/private/README.md" "${OutPutPath}/"
 cp -rf "${NowPath}/.vscode" "${OutPutPath}/.vscode"
 cp -rf "${NowPath}/src" "${OutPutPath}/src"
 cp -rf "${NowPath}/package.json" "${OutPutPath}/"
 cp -rf "${NowPath}/pnpm-lock.yaml" "${OutPutPath}/"
 cp -rf "${NowPath}/.gitignore" "${OutPutPath}/"
 cp -rf "${NowPath}/tsconfig.json" "${OutPutPath}/"
-cp -rf "${NowPath}/README.md" "${OutPutPath}/"
 cp -rf "${NowPath}/.prettierignore" "${OutPutPath}/"
 cp -rf "${NowPath}/.prettierrc.cjs" "${OutPutPath}/"
 cp -rf "${NowPath}/go.mod" "${OutPutPath}/"

@@ -3,8 +3,8 @@ import weekday from 'dayjs/plugin/weekday.js';
 import weekOfYear from 'dayjs/plugin/weekOfYear.js';
 import 'dayjs/locale/zh-cn.js';
 import path from 'path';
-import fs from 'fs';
-import template from 'art-template';
+// import fs from 'fs';
+// import template from 'art-template';
 const __dirname = path.resolve();
 dayjs.extend(weekday); // 加载插件
 dayjs.extend(weekOfYear); // 加载插件
@@ -54,22 +54,24 @@ console.info(bannerStr);
 
 console.info(weekList);
 
-console.info(`文件目录为: ${filePath}`);
+console.info(`${Year}_${weekNumForYear}`);
 
-const isExist = fs.existsSync(filePath);
-if (isExist) {
-  console.info('当前文件已存在，无需重复写入。');
-  process.exit(1);
-}
+// console.info(`文件目录为: ${filePath}`);
 
-console.log('正在生成模板');
-const tempPath = path.join(__dirname, '_shell', 'weekly.md');
-const fileContent = template(tempPath, {
-  year: Year,
-  weekly: weekNumForYear,
-  weekList: weekList,
-});
+// const isExist = fs.existsSync(filePath);
+// if (isExist) {
+//   console.info('当前文件已存在，无需重复写入。');
+//   process.exit(1);
+// }
 
-console.info('正在写入文件.......');
-fs.writeFileSync(filePath, fileContent);
-console.info('文件写入完成');
+// console.log('正在生成模板');
+// const tempPath = path.join(__dirname, '_shell', 'weekly.md');
+// const fileContent = template(tempPath, {
+//   year: Year,
+//   weekly: weekNumForYear,
+//   weekList: weekList,
+// });
+
+// console.info('正在写入文件.......');
+// fs.writeFileSync(filePath, fileContent);
+// console.info('文件写入完成');

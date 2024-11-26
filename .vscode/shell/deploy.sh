@@ -2,7 +2,7 @@
 
 ## 设置并加载变量
 # shellcheck disable=SC1091
-source "./_shell/init.sh"
+source "./.vscode/shell/init.sh"
 
 NowPath=${NowPath:?}
 OutPutPath=${OutPutPath:?}
@@ -23,7 +23,6 @@ rm -rf "${OutPutPath}"
 ## 开始编译
 pnpm run build &&
   cp "${NowPath}/package.json" "${OutPutPath}" &&
-  cp "${NowPath}/README.md" "${OutPutPath}" &&
   echo "编译结束${OutPutPath}"
 
 ###################################################
@@ -36,7 +35,7 @@ git init &&
   git remote add origin "${GitRemotePath}" &&
   git push -f --set-upstream origin main:main &&
   echo "同步完成,开始清理工作目录"
-rm -rf "${OutPutPath}"
+rm -rf "${OutPutPath}/.git"
 
 ###################################################
 

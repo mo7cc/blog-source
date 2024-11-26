@@ -164,6 +164,13 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
+#GlobalAPlayer {
+  .aplayer-list-title,
+  .aplayer-title {
+    color: var(--theme-color);
+  }
+}
+
 .MyMusic {
   position: fixed;
   right: 0.5rem;
