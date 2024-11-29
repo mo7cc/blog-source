@@ -1,6 +1,6 @@
 {
   "name": "mo7_obsidian_data",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "墨七的 Obsidian 笔记仓库。",
   "license": "MIT",
   "author": "墨七",
@@ -14,7 +14,7 @@
     "open": ".vscode/shell/open.sh",
     "weekly": "node ./.vscode/shell/weekly.js",
     "preview": "go run ./.vscode/shell/static_serve.go",
-    "clear": "rm -rf .cache dist .trash node_modules pnpm-lock.yaml && pnpm install"
+    "clear-dir": "rm -rf .cache dist .trash node_modules pnpm-lock.yaml "
   },
   "dependencies": {
     "@algolia/client-search": "^5.15.0",
@@ -23,15 +23,15 @@
     "@vuepress/plugin-feed": "2.0.0-rc.61",
     "@vuepress/plugin-pwa": "2.0.0-rc.61",
     "@vuepress/plugin-redirect": "2.0.0-rc.61",
-    "@waline/client": "^3.4.0",
+    "@waline/client": "^3.4.1",
     "aplayer": "^1.10.1",
-    "axios": "^1.7.7",
+    "axios": "^1.7.8",
     "dayjs": "^1.11.13",
     "echarts": "^5.5.1",
     "sass-embedded": "^1.81.0",
     "store": "^2.0.12",
     "vue": "^3.5.13",
-    "vue-router": "^4.4.5",
+    "vue-router": "^4.5.0",
     "vuepress": "2.0.0-rc.18",
     "vuepress-plugin-search-pro": "2.0.0-rc.59",
     "vuepress-theme-hope": "2.0.0-rc.59"

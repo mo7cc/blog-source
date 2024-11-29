@@ -52,7 +52,7 @@ permalink: /favorite/links/friend.html
 <VPCard
   title="Salvely"
   desc="Salvely"
-  logo="https://salvely.github.io/logo.svg"
+  logo="https://salvely.github.io/images/Salvely_hu7437392978405238918.webp"
   link="https://salvely.github.io"
 />
 
@@ -96,9 +96,9 @@ permalink: /favorite/links/friend.html
 
 ### 本站信息如下:
 
-::: code-tabs#shell
+::: tabs
 
-@tab label
+@tab YAML
 
 ```yaml
 昵称: 墨七
@@ -107,7 +107,7 @@ permalink: /favorite/links/friend.html
 头像: https://file.mo7.cc/static/lxh_gif/lxh_71.gif
 ```
 
-@tab json
+@tab JSON
 
 ```json
 {

@@ -5,6 +5,7 @@ dist/
 .temp
 .vp-cache
 .vp-temp
+config.ts.*.mjs
 .sum
 /logs
 pnpm-lock.yaml

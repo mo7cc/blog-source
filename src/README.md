@@ -81,9 +81,7 @@ footer: true
     <img class="vp-blog-hero-image" src="//file.mo7.cc/static/lxh_gif/lxh_71.gif" alt="" srcset="" />
   </a>
   <a target="_blank" class="link  link-2" href="https://mo7cc.github.io">
-    <h1 class="vp-blog-hero-title">
-      墨七<span class="vp-blog-hero-subtitle">(mo7.cc)</span>
-    </h1>
+    <h1 class="vp-blog-hero-title">墨七<span class="vp-blog-hero-subtitle">(mo7.cc)</span></h1>
   </a>
   <a target="_blank" class="link  link-3" href="/posts/catalog.html">
     <h2>My Blog</h2>
@@ -101,4 +99,13 @@ footer: true
     <h2>E-mail</h2>
     <span>meichangliang@outlook.com</span>
   </a>
+</div>
+
+<div id="mo7-hitokoto-wrapper">
+  <div class="word">
+    <div class="left">『</div>
+    <span id="hitokoto_text"> 简单快乐，理应如此。 </span>
+    <div class="right">』</div>
+  </div>
+  <div id="hitokoto_author">——「墨七」</div>
 </div>

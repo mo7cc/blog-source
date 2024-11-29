@@ -33,12 +33,12 @@ permalink: /favorite/links/document.html
   link="https://theme-hope.vuejs.press"
 />
 
-## <MyIcon name="bokex" /> 本站进阶
+## <MyIcon name="bokex" /> 进阶
 
 <VPCard
   title="🍭 一款很漂亮的 HTML5 播放器"
   desc="🍭 一款很漂亮的 HTML5 播放器"
-  logo="https://camo.githubusercontent.com/945862845a2aa812b8cf50b9238b74524cb8e87b7420b647f37e69d968e09d40/68747470733a2f2f692e696d6775722e636f6d2f4c6e50765a764f2e706e67"
+  logo="https://camo.githubusercontent.com/63b51909314fabbead73db564a153016d0ad06de232f5ba27b29f8cfc227aa77/68747470733a2f2f692e696d6775722e636f6d2f4c6e50765a764f2e706e67"
   link="https://aplayer.js.org"
 />
 
@@ -66,7 +66,7 @@ permalink: /favorite/links/document.html
 <VPCard
   title="MDN Web Docs站点提供了关于开放Web技术的信息，包括HTML、CSS和用于Web站点和渐进式Web应用程序的api。"
   desc="MDN Web Docs站点提供了关于开放Web技术的信息，包括HTML、CSS和用于Web站点和渐进式Web应用程序的api。"
-  logo="https://developer.mozilla.org/apple-touch-icon.6803c6f0.png"
+  logo="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
   link="https://developer.mozilla.org"
 />
 
