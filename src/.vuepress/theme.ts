@@ -116,11 +116,6 @@ export default hopeTheme({
       reaction: true,
     },
 
-    searchPro: {
-      indexContent: true,
-      autoSuggestions: true,
-    },
-
     components: {
       components: ['Badge', 'VPCard', 'BiliBili', 'PDF'],
     },

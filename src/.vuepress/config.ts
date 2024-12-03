@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress';
 import theme from './theme.js';
 import { getDirname, path } from 'vuepress/utils';
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch';
 
 const __dirname = getDirname(import.meta.url);
 const SrcPath = path.resolve(__dirname, '../');
@@ -31,7 +32,12 @@ export default defineUserConfig({
     },
   },
 
-  plugins: [],
+  plugins: [
+    slimsearchPlugin({
+      indexContent: true,
+      autoSuggestions: true,
+    }),
+  ],
 
   theme,
   // Enable it with pwa

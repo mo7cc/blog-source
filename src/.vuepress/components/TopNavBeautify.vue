@@ -126,14 +126,14 @@ onMounted(() => {
 }
 
 // 简化搜索按钮
-.search-pro-button {
-  .search-pro-placeholder,
-  .search-pro-key-hints {
+.slimsearch-button {
+  .slimsearch-placeholder,
+  .slimsearch-key-hints {
     display: none;
   }
+
   border-radius: 100%;
   background-color: transparent;
-  border-color: transparent;
 }
 
 // 导航栏透明
@@ -165,11 +165,8 @@ onMounted(() => {
 
   .theme-container.mo7-scroll-blog-hero-inner {
     // 搜索按钮
-    .search-pro-button {
+    .slimsearch-button {
       color: #eee;
-      &:hover {
-        color: #2c3e50;
-      }
     }
 
     // 左边的名字颜色调整
