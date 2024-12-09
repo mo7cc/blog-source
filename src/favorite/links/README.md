@@ -6,7 +6,7 @@ index: false
 permalink: /favorite/links/
 ---
 
-# 链接
+# 超链接
 
 ::: info 好的东西应该共享
 

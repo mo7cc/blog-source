@@ -24,7 +24,7 @@ rm -rf "${CachePath}"
 
 ## 构建源码目录
 mkdir "${OutPutPath}"
-cp -rf "${NowPath}/private/README.md" "${OutPutPath}/"
+cp -rf "${NowPath}/private/VuePress_README.md" "${OutPutPath}/README.md"
 cp -rf "${NowPath}/.vscode" "${OutPutPath}/.vscode"
 cp -rf "${NowPath}/src" "${OutPutPath}/src"
 cp -rf "${NowPath}/package.json" "${OutPutPath}/"

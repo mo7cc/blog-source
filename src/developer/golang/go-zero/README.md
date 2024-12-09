@@ -1,4 +1,5 @@
 ---
+icon: gologo
 category:
   - Go
 tag:
@@ -6,7 +7,7 @@ tag:
   - 库
 
 dir:
-  order: 99
+  order: -1
 
 permalink: /developer/golang/go-zero/
 ---
@@ -16,6 +17,8 @@ permalink: /developer/golang/go-zero/
 ::: info go-zero 缩短需求到上线的距离
 
 :::
+
+go 不需要框架，但一定需要 【最佳实践】
 
 https://go-zero.dev/
 

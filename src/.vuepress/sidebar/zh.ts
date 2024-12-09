@@ -155,6 +155,13 @@ export const zhSidebar = sidebar({
   '/favorite/': [
     back_posts,
     {
+      text: '读书笔记',
+      icon: 'book',
+      children: 'structure',
+      prefix: 'books/',
+      link: '/favorite/books/',
+    },
+    {
       text: '随笔',
       icon: 'ganwu',
       children: 'structure',

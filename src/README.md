@@ -95,10 +95,6 @@ footer: true
     <h2>OtterTrade.com</h2>
     <span>https://otter-trade.github.io</span>
   </a>
-  <a target="_blank" class="link  link-6" href="mailto: meichangliang@outlook.com">
-    <h2>E-mail</h2>
-    <span>meichangliang@outlook.com</span>
-  </a>
 </div>
 
 <div id="mo7-hitokoto-wrapper">

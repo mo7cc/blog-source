@@ -48,7 +48,7 @@ export default hopeTheme({
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
 
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_x57nhnfssr7.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_8i3wku9k2rd.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
@@ -104,10 +104,50 @@ export default hopeTheme({
   // enable it to preview all changes in time
   hotReload: true,
 
+  // These features are enabled for demo, only preserve features you need here
+  markdown: {
+    align: true,
+    attrs: true,
+    alert: true,
+    tabs: true,
+    component: true,
+    spoiler: true,
+    demo: true,
+    echarts: true,
+    include: {
+      resolvePath: (file) => {
+        if (file.startsWith('@src')) {
+          return file.replace('@src', path.resolve(__dirname, '..'));
+        }
+        return file;
+      },
+    },
+    mark: true,
+    stylize: [
+      {
+        matcher: 'Recommended',
+        replacer: ({ tag }) => {
+          if (tag === 'em')
+            return {
+              tag: 'Badge',
+              attrs: { type: 'tip' },
+              content: 'Recommended',
+            };
+        },
+      },
+    ],
+    sub: true,
+    sup: true,
+    tasklist: true,
+    vPre: true,
+    breaks: true,
+    linkify: true,
+    footnote: true,
+  },
+
   plugins: {
     blog: true,
     photoSwipe: false, // 这个插件难用的 一 B
-    linksCheck: true,
 
     comment: {
       provider: 'Waline',
@@ -122,59 +162,12 @@ export default hopeTheme({
 
     copyright: false,
 
-    markdownTab: {
-      tabs: true,
-    },
-    markdownHint: {
-      // 启用 GFM 警告
-      alert: true,
-    },
-
     feed: {
       atom: true,
       json: true,
       rss: true,
       image: '/pwa/72.png',
       icon: '/pwa/512.png',
-    },
-
-    // These features are enabled for demo, only preserve features you need here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      component: true,
-      spoiler: true,
-      demo: true,
-      echarts: true,
-      include: {
-        resolvePath: (file) => {
-          if (file.startsWith('@src')) {
-            return file.replace('@src', path.resolve(__dirname, '..'));
-          }
-          return file;
-        },
-      },
-      mark: true,
-      stylize: [
-        {
-          matcher: 'Recommended',
-          replacer: ({ tag }) => {
-            if (tag === 'em')
-              return {
-                tag: 'Badge',
-                attrs: { type: 'tip' },
-                content: 'Recommended',
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tasklist: true,
-      vPre: true,
-      breaks: true,
-      linkify: true,
-      footnote: true,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA

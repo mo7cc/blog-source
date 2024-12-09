@@ -77,6 +77,13 @@ permalink: /favorite/links/friend.html
   link="https://erduotong.github.io/"
 />
 
+<VPCard
+  title="XingJiのBlog"
+  desc="迄今所有人生都大写着失败，但不妨碍我继续向前✨"
+  logo="https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg"
+  link="https://love.xingji.fun"
+/>
+
 ---
 
 ::: tip 欢迎交换友情链接
