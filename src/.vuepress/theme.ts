@@ -173,7 +173,6 @@ export default hopeTheme({
     },
     slimsearch: {
       indexContent: true,
-      suggestion: true,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
