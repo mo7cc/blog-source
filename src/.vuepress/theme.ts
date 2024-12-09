@@ -106,14 +106,6 @@ export default hopeTheme({
 
   // These features are enabled for demo, only preserve features you need here
   markdown: {
-    align: true,
-    attrs: true,
-    alert: true,
-    tabs: true,
-    component: true,
-    spoiler: true,
-    demo: true,
-    echarts: true,
     include: {
       resolvePath: (file) => {
         if (file.startsWith('@src')) {
@@ -122,7 +114,6 @@ export default hopeTheme({
         return file;
       },
     },
-    mark: true,
     stylize: [
       {
         matcher: 'Recommended',
@@ -136,6 +127,15 @@ export default hopeTheme({
         },
       },
     ],
+    align: true,
+    attrs: true,
+    alert: true,
+    tabs: true,
+    component: true,
+    spoiler: true,
+    demo: true,
+    echarts: true,
+    imgMark: true,
     sub: true,
     sup: true,
     tasklist: true,
@@ -143,6 +143,8 @@ export default hopeTheme({
     breaks: true,
     linkify: true,
     footnote: true,
+    mark: true,
+    obsidianImgSize: true,
   },
 
   plugins: {
@@ -168,6 +170,10 @@ export default hopeTheme({
       rss: true,
       image: '/pwa/72.png',
       icon: '/pwa/512.png',
+    },
+    slimsearch: {
+      indexContent: true,
+      suggestion: true,
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA

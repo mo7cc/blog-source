@@ -1,6 +1,6 @@
 {
   "name": "mo7_obsidian_data",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "墨七的 Obsidian 笔记仓库。",
   "license": "MIT",
   "author": "墨七",
@@ -20,10 +20,10 @@
     "@algolia/client-search": "^5.15.0",
     "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
-    "@vuepress/plugin-feed": "2.0.0-rc.63",
-    "@vuepress/plugin-pwa": "2.0.0-rc.64",
-    "@vuepress/plugin-redirect": "2.0.0-rc.63",
-    "@vuepress/plugin-slimsearch": "2.0.0-rc.63",
+    "@vuepress/plugin-feed": "2.0.0-rc.65",
+    "@vuepress/plugin-pwa": "2.0.0-rc.65",
+    "@vuepress/plugin-redirect": "2.0.0-rc.65",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.61",
     "@waline/client": "^3.4.1",
     "aplayer": "^1.10.1",
     "axios": "^1.7.9",
@@ -34,6 +34,6 @@
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
     "vuepress": "2.0.0-rc.18",
-    "vuepress-theme-hope": "2.0.0-rc.61"
+    "vuepress-theme-hope": "2.0.0-rc.63"
   }
 }
