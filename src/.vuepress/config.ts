@@ -35,7 +35,7 @@ export default defineUserConfig({
   plugins: [
     slimsearchPlugin({
       indexContent: true,
-      autoSuggestions: true,
+      suggestion: true,
     }),
   ],
 
