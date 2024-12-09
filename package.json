@@ -17,8 +17,6 @@
     "clear-dir": "rm -rf .cache dist .trash node_modules pnpm-lock.yaml "
   },
   "dependencies": {
-    "@algolia/client-search": "^5.15.0",
-    "@vue/repl": "^4.4.2",
     "@vuepress/bundler-vite": "2.0.0-rc.18",
     "@vuepress/plugin-feed": "2.0.0-rc.65",
     "@vuepress/plugin-pwa": "2.0.0-rc.65",
