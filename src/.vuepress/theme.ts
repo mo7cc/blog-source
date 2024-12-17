@@ -3,9 +3,9 @@ import { enNavbar, zhNavbar } from './navbar/index.js';
 import { enSidebar, zhSidebar } from './sidebar/index.js';
 import { getDirname, path } from 'vuepress/utils';
 import { BlogPassword } from '../../private/password.js';
-import AppPackage from '../../package.json';
+import AppPackage from '../../package.json' with { type: 'json' };
 
-import manifest_json from './public/pwa/manifest.json';
+import manifest_json from './public/pwa/manifest.json' with { type: 'json' };
 const manifestJson: any = manifest_json;
 
 const __dirname = getDirname(import.meta.url);
@@ -47,8 +47,9 @@ export default hopeTheme({
     center: [],
     end: ['Search', 'Links', 'Language', 'Outlook'],
   },
+  sidebarSorter: ['order', 'readme', 'title', 'filename'],
 
-  iconAssets: '//at.alicdn.com/t/c/font_3855310_8i3wku9k2rd.css',
+  iconAssets: '//at.alicdn.com/t/c/font_3855310_ue6zvltxqq.css',
   logo: '/pwa/144.png',
   docsDir: 'src',
   blog: {
@@ -101,10 +102,8 @@ export default hopeTheme({
     },
   },
 
-  // enable it to preview all changes in time
   hotReload: true,
 
-  // These features are enabled for demo, only preserve features you need here
   markdown: {
     include: {
       resolvePath: (file) => {
@@ -175,7 +174,6 @@ export default hopeTheme({
       indexContent: true,
     },
 
-    // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     pwa: {
       favicon: '/favicon.ico',
       themeColor: '#af7ac5',

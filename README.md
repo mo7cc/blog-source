@@ -41,7 +41,37 @@ https://talk.mo7.cc/ui
 
 https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.22&manage_type=myprojects&projectId=3855310
 
-### 运行
+## 使用 Bun 运行 (推荐)
+
+> 个人实测，比较 pnpm 和 NodeJs 速度有显著提升， dev/build 的提升非常明显
+
+bun version : 1.1.x 以上
+
+```bash
+
+# 启用 bun
+npm install -g bun
+
+# 安装依赖
+bun install
+
+# 更新依赖
+bun run update-package
+
+# 运行
+bun run dev
+
+# 编译打包
+bun run build
+
+# 更新同步
+bun run sync
+
+# 发布到 https://mo7.cc
+bun run deploy
+```
+
+## 使用 NodeJs 运行
 
 编译环境: Debian 12
 

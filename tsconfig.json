@@ -3,9 +3,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ES2022",
     "allowJs": true,
+    "moduleResolution": "NodeNext",
     "outDir": "./dist"
   },
   "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue", "src/.vuepress/**/*", "src/.vuepress/public"],
