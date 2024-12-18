@@ -8,13 +8,13 @@
   "scripts": {
     "build": "vuepress-vite build src",
     "dev": "vuepress-vite dev src --clean-cache",
-    "update-package": "bunx vp-update",
-    "sync": "./.vscode/shell/git-sync.sh",
-    "deploy": "./.vscode/shell/deploy.sh",
-    "open": ".vscode/shell/open.sh",
-    "weekly": "node ./.vscode/shell/weekly.js",
+    "update-package": "bun x vp-update",
+    "sync": "bash .vscode/shell/git-sync.sh",
+    "deploy": "bash ./.vscode/shell/deploy.sh",
+    "open": "bash .vscode/shell/open.sh",
+    "weekly": "bun ./.vscode/shell/weekly.js",
     "preview": "go run ./.vscode/shell/static_serve.go",
-    "clear-dir": "rm -rf .cache dist .trash node_modules pnpm-lock.yaml "
+    "clear-dir": "rm -rf .cache dist .trash node_modules pnpm-lock.yaml bun.lockb"
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",
